@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ChaseCamera
+public class ChaseCamera : MonoBehaviour
 {
     public Transform target;
     public Vector3 offset = new Vector3(0, 5, -10);
@@ -9,7 +9,13 @@ public class ChaseCamera
     void LateUpdate()
     {
         if (target == null) return;
-        Vector3 desiredPos = target.position + target.TransformDirection(offset);
-        transform.position = Vector3.Lerp(transform.position, desiredPos, followSpeed * Time.deltaTime);
+
+        Vector3 desiredPos = target.position + target.rotation*offset;
+        transform.position = Vector3.Lerp(
+            transform.position, 
+            desiredPos, 
+            followSpeed * Time.deltaTime);
+
+        transform.LookAt(target, target.up);
     }
 }
