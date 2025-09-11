@@ -8,13 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GamePlayScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenuScene.unity
     guid: 0be9eb5b45843a2438e7e2a0c96c01d1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ManageSpaceShipScene.unity
     guid: 89ad5a03f971d29409d7b1dadbb19c33
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MissionInfoScene.unity
     guid: 5df842e2188001249ba92c834b0ce4ad
   m_configObjects:
