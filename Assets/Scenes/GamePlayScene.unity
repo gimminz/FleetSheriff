@@ -846,6 +846,7 @@ MonoBehaviour:
   spawnInterval: 5
   spawnRadius: 500
   player: {fileID: 1654474313}
+  enemyIndicator: {fileID: 1581583089}
 --- !u!4 &455517798
 Transform:
   m_ObjectHideFlags: 0
@@ -1545,6 +1546,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arrow
       objectReference: {fileID: 0}
+    - target: {fileID: 5365588831806937937, guid: c225c141eb8387847828c18bc7f70a68, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1855,8 +1860,7 @@ MonoBehaviour:
   arrowPrefab: {fileID: 1224371661}
   radius: 400
   poolSize: 20
-  enemies:
-  - {fileID: 1621325218}
+  enemies: []
 --- !u!4 &1581583090
 Transform:
   m_ObjectHideFlags: 0
@@ -2080,11 +2084,6 @@ PrefabInstance:
 --- !u!1 &1621325215 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7706704133163136415, guid: 1b9c9bd520ad54747a98d7222069677a, type: 3}
-  m_PrefabInstance: {fileID: 1621325214}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1621325218 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6676849553677731724, guid: 1b9c9bd520ad54747a98d7222069677a, type: 3}
   m_PrefabInstance: {fileID: 1621325214}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1654474309

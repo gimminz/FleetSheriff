@@ -21,19 +21,22 @@ public class EnemyIndicator : MonoBehaviour
 
     private void Update()
     {
-        List<Transform> enemiesToRemove = new List<Transform>();
+        for (int i = enemies.Count - 1; i >= 0; i--)
+        {
+            if (enemies[i] == null)
+            {
+                Transform nullEnemy = enemies[i];
+                if(enemyArrowMap.ContainsKey(nullEnemy))
+                {
+                    arrowPool.Return(enemyArrowMap[nullEnemy]);
+                    enemyArrowMap.Remove(nullEnemy);
+                }
+                enemies.RemoveAt(i);
+            }
+        }
 
         foreach (Transform enemy in enemies)
         {
-            if (enemy == null)
-            {
-                if (enemyArrowMap.ContainsKey(enemy))
-                {
-                    arrowPool.Return(enemyArrowMap[enemy]);
-                    enemyArrowMap.Remove(enemy);
-                }
-                continue;
-            }
             if (!enemyArrowMap.ContainsKey(enemy))
             {
                 RectTransform arrow = arrowPool.Get();
@@ -41,23 +44,12 @@ public class EnemyIndicator : MonoBehaviour
             }
             UpdateArrow(enemyArrowMap[enemy], enemy);
         }
-
-        foreach (Transform enemy in enemiesToRemove)
-        {
-            if (enemyArrowMap.ContainsKey(enemy))
-            {
-                arrowPool.Return(enemyArrowMap[enemy]);
-                enemyArrowMap.Remove(enemy);
-            }
-            enemies.Remove(enemy);
-        }
     }
     private void UpdateArrow(RectTransform arrow, Transform enemy)
     {
         Vector3 enemyDir = player.InverseTransformDirection(enemy.position - player.position);
         Vector2 arrowPlane = new Vector2(enemyDir.x, enemyDir.y);
         arrowPlane.Normalize();
-
         Vector2 arrowPos = arrowPlane * radius;
         arrow.anchoredPosition = arrowPos;
 

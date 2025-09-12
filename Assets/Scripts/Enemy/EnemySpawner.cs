@@ -7,6 +7,8 @@ public class EnemySpawner : MonoBehaviour
     public float spawnInterval = 5f; 
     public float spawnRadius = 500f; 
     public Transform player;
+    public EnemyIndicator enemyIndicator;
+
 
     void Start()
     {
@@ -19,7 +21,13 @@ public class EnemySpawner : MonoBehaviour
         {
             Vector3 spawnPos = player.position + Random.insideUnitSphere * spawnRadius;
             spawnPos.y = player.position.y + Random.Range(-20f, 20f);
-            Instantiate(enemy, spawnPos, Quaternion.identity);
+
+            GameObject spawnedEnemy = Instantiate(enemy, spawnPos, Quaternion.identity);
+
+            if (enemyIndicator != null)
+            {
+                enemyIndicator.AddEnemy(spawnedEnemy.transform);
+            }
             yield return new WaitForSeconds(spawnInterval);
         }
     }
