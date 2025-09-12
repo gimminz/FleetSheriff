@@ -1,32 +1,83 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class EnemyIndicator : MonoBehaviour
 {
-    public RectTransform canvas;   
+    public Transform player;
+    public RectTransform canvas;
     public RectTransform arrowPrefab;
-    public float radius = 200f;
 
-    private RectTransform screenCenter;
+    public float radius = 100f;
+    public int poolSize = 20;
 
-    void Start()
+    private ObjectPool<RectTransform> arrowPool;
+    private Dictionary<Transform, RectTransform> enemyArrowMap=new Dictionary<Transform,RectTransform>();
+    public List<Transform> enemies = new List<Transform>();
+
+    private void Start()
     {
-        screenCenter = canvas.GetComponent<RectTransform>();
+        arrowPool = new ObjectPool<RectTransform>(arrowPrefab, canvas, poolSize * 2);
     }
 
-    public void ShowIndicator(Transform enemy)
+    private void Update()
     {
-        Vector2 center = new Vector2(Screen.width / 2f, Screen.height / 2f);
-        Vector3 screenPos = Camera.main.WorldToScreenPoint(enemy.position); //
+        List<Transform> enemiesToRemove = new List<Transform>();
 
-        Vector2 dir = (Vector2)screenPos - center;
-        dir.Normalize();
+        foreach (Transform enemy in enemies)
+        {
+            if (enemy == null)
+            {
+                if (enemyArrowMap.ContainsKey(enemy))
+                {
+                    arrowPool.Return(enemyArrowMap[enemy]);
+                    enemyArrowMap.Remove(enemy);
+                }
+                continue;
+            }
+            if (!enemyArrowMap.ContainsKey(enemy))
+            {
+                RectTransform arrow = arrowPool.Get();
+                enemyArrowMap[enemy] = arrow;
+            }
+            UpdateArrow(enemyArrowMap[enemy], enemy);
+        }
 
-        Vector2 circlePos = center + dir * radius;
+        foreach (Transform enemy in enemiesToRemove)
+        {
+            if (enemyArrowMap.ContainsKey(enemy))
+            {
+                arrowPool.Return(enemyArrowMap[enemy]);
+                enemyArrowMap.Remove(enemy);
+            }
+            enemies.Remove(enemy);
+        }
+    }
+    private void UpdateArrow(RectTransform arrow, Transform enemy)
+    {
+        Vector3 enemyDir = player.InverseTransformDirection(enemy.position - player.position);
+        Vector2 arrowPlane = new Vector2(enemyDir.x, enemyDir.y);
+        arrowPlane.Normalize();
 
-        RectTransform arrow = Instantiate(arrowPrefab, canvas);
-        arrow.position = circlePos;
+        Vector2 arrowPos = arrowPlane * radius;
+        arrow.anchoredPosition = arrowPos;
 
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        arrow.rotation = Quaternion.Euler(0, 0, angle - 90f);
+        float angle = Mathf.Atan2(arrowPlane.y, arrowPlane.x) * Mathf.Rad2Deg - 90f;
+        arrow.localRotation = Quaternion.Euler(0, 0, angle);
+    }
+
+    public void AddEnemy(Transform enemy)
+    {
+        if (!enemies.Contains(enemy)) enemies.Add(enemy);
+    }
+
+    public void RemoveEnemy(Transform enemy)
+    {
+        if (enemies.Contains(enemy)) enemies.Remove(enemy);
+
+        if (enemyArrowMap.ContainsKey(enemy))
+        {
+            arrowPool.Return(enemyArrowMap[enemy]);
+            enemyArrowMap.Remove(enemy);
+        }
     }
 }
