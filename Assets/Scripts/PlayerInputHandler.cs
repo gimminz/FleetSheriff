@@ -13,6 +13,8 @@ public class PlayerInputHandler : MonoBehaviour
     private Quaternion lastGyroRot;
     private int rotationFingerId = -1;
 
+    public LockOnManager lockOnManager;
+
     private void Start()
     {
 #if UNITY_EDITOR
@@ -28,6 +30,11 @@ public class PlayerInputHandler : MonoBehaviour
 #if UNITY_EDITOR
         rotationInput.x = Input.GetAxis("Vertical") * touchSensitivity;
         rotationInput.y = Input.GetAxis("Horizontal") * touchSensitivity;
+
+        if (Input.GetMouseButton(0) && lockOnManager != null)
+        {
+            lockOnManager.TouchLockOn(Input.mousePosition);
+        }
 #endif
 
 #if UNITY_ANDROID || UNITY_IOS
@@ -60,13 +67,19 @@ public class PlayerInputHandler : MonoBehaviour
                 switch (touch.phase)
                 {
                     case TouchPhase.Began:
-                        if (isRotationTouchArea(touch.position))
-                            rotationFingerId = touch.fingerId;
+                        if (rotationFingerId == -1)
+                        {
+                            rotationFingerId = touch.fingerId; 
+                        }
+                        else
+                        {
+                            if (lockOnManager != null)
+                                lockOnManager.TouchLockOn(touch.position); 
+                        }
                         break;
-
                     case TouchPhase.Moved:
                     case TouchPhase.Stationary:
-                        if (touch.fingerId == rotationFingerId)
+                        if(touch.fingerId==rotationFingerId)
                         {
                             Vector2 delta = new Vector2(
                                 touch.deltaPosition.x / Screen.width,
