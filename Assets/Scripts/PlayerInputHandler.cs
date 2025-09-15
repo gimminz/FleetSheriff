@@ -67,16 +67,30 @@ public class PlayerInputHandler : MonoBehaviour
                 switch (touch.phase)
                 {
                     case TouchPhase.Began:
+                        if (Input.GetMouseButton(0) && lockOnManager != null)
+                        {
+                            lockOnManager.TouchLockOn(Input.mousePosition);
+                        }
+
+                        if (lockOnManager != null)
+                        {
+                            Vector2 touchPos = touch.position;
+                            Vector2 flippedY = new Vector2(touchPos.x, Screen.height - touchPos.y);
+
+                            Debug.Log($"[TOUCH] Original: {touchPos}");
+                            Debug.Log($"[TOUCH] Flipped Y: {flippedY}");
+                            Debug.Log($"[TOUCH] Screen: {Screen.width}x{Screen.height}");
+
+                            lockOnManager.TouchLockOn(touchPos);
+                            // lockOnManager.TouchLockOn(flippedY);
+                        }
                         if (rotationFingerId == -1)
                         {
                             rotationFingerId = touch.fingerId; 
                         }
-                        else
-                        {
-                            if (lockOnManager != null)
-                                lockOnManager.TouchLockOn(touch.position); 
-                        }
+                        lockOnManager.TouchLockOn(touch.position);
                         break;
+
                     case TouchPhase.Moved:
                     case TouchPhase.Stationary:
                         if(touch.fingerId==rotationFingerId)
