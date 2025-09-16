@@ -73,7 +73,7 @@ public class LockOnManager : MonoBehaviour
         }
     }
 
-    private void RemoveLockOn(Transform enemy)
+    public void RemoveLockOn(Transform enemy)
     {
         if (activeLockOns.TryGetValue(enemy, out Image lockOnImage))
         {
@@ -123,7 +123,14 @@ public class LockOnManager : MonoBehaviour
         foreach (var alo in activeLockOns)
         {
             Transform enemy = alo.Key;
-            if (enemy != null && Vector3.Distance(playerCamera.transform.position, enemy.position)>maxLockOnDistance)
+
+            if(enemy==null) 
+            {
+                enemiesToRemove.Add(enemy);
+                continue;
+            }
+
+            if (Vector3.Distance(playerCamera.transform.position, enemy.position)>maxLockOnDistance)
             {
                 enemiesToRemove.Add(enemy);
             }
@@ -146,17 +153,14 @@ public class LockOnManager : MonoBehaviour
 
     public List<Transform> GetLockedOnEnemies()
     {
-        var lockedEnemies = new List<Transform>(activeLockOns.Keys);
+        var lockedEnemies = new List<Transform>();
         foreach (var alo in activeLockOns)
         {
-            if (alo.Key != null)
-            {
-                lockedEnemies.Add(alo.Key);
-            }
+            if (alo.Key != null) lockedEnemies.Add(alo.Key);
         }
         return lockedEnemies;
     }
-    private void OnDestory()
+    private void OnDestroy()
     {
         ClearAllLockOns();
     }

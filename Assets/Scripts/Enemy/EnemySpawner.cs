@@ -9,9 +9,19 @@ public class EnemySpawner : MonoBehaviour
     public Transform player;
     public EnemyIndicator enemyIndicator;
 
+    //debug -> fire test
+    public bool spawnTestEnemyInFront = true; 
+    public float forwardDistance = 1000f;       
+    public float heightOffset = 0f;
+
 
     void Start()
     {
+        if (spawnTestEnemyInFront)
+        {
+            SpawnEnemyInFront();
+        }
+
         StartCoroutine(SpawnEnemyRoutine());
     }
 
@@ -34,6 +44,17 @@ public class EnemySpawner : MonoBehaviour
     {
         Vector3 spawnPos = player.position + Random.insideUnitSphere * spawnRadius;
         spawnPos.y = player.position.y + Random.Range(-20f, 20f);
+        GameObject spawnedEnemy = Instantiate(enemy, spawnPos, Quaternion.identity);
+        if (enemyIndicator != null)
+        {
+            enemyIndicator.AddEnemy(spawnedEnemy.transform);
+        }
+    }
+    private void SpawnEnemyInFront()
+    {
+        Vector3 spawnPos = player.position + player.forward * forwardDistance;
+        spawnPos.y += heightOffset;
+
         GameObject spawnedEnemy = Instantiate(enemy, spawnPos, Quaternion.identity);
         if (enemyIndicator != null)
         {

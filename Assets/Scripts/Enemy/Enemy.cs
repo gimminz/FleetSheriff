@@ -1,23 +1,29 @@
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : LivingEntity
 {
-    public float health = 100f;
     public LockOnManager lockOnManager;
+    public EnemyIndicator enemyIndicator;
 
-    public void TakeDamage(float damage)
+    public override void OnDamage(float damage, Vector3 hitPoint, Vector3 hitNormal)
     {
-        health -= damage;
-        Debug.Log($"Enemy {gameObject.name} took {damage} damage. Health: {health}");
-
-        if (health <= 0)
-        {
-            DestroyEnemy();
-        }
+         base.OnDamage(damage, hitPoint, hitNormal);
     }
 
-    private void DestroyEnemy()
+    protected override void Die()
     {
-        Destroy(gameObject);
+        base.Die(); 
+
+        if (lockOnManager != null)
+        {
+            lockOnManager.RemoveLockOn(transform);
+        }
+
+        if (enemyIndicator != null)
+        {
+            enemyIndicator.RemoveEnemy(transform);
+        }
+
+        Destroy(gameObject, 0.2f);
     }
 }

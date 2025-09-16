@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Gun : MonoBehaviour
@@ -6,10 +7,13 @@ public class Gun : MonoBehaviour
     [System.Serializable]
     public class Muzzle
     {
-        public Transform muzzleTransform;  
-        public LineRenderer lineRenderer;  
+        public Transform muzzleTransform;
+        public LineRenderer lineRenderer;
     }
-    public Muzzle[] muzzles;  
+
+    public LockOnManager lockOnManager;
+
+    public Muzzle[] muzzles;
 
     public float fireDistance = 50f;
     public float damage = 25f;
@@ -42,13 +46,34 @@ public class Gun : MonoBehaviour
         {
             hitPosition = hit.point;
 
-            var target = hit.collider.GetComponent<IDamagable>();
-            if (target != null)
+            List<Transform> lockedEnemies = lockOnManager != null
+                ? lockOnManager.GetLockedOnEnemies()
+                : null;
+
+            if (lockedEnemies != null && lockedEnemies.Count > 0)
             {
-                target.OnDamage(damage, hit.point, hit.normal);
+                Transform enemyRoot = hit.collider.transform;
+
+
+                if (lockedEnemies.Contains(enemyRoot))
+                {
+                    var target = hit.collider.GetComponent<IDamagable>();
+                    if (target != null)
+                    {
+                        target.OnDamage(damage, hit.point, hit.normal);
+                    }
+                }
+
+                if (lockedEnemies.Contains(enemyRoot))
+                {
+                    var target = hit.collider.GetComponent<IDamagable>();
+                    if (target != null)
+                    {
+                        target.OnDamage(damage, hit.point, hit.normal);
+                    }
+                }
             }
         }
-
         StartCoroutine(CoShotEffect(m, hitPosition));
     }
 

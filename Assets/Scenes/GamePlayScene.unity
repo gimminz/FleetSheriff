@@ -670,7 +670,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.5
+    widthMultiplier: 1
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -2289,6 +2289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   lockOnManager: {fileID: 1904449431}
+  enemyIndicator: {fileID: 0}
 --- !u!65 &1621325220
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2467,6 +2468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 410ddb18f122689459bfd408ed14c901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lockOnManager: {fileID: 1904449431}
   muzzles:
   - muzzleTransform: {fileID: 397609298}
     lineRenderer: {fileID: 397609299}
@@ -2873,7 +2875,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.5
+    widthMultiplier: 1
     widthCurve:
       serializedVersion: 2
       m_Curve:
