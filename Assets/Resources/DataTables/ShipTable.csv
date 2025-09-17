@@ -1,0 +1,4 @@
+ID,Item_address,Ship_name,Ship_HP,Ship_Shield,Shield-regen,Ship_Max_Speed,MAX_Search_range,Max_targeting,Unlock_Lv.,Unlock_Precondition,Buy_Cost,Ship_Description
+412500,StarSparrow3.prefabs,표준형,1200,400,40,120,500,5,,기본 지급,,
+490307,StarSparrow8.prefabs,고속형,900,450,90,150,350,3,7,,25000,
+416815,StarSparrow20.prefabs,선체 강화형,1600,600,50,100,700,8,15,,35000,
