@@ -5,6 +5,7 @@ public class UiShipList : MonoBehaviour
 {
     public Transform spaceShipListRoot;
     public UiShipExplain explain;
+    public UiShipExplain centerPanel;
 
     private readonly List<ShipInSelectPanel> panels = new();
 
@@ -14,10 +15,7 @@ public class UiShipList : MonoBehaviour
         panels.AddRange(spaceShipListRoot.GetComponentsInChildren<ShipInSelectPanel>(includeInactive: true));
     }
 
-    private void OnEnable()
-    {
-        Refresh();
-    }
+    private void OnEnable() => Refresh();
 
     public void Refresh()
     {
@@ -49,6 +47,7 @@ public class UiShipList : MonoBehaviour
 
     private void OnSelectShip(ShipData data)
     {
-        if (explain) explain.SetData(data);
+        explain?.SetData(data);   
+        centerPanel?.SetData(data);
     }
 }

@@ -1,16 +1,19 @@
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SelectStartShipPanel : GenericWindow
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public Button backButton;
+    private void Awake()
     {
-        
+        if (backButton != null) backButton.onClick.AddListener(() => manager.Open(Menus.ReadyWindowPanel));
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Open()
     {
-        
+        if (backButton != null) firstSelected = backButton.gameObject;
+
+        base.Open();
     }
 }

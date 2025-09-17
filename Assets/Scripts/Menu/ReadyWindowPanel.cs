@@ -10,7 +10,7 @@ public class ReadyWindowPanel : GenericWindow
 
     private void Awake()
     {
-        if (backButton != null) backButton.onClick.AddListener(() => manager.Open(Menus.ReadyWindowPanel));
+        if (backButton != null) backButton.onClick.AddListener(() => manager.Open(Menus.MainMenuSelect));
         if (goButton != null) goButton.onClick.AddListener(OnClickGo);
     }
 
