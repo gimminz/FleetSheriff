@@ -36,7 +36,7 @@ public class PlaneController : MonoBehaviour
     public void SetRotationInput(Vector3 input)
     {
         rotationInput = input;
-        Debug.Log($"[PLANE] rotationInput = {rotationInput}");
+        //Debug.Log($"[PLANE] rotationInput = {rotationInput}");
     }
 
     public void SetForwardInput(float value)

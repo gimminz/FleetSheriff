@@ -14,15 +14,8 @@ public class Enemy : LivingEntity
     {
         base.Die(); 
 
-        if (lockOnManager != null)
-        {
-            lockOnManager.RemoveLockOn(transform);
-        }
-
-        if (enemyIndicator != null)
-        {
-            enemyIndicator.RemoveEnemy(transform);
-        }
+        if (lockOnManager != null) lockOnManager.RemoveLockOn(transform);
+        if (enemyIndicator != null) enemyIndicator.RemoveEnemy(transform);
 
         Destroy(gameObject, 0.2f);
     }
