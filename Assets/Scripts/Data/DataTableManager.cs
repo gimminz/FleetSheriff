@@ -23,12 +23,15 @@ public class DataTableManager : MonoBehaviour
         var part = new PartTable();
         part.Load(DataTableIds.Part);
         tables[DataTableIds.Part] = part;
+
+        var weap = new WeaponTable();
+        weap.Load(DataTableIds.Weapon);
+        tables[DataTableIds.Weapon] = weap;
     }
 
     public static PlayerStatusTable PlayerStatusTable
     {
         get { return Get<PlayerStatusTable>(DataTableIds.PlayerStatus); }
-
     }
 
     public static ShipTable ShipTable
@@ -38,6 +41,11 @@ public class DataTableManager : MonoBehaviour
     public static PartTable PartTable
     {
         get { return Get<PartTable>(DataTableIds.Part); }
+    }
+
+    public static WeaponTable WeaponTable
+    {
+        get { return Get<WeaponTable>(DataTableIds.Weapon); }
     }
 
     public static T Get<T>(string id) where T : DataTable

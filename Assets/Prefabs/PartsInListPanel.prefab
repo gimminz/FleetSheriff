@@ -148,7 +148,6 @@ GameObject:
   - component: {fileID: 4508504880468686585}
   - component: {fileID: 986621631705904958}
   - component: {fileID: 4090703082192004504}
-  - component: {fileID: 7640369622991945753}
   m_Layer: 5
   m_Name: PartsInListPanel
   m_TagString: Untagged
@@ -258,17 +257,3 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &7640369622991945753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3865620950980766874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2695b061250aa8941b02d9e5d7241584, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameText: {fileID: 0}
-  button: {fileID: 0}
