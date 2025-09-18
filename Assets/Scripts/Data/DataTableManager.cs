@@ -19,16 +19,25 @@ public class DataTableManager : MonoBehaviour
         var shipTable = new ShipTable();
         shipTable.Load(DataTableIds.Ship);
         tables.Add(DataTableIds.Ship, shipTable);
+
+        var part = new PartTable();
+        part.Load(DataTableIds.Part);
+        tables[DataTableIds.Part] = part;
     }
 
     public static PlayerStatusTable PlayerStatusTable
     {
         get { return Get<PlayerStatusTable>(DataTableIds.PlayerStatus); }
+
     }
 
     public static ShipTable ShipTable
     {
         get { return Get<ShipTable>(DataTableIds.Ship); }
+    }
+    public static PartTable PartTable
+    {
+        get { return Get<PartTable>(DataTableIds.Part); }
     }
 
     public static T Get<T>(string id) where T : DataTable

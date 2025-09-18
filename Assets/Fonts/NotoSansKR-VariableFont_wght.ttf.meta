@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c421e9d5a55d40043bd78fade9671e4a
+guid: 23841ce3627ac0943a8836a39ecb07fa
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - SF_HambakSnow
+  - Noto Sans KR
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
