@@ -7,7 +7,7 @@ public class UiShipWeaponsController : MonoBehaviour
     public GameObject weaponListContainer;
 
     public UiWeaponsList weaponsList;
-    public UiPartExplain explain;
+    public UiWeaponExplain explain;
 
     public TextMeshProUGUI upAddressText;
     public TextMeshProUGUI leftAddressText;
@@ -38,12 +38,9 @@ public class UiShipWeaponsController : MonoBehaviour
 
         if (explain)
         {
-            explain.SetData(new PartData
-            {
-                ItemDisplayName = w.DisplayName,
-                ItemDescription = w.ItemDescription
-            });
+            explain.SetData(w); 
         }
+
         var target = GetAddressText(currentSlot);
         if (target)
             target.text = string.IsNullOrWhiteSpace(w.WeaponAddress) ? "-" : w.WeaponAddress;
