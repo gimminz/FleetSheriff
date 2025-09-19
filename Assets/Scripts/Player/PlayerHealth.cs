@@ -41,6 +41,8 @@ public class PlayerHealth : LivingEntity
         if (planeController) planeController.enabled = false;
         if (gun) gun.enabled = false;
 
+        gameObject.SetActive(false);
+
         Debug.Log("[PlayerHealth] Player died.");
     }
     public float GetCurrentHealth()
