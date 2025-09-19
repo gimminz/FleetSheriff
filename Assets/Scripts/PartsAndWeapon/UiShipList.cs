@@ -26,7 +26,7 @@ public class UiShipList : MonoBehaviour
             return;
         }
 
-        var sorted = table.GetAllSortedByName(ascending: true, locale: "ko-KR");
+        var sorted = table.GetAllSortedByName(ascending: false, locale: "ko-KR");
 
         int bindCount = Mathf.Min(sorted.Count, panels.Count);
         for (int i = 0; i < bindCount; i++)
