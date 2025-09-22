@@ -6,11 +6,24 @@ public class ReadyWindowPanel : GenericWindow
 {
     public Button goButton;
     public Button backButton;
-    public GameObject infoPanel;  
+    public GameObject infoPanel;
 
     private void Awake()
     {
-        if (backButton != null) backButton.onClick.AddListener(() => manager.Open(Menus.MainMenuSelect));
+
+        if (backButton != null)
+        {
+            backButton.onClick.AddListener(() =>
+            {
+                Debug.Log("[BackButton] Clicked - Try to open MainMenuSelect");
+                manager.Open(Menus.MainMenuSelect);
+            });
+        }
+        else
+        {
+            Debug.LogError("[BackButton] is NULL!");
+        }
+
         if (goButton != null) goButton.onClick.AddListener(OnClickGo);
     }
 

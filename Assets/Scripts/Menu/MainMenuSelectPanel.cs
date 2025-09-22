@@ -3,13 +3,13 @@ using UnityEngine.UI;
 
 public class MainMenuSelectPanel : GenericWindow
 {
-    public Button startShipButton;
+    public Button starShipButton;
     public Button missionButton;
     public GameObject infoPanel;
 
     private void Awake()
     {
-        if (startShipButton != null)  startShipButton.onClick.AddListener(OnClickStartShip);
+        if (starShipButton != null)  starShipButton.onClick.AddListener(OnClickStartShip);
         if (missionButton != null) missionButton.onClick.AddListener(OnClickMission);
     }
     public override void Open()
@@ -21,7 +21,7 @@ public class MainMenuSelectPanel : GenericWindow
 
     private void OnClickStartShip()
     {
-        manager.Open(Menus.ManageStartShip);
+        manager.Open(Menus.ManageStarShip);
     }
 
     private void OnClickMission()

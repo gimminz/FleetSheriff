@@ -3,7 +3,7 @@ using UnityEngine;
 public enum Menus
 {
     MainMenuSelect,   
-    ManageStartShip,
+    ManageStarShip,
     MissionInfo,
     ReadyWindowPanel,
 }
