@@ -1,89 +1,106 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class GameFlowManager : MonoBehaviour
 {
-    [Header("Refs")]
-    public PlayerHealth player;
-    public RestartPanelController restartPanel;
+    public static GameFlowManager Instance { get; private set; }
+    
+    public string mainMenuSceneName = "MainMenuScene";
+    public OptionPanelController optionPanel;
 
-    [Header("Main Menu Options")]
-    public bool useSeparateMainMenuScene = true;
-    public string mainMenuSceneName = "MainMenu";
+    public MonoBehaviour[] pauseTargets; //Pause Scripts
 
-    public MenuManager menuManager;           // 같은 씬 내 UI 전환용
-    public Menus mainMenuId = Menus.MainMenuSelect;
+    public PlayerInput playerInput;      
+    public string playerActionMapName = "Player";
+    public string uiActionMapName = "UI";
 
-    public void OnClickMainMenu()
+    float _prevTimeScale = 1f;
+    bool _isPaused = false;
+
+    void Awake()
     {
-        Debug.Log($"[GFM] MainMenu clicked | useSeparateMainMenuScene={useSeparateMainMenuScene}");
+        if (Instance && Instance != this) { Destroy(gameObject); return; }
+        Instance = this;
 
-        // 항상 일단 시간/오디오 복구
-        Time.timeScale = 1f;
-        AudioListener.pause = false;
+        _prevTimeScale = 1f;
+        _isPaused = false;
 
-        if (useSeparateMainMenuScene)
+        if (optionPanel) optionPanel.Hide();
+    }
+
+    public void OpenOption()
+    {
+        PauseGame();
+        if (optionPanel) optionPanel.Show();
+    }
+
+    public void CloseOption()
+    {
+        if (optionPanel) optionPanel.Hide();
+        ResumeGame();
+    }
+
+    public void PauseGame()
+    {
+        if (_isPaused) return;
+
+        _prevTimeScale = Time.timeScale;
+        Time.timeScale = 0f;
+        AudioListener.pause = true;
+        _isPaused = true;
+
+        SetPauseTargetsEnabled(false);
+
+        if (playerInput && !string.IsNullOrEmpty(uiActionMapName))
         {
-            if (string.IsNullOrEmpty(mainMenuSceneName))
-            {
-                Debug.LogError("[GFM] mainMenuSceneName 비어있음");
-                return;
-            }
-
-            // 빌드 세팅에 등록되어 있는지 빠른 검증
-            bool inBuild = false;
-            for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
-            {
-                string path = SceneUtility.GetScenePathByBuildIndex(i);
-                var name = System.IO.Path.GetFileNameWithoutExtension(path);
-                if (name == mainMenuSceneName) { inBuild = true; break; }
-            }
-            if (!inBuild)
-            {
-                Debug.LogError($"[GFM] 씬 '{mainMenuSceneName}' 이(가) Build Settings에 없음 (File > Build Settings > Scenes In Build 확인)");
-                return;
-            }
-
-            Debug.Log($"[GFM] Loading scene '{mainMenuSceneName}'...");
-            SceneManager.LoadScene(mainMenuSceneName);
-        }
-        else
-        {
-            if (!menuManager)
-            {
-                Debug.LogError("[GFM] menuManager 레퍼런스가 비어있음 (같은 씬 패널 전환 모드인데 MenuManager 미할당)");
-                return;
-            }
-
-            Debug.Log($"[GFM] Opening menu '{mainMenuId}' via MenuManager...");
-            menuManager.Open(mainMenuId);
+            var current = playerInput.currentActionMap?.name;
+            if (current != uiActionMapName) playerInput.SwitchCurrentActionMap(uiActionMapName);
         }
     }
 
-    public void OnClickRestart()
+    public void ResumeGame()
     {
-        Debug.Log("[GFM] Restart clicked -> Reload current scene");
-        Time.timeScale = 1f;
-        AudioListener.pause = false;
-        var idx = SceneManager.GetActiveScene().buildIndex;
+        if (!_isPaused) return;
 
-        // 현재 씬이 빌드세팅에 없는 경우 대비
-        if (idx < 0)
+        Time.timeScale = _prevTimeScale <= 0f ? 1f : _prevTimeScale;
+        AudioListener.pause = false;
+        _isPaused = false;
+
+        SetPauseTargetsEnabled(true);
+
+        if (playerInput && !string.IsNullOrEmpty(playerActionMapName))
         {
-            Debug.LogError("[GFM] 현재 씬이 Build Settings에 등록되어 있지 않음. 이름으로 로드 시도");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-        else
-        {
-            SceneManager.LoadScene(idx);
+            var current = playerInput.currentActionMap?.name;
+            if (current != playerActionMapName) playerInput.SwitchCurrentActionMap(playerActionMapName);
         }
     }
 
-    public void OnClickResume()
+    public void RestartGame()
     {
-        Debug.Log("[GFM] Resume clicked");
         Time.timeScale = 1f;
         AudioListener.pause = false;
-        if (restartPanel) restartPanel.Hide();
+        _isPaused = false;
+
+        var active = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(active.buildIndex, LoadSceneMode.Single);
+    }
+
+    public void GoToMainMenu()
+    {
+        Time.timeScale = 1f;
+        AudioListener.pause = false;
+        _isPaused = false;
+
+        SceneManager.LoadScene(mainMenuSceneName, LoadSceneMode.Single);
+    }
+
+    void SetPauseTargetsEnabled(bool enabled)
+    {
+        if (pauseTargets == null) return;
+        foreach (var t in pauseTargets)
+        {
+            if (t) t.enabled = enabled;
+        }
     }
 }

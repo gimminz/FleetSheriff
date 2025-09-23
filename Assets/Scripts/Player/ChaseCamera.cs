@@ -3,8 +3,8 @@ using UnityEngine;
 public class ChaseCamera : MonoBehaviour
 {
     public Transform target;
-    public Vector3 offset = new Vector3(0, 5, -10);
-    public float followSpeed = 5f;
+    public Vector3 offset = new Vector3(0, 5, -15);
+    public float followSpeed = 50f;
 
     void LateUpdate()
     {

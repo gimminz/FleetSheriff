@@ -18,13 +18,6 @@ public class UIClickProbe : MonoBehaviour
 
             _hits.Clear();
             EventSystem.current.RaycastAll(_ped, _hits);
-
-            if (_hits.Count == 0) Debug.Log("UI Raycast: no hits");
-            else
-            {
-                Debug.Log($"UI Raycast hits ({_hits.Count}):");
-                foreach (var h in _hits) Debug.Log($" - {h.gameObject.name}");
-            }
         }
     }
 }
