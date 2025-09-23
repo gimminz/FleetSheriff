@@ -309,8 +309,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Manage SpaceShip
   m_isRightToLeft: 0
+<<<<<<< Updated upstream
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> Stashed changes
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -445,8 +450,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: ' Mission Select'
   m_isRightToLeft: 0
+<<<<<<< Updated upstream
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> Stashed changes
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -581,8 +591,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Level Exp Gold
   m_isRightToLeft: 0
+<<<<<<< Updated upstream
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> Stashed changes
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
