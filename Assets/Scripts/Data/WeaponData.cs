@@ -13,8 +13,16 @@ public class WeaponData
     public string WeaponAddress { get; set; }
     public string DisplayName { get; set; }
     public int Category { get; set; }
+    public int? AmmoProjectile { get; set; }      
+    public float? Effect1 { get; set; }          
+    public float? Effect2 { get; set; }           
+    public float? Effect3 { get; set; }         
+    public float? RateOfFire { get; set; }       
+    public float? MaxRange { get; set; }        
+    public int? AmmoCapacity { get; set; }     
+    public int? NumberOfUses { get; set; }    
+    public float? UseCooltime { get; set; }
     public int Hardpoint { get; set; }
-
     public int? UnlockLv { get; set; }
     public string UnlockPrecondition { get; set; }
     public int? Cost { get; set; }
@@ -34,11 +42,6 @@ public class WeaponTable : DataTable
 
         var path = string.Format(FormatPath, filename);
         var ta = Resources.Load<TextAsset>(path);
-        if (ta == null)
-        {
-            Debug.LogError($"WeaponTable: CSV not found at Resources/{path}.csv");
-            return;
-        }
 
         using (var reader = new StringReader(ta.text))
         using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
@@ -55,6 +58,15 @@ public class WeaponTable : DataTable
                     WeaponAddress = GetStr(csv, 2),
                     DisplayName = GetStr(csv, 3),
                     Category = GetInt(csv, 4),
+                    AmmoProjectile = GetNullableInt(csv, 5),
+                    Effect1 = GetNullableFloat(csv, 6),
+                    Effect2 = GetNullableFloat(csv, 7),
+                    Effect3 = GetNullableFloat(csv, 8),
+                    RateOfFire = GetNullableFloat(csv, 9),
+                    MaxRange = GetNullableFloat(csv, 10),
+                    AmmoCapacity = GetNullableInt(csv, 11),
+                    NumberOfUses = GetNullableInt(csv, 12),
+                    UseCooltime = GetNullableFloat(csv, 13),
                     Hardpoint = GetInt(csv, 14),
                     UnlockLv = GetNullableInt(csv, 15),
                     UnlockPrecondition = GetStr(csv, 16),
@@ -69,10 +81,6 @@ public class WeaponTable : DataTable
                 {
                     byId.Add(d.Id, d);
                     cache.Add(d);
-                }
-                else
-                {
-                    Debug.LogError($"WeaponTable: duplicated ID {d.Id}");
                 }
             }
         }
@@ -99,5 +107,11 @@ public class WeaponTable : DataTable
         var s = GetStr(csv, index);
         if (string.IsNullOrWhiteSpace(s)) return null;
         return int.TryParse(s, NumberStyles.Integer, CultureInfo.InvariantCulture, out var v) ? v : (int?)null;
+    }
+    private static float? GetNullableFloat(CsvReader csv, int index)
+    {
+        var s = GetStr(csv, index);
+        if (string.IsNullOrWhiteSpace(s)) return null;
+        return float.TryParse(s, NumberStyles.Float | NumberStyles.AllowThousands, CultureInfo.InvariantCulture, out var v) ? v : (float?)null;
     }
 }

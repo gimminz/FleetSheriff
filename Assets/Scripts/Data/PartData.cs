@@ -37,12 +37,6 @@ public class PartTable : DataTable
 
         var path = string.Format(FormatPath, filename); 
         var ta = Resources.Load<TextAsset>(path);
-        //debug
-        if (ta == null)
-        {
-            Debug.LogError($"PartTable: CSV not found at Resources/{path}.csv");
-            return;
-        }
 
         using (var reader = new StringReader(ta.text))
         using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))

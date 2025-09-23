@@ -27,26 +27,17 @@ public class DataTableManager : MonoBehaviour
         var weap = new WeaponTable();
         weap.Load(DataTableIds.Weapon);
         tables[DataTableIds.Weapon] = weap;
+
+        var effect = new EffectTable();         
+        effect.Load(DataTableIds.Effect);
+        tables[DataTableIds.Effect] = effect;
     }
 
-    public static PlayerStatusTable PlayerStatusTable
-    {
-        get { return Get<PlayerStatusTable>(DataTableIds.PlayerStatus); }
-    }
-
-    public static ShipTable ShipTable
-    {
-        get { return Get<ShipTable>(DataTableIds.Ship); }
-    }
-    public static PartTable PartTable
-    {
-        get { return Get<PartTable>(DataTableIds.Part); }
-    }
-
-    public static WeaponTable WeaponTable
-    {
-        get { return Get<WeaponTable>(DataTableIds.Weapon); }
-    }
+    public static PlayerStatusTable PlayerStatusTable => Get<PlayerStatusTable>(DataTableIds.PlayerStatus);
+    public static ShipTable ShipTable => Get<ShipTable>(DataTableIds.Ship);
+    public static PartTable PartTable => Get<PartTable>(DataTableIds.Part);
+    public static WeaponTable WeaponTable => Get<WeaponTable>(DataTableIds.Weapon);
+    public static EffectTable EffectTable => Get<EffectTable>(DataTableIds.Effect);
 
     public static T Get<T>(string id) where T : DataTable
     {   

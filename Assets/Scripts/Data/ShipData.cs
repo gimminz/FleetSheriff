@@ -8,8 +8,8 @@ using UnityEngine;
 public class ShipData
 {
     [Name("ID")] public int Id { get; set; }
-    [Name("Item_address")] public string ItemAddress { get; set; }
     [Name("Ship_name")] public string ShipName { get; set; }
+    [Name("Ship_address")] public string ItemAddress { get; set; }
     [Name("Ship_HP")] public int ShipHP { get; set; }
     [Name("Ship_Shield")] public int ShipShield { get; set; }
     [Name("Shield-regen")] public float ShieldRegen { get; set; }
@@ -36,20 +36,7 @@ public class ShipTable : DataTable
 
         var path = string.Format(FormatPath, filename); 
         var textAsset = Resources.Load<TextAsset>(path);
-        //debug
-        if (textAsset == null)
-        {
-            Debug.LogError($"ShipTable: CSV not found at Resources/{path}.csv");
-            return;
-        }
-
         var list = LoadCSV<ShipData>(textAsset.text);
-        //debug
-        if (list == null || list.Count == 0)
-        {
-            Debug.LogError("ShipTable: CSV has no rows");
-            return;
-        }
 
         foreach (var ship in list)
         {
@@ -61,10 +48,6 @@ public class ShipTable : DataTable
             {
                 table.Add(ship.Id, ship);
                 cacheList.Add(ship);
-            }
-            else
-            {
-                Debug.LogError($"ShipTable: duplicated ID {ship.Id}");
             }
         }
     }
