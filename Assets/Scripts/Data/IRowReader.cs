@@ -1,17 +1,20 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Text;
 using CsvHelper;
 public interface IRowReader
 {
     bool Has(string header);
+
     bool TryGetString(string header, out string value);
     string GetString(string header, string @default = null);
+
     int GetInt(string header, int @default = 0);
     int? GetNullableInt(string header);
+
     float GetFloat(string header, float @default = 0f);
     float? GetNullableFloat(string header);
-
     string GetFirstString(params string[] headers);
 }
 public sealed class CsvRowReader : IRowReader
@@ -28,18 +31,23 @@ public sealed class CsvRowReader : IRowReader
 
         for (int i = 0; i < headers.Length; i++)
         {
-            var h = headers[i]?.Trim();
-            if (!string.IsNullOrEmpty(h) && !indexMap.ContainsKey(h))
-                indexMap[h] = i;
+            var raw = headers[i]?.Trim();
+            if (string.IsNullOrEmpty(raw)) continue;
+
+            if (!indexMap.ContainsKey(raw)) indexMap[raw] = i;
+
+            var norm = NormalizeKey(raw);
+            if (!indexMap.ContainsKey(norm)) indexMap[norm] = i;
         }
     }
 
-    public bool Has(string header) => indexMap.ContainsKey(header);
+    public bool Has(string header) => indexMap.ContainsKey(header) || indexMap.ContainsKey(NormalizeKey(header));
 
     private string Field(string header)
     {
-        if (!indexMap.TryGetValue(header, out var i)) return null;
-        return csv.TryGetField(i, out string s) ? s?.Trim() : null;
+        if (indexMap.TryGetValue(header, out var i) || indexMap.TryGetValue(NormalizeKey(header), out i))
+            return csv.TryGetField(i, out string s) ? s?.Trim() : null;
+        return null;
     }
 
     public bool TryGetString(string header, out string value)
@@ -89,7 +97,22 @@ public sealed class CsvRowReader : IRowReader
         }
         return null;
     }
+
+    private static string NormalizeKey(string s)
+    {
+        if (string.IsNullOrEmpty(s)) return s;
+        var sb = new StringBuilder(s.Length);
+        foreach (var ch in s)
+        {
+            if (char.IsLetterOrDigit(ch)) sb.Append(char.ToLowerInvariant(ch));
+            else sb.Append('_'); 
+        }
+        var norm = sb.ToString();
+        while (norm.Contains("__")) norm = norm.Replace("__", "_");
+        return norm.Trim('_');
+    }
 }
+
 public static class CsvReaderRowExtensions
 {
     public static IRowReader AsRowReader(this CsvReader csv, CultureInfo culture = null)

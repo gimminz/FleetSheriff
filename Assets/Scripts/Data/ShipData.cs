@@ -4,92 +4,90 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using UnityEngine;
-
 public class ShipData
 {
-    [Name("ID")] public int Id { get; set; }
-    [Name("Ship_name")] public string ShipName { get; set; }
-    [Name("Ship_address")] public string ItemAddress { get; set; }
-    [Name("Ship_HP")] public int ShipHP { get; set; }
-    [Name("Ship_Shield")] public int ShipShield { get; set; }
-    [Name("Shield-regen")] public float ShieldRegen { get; set; }
-    [Name("Ship_Max_Speed")] public float ShipMaxSpeed { get; set; }
-    [Name("MAX_Search_range")] public float MaxSearchRange { get; set; }
-    [Name("Max_targeting")] public int MaxTargeting { get; set; }
-    [Name("Unlock_Lv.")] public int? UnlockLv { get; set; }
-    [Name("Unlock_Precondition")] public string UnlockPrecondition { get; set; }
-    [Name("Buy_Cost")] public int? BuyCost { get; set; }
-    [Name("Ship_Description")] public string ShipDescription { get; set; }
+    public int Id { get; set; }                 
+    public string ShipName { get; set; }    
+    public string KoreanName { get; set; }       
+    public string ItemAddress { get; set; }    
+    public int ShipHP { get; set; }             
+    public float ShipShield { get; set; }       
+    public float ShieldRegen { get; set; }     
+    public float ShipMaxSpeed { get; set; }     
+    public float MaxSearchRange { get; set; }    
+    public int MaxTargeting { get; set; }     
+    public int? UnlockLv { get; set; }           
+    public string UnlockPrecondition { get; set; }
+    public int? BuyCost { get; set; }        
+    public string ShipDescription { get; set; }
+    public string DisplayName => string.IsNullOrWhiteSpace(KoreanName) ? ShipName : KoreanName;
 
-    public override string ToString() => $"{Id} / {ShipName} / HP:{ShipHP} / Shield:{ShipShield} / Regen:{ShieldRegen} / Speed:{ShipMaxSpeed}";
+    public override string ToString()
+        => $"{Id} / {DisplayName} / HP:{ShipHP} / Shield:{ShipShield} / Regen:{ShieldRegen} / Speed:{ShipMaxSpeed}";
 }
 
-public class ShipTable : DataTable
+public class ShipTable : HeaderCsvTable<ShipData>
 {
-    private readonly Dictionary<int, ShipData> table = new Dictionary<int, ShipData>();
-    private readonly List<ShipData> cacheList = new List<ShipData>();
+    protected override int GetId(ShipData row) => row.Id;
 
-    public override void Load(string filename)
+    protected override ShipData MapRow(IRowReader r, string locale)
     {
-        table.Clear();
-        cacheList.Clear();
+        var id = r.GetInt("id");
+        var shipName = r.GetString("ship_name");
+        var krName = r.GetString("korean_name");
 
-        var path = string.Format(FormatPath, filename); 
-        var textAsset = Resources.Load<TextAsset>(path);
-        var list = LoadCSV<ShipData>(textAsset.text);
-
-        foreach (var ship in list)
+        return new ShipData
         {
-            if (ship == null) continue;
+            Id = id,
+            ShipName = string.IsNullOrWhiteSpace(shipName) ? $"Ship_{id}" : shipName,
+            KoreanName = krName,
+            ItemAddress = r.GetString("ship_address"),
 
-            if (string.IsNullOrWhiteSpace(ship.ShipName)) ship.ShipName = $"Ship_{ship.Id}";
+            ShipHP = r.GetInt("ship_hp"),
+            ShipShield = r.GetFloat("ship_shield"),
+            ShieldRegen = r.GetFloat("shield_regen"),
+            ShipMaxSpeed = r.GetFloat("ship_max_speed"),
+            MaxSearchRange = r.GetFloat("max_search_range"),
+            MaxTargeting = r.GetInt("max_targeting"),
 
-            if (!table.ContainsKey(ship.Id))
-            {
-                table.Add(ship.Id, ship);
-                cacheList.Add(ship);
-            }
-        }
+            UnlockLv = r.GetNullableInt("unlock_lv"),
+            UnlockPrecondition = r.GetString("unlock_precondition"),
+            BuyCost = r.GetNullableInt("buy_cost"),
+            ShipDescription = r.GetString("ship_description", "")
+        };
     }
+    public ShipData Get(int id) => TryGetById(id, out var d) ? d : null;
 
-    public ShipData Get(int id)
-    {
-        return table.TryGetValue(id, out var data) ? data : null;
-    }
-
-    public List<ShipData> GetAll()
-    {
-        return new List<ShipData>(cacheList);
-    }
+    public List<ShipData> GetAll() => new List<ShipData>(All);
 
     public List<ShipData> GetAllSortedByName(bool ascending = true, string locale = "ko-KR")
     {
-        var comparer = StringComparer.Create(new CultureInfo(locale), ignoreCase: true);
-        var ordered = ascending
-            ? cacheList.OrderBy(s => s.ShipName, comparer)
-            : cacheList.OrderByDescending(s => s.ShipName, comparer);
-        return ordered.ToList();
+        var comp = System.StringComparer.Create(new CultureInfo(locale), true);
+        var q = ascending
+            ? All.OrderBy(s => s.DisplayName, comp)
+            : All.OrderByDescending(s => s.DisplayName, comp);
+        return q.ToList();
     }
 
     public List<ShipData> FilterUnlockedByLevel(int playerLevel, bool includeNoRequirement = true)
     {
-        return cacheList.Where(s =>
+        return All.Where(s =>
             (includeNoRequirement && s.UnlockLv == null) ||
             (s.UnlockLv.HasValue && s.UnlockLv.Value <= playerLevel)).ToList();
     }
 
     public List<ShipData> FilterUnlockedSortedByName(int playerLevel, bool ascending = true, string locale = "ko-KR")
     {
-        var comparer = StringComparer.Create(new CultureInfo(locale), ignoreCase: true);
-        var unlocked = FilterUnlockedByLevel(playerLevel, includeNoRequirement: true);
+        var comp = System.StringComparer.Create(new CultureInfo(locale), true);
+        var unlocked = FilterUnlockedByLevel(playerLevel, true);
         return ascending
-            ? unlocked.OrderBy(s => s.ShipName, comparer).ToList()
-            : unlocked.OrderByDescending(s => s.ShipName, comparer).ToList();
+            ? unlocked.OrderBy(s => s.DisplayName, comp).ToList()
+            : unlocked.OrderByDescending(s => s.DisplayName, comp).ToList();
     }
 
     public ShipData GetRandom()
     {
-        if (cacheList.Count == 0) return null;
-        return cacheList[UnityEngine.Random.Range(0, cacheList.Count)];
+        if (All.Count == 0) return null;
+        return All[UnityEngine.Random.Range(0, All.Count)];
     }
 }

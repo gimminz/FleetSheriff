@@ -31,6 +31,18 @@ public class DataTableManager : MonoBehaviour
         var effect = new EffectTable();         
         effect.Load(DataTableIds.Effect);
         tables[DataTableIds.Effect] = effect;
+
+        var npc = new NpcTable();
+        npc.Load(DataTableIds.Npc);
+        tables[DataTableIds.Npc] = npc;
+
+        var mission = new MissionTable();
+        mission.Load(DataTableIds.Mission);
+        tables[DataTableIds.Mission] = mission;
+
+        var lv = new LvTable();
+        lv.Load(DataTableIds.Lv);
+        tables[DataTableIds.Lv] = lv;
     }
 
     public static PlayerStatusTable PlayerStatusTable => Get<PlayerStatusTable>(DataTableIds.PlayerStatus);
@@ -38,6 +50,9 @@ public class DataTableManager : MonoBehaviour
     public static PartTable PartTable => Get<PartTable>(DataTableIds.Part);
     public static WeaponTable WeaponTable => Get<WeaponTable>(DataTableIds.Weapon);
     public static EffectTable EffectTable => Get<EffectTable>(DataTableIds.Effect);
+    public static NpcTable NpcTable => Get<NpcTable>(DataTableIds.Npc);
+    public static MissionTable MissionTable => Get<MissionTable>(DataTableIds.Mission);
+    public static LvTable LvTable => Get<LvTable>(DataTableIds.Lv);
 
     public static T Get<T>(string id) where T : DataTable
     {   

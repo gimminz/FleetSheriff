@@ -47,10 +47,11 @@ public class UiShipPartsController : MonoBehaviour
         }
     }
 
-    private void SetModeShipList()
+    public void SetModeShipList()
     {
         if (shipListContainer) shipListContainer.SetActive(true);
         if (partsListContainer) partsListContainer.SetActive(false);
+        explain?.Clear();
     }
 
     private void SetModePartsList()
