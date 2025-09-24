@@ -1,9 +1,11 @@
-// Assets/Scripts/Parts/UiShipPartsController.cs
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class UiShipPartsController : MonoBehaviour
 {
+    public SelectedShipContext selectedShipContext;
+
     public GameObject shipListContainer;   
     public GameObject partsListContainer;  
         
@@ -30,7 +32,15 @@ public class UiShipPartsController : MonoBehaviour
     {
         currentSlot = slot;
         SetModePartsList();
-        partsList.Show(currentSlot, OnSelectPart);
+        partsList.Show(currentSlot, part =>
+        {
+            OnSelectPart(part); 
+            if (selectedShipContext != null && selectedShipContext.ActiveShipId.HasValue)
+            {
+                selectedShipContext.SetPart(selectedShipContext.ActiveShipId.Value, currentSlot, part?.Id);
+            }
+        });
+
         explain?.Clear();
     }
 
@@ -44,6 +54,27 @@ public class UiShipPartsController : MonoBehaviour
         if (target)
         {
             target.text = string.IsNullOrWhiteSpace(part.ItemAddress) ? "-" : part.ItemAddress;
+        }
+    }
+    public void ApplyPartToSlot(ShipSlot slot, PartData part) //revert
+    {
+        if (part != null)explain?.SetData(part);
+
+        var target = GetAddressText(slot);
+        if (target) target.text = string.IsNullOrWhiteSpace(part?.ItemAddress) ? "-" : part.ItemAddress;
+    }
+
+    public void ApplyPartsByIds(Dictionary<ShipSlot, int?> parts)
+    {
+        var partTable = DataTableManager.PartTable;
+        if (parts == null || partTable == null) return;
+
+
+        foreach (var kv in parts)
+        {
+            var id = kv.Value;
+            PartData p = (id.HasValue) ? partTable.Get(id.Value) : null;
+            ApplyPartToSlot(kv.Key, p);
         }
     }
 

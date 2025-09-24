@@ -6,6 +6,8 @@ public class UiShipList : MonoBehaviour
     public Transform spaceShipListRoot;
     public UiShipExplain explain;
     public UiShipExplain centerPanel;
+    public SelectedShipContext selectedShipContext;
+    public UiShipPartsController shipPartsController;
 
     private readonly List<ShipInSelectPanel> panels = new();
 
@@ -47,7 +49,18 @@ public class UiShipList : MonoBehaviour
 
     private void OnSelectShip(ShipData data)
     {
-        explain?.SetData(data);   
+        explain?.SetData(data);
         centerPanel?.SetData(data);
+        selectedShipContext.SetActiveShip(data.Id);
+
+        if (selectedShipContext != null && shipPartsController != null)
+        {
+            if (selectedShipContext.TryGetParts(data.Id, out var partsMap))
+            {
+                shipPartsController.ApplyPartsByIds(partsMap);
+            }
+            else shipPartsController.ApplyPartsByIds(null);
+
+        }
     }
 }
