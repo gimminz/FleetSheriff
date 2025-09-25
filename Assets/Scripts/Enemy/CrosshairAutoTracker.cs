@@ -19,14 +19,18 @@ public class CrosshairAutoTracker : MonoBehaviour
     public Color normalColor = Color.white;
     public Color lockedColor = Color.red;
 
+    private Graphic[] _crosshairGraphics;
+
     public bool IsLocked { get; private set; }
     public Transform CurrentTarget { get; private set; }
+
 
     static readonly List<Transform> _candidate = new List<Transform>();
 
     void Reset()
     {
         crosshairImage = crosshair ? crosshair.GetComponent<Image>() : null;
+        _crosshairGraphics = crosshair ? crosshair.GetComponentsInChildren<Graphic>(true) : null;
     }
 
     void LateUpdate()
@@ -95,7 +99,7 @@ public class CrosshairAutoTracker : MonoBehaviour
                 if (locked != IsLocked)
                 {
                     IsLocked = locked;
-                    if (crosshairImage) crosshairImage.color = IsLocked ? lockedColor : normalColor;
+                    SetCrosshairColor(IsLocked ? lockedColor : normalColor); // ← 여기만 교체
                 }
             }
             else ReleaseLock();
@@ -111,7 +115,25 @@ public class CrosshairAutoTracker : MonoBehaviour
         if (IsLocked)
         {
             IsLocked = false;
-            if (crosshairImage) crosshairImage.color = normalColor;
+            SetCrosshairColor(normalColor);
+        }
+    }
+    void SetCrosshairColor(Color c)
+    {
+        if ((_crosshairGraphics == null || _crosshairGraphics.Length == 0) && crosshair)
+            _crosshairGraphics = crosshair.GetComponentsInChildren<Graphic>(true);
+
+        if (_crosshairGraphics != null)
+        {
+            for (int i = 0; i < _crosshairGraphics.Length; i++)
+            {
+                var g = _crosshairGraphics[i];
+                if (g) g.color = c;
+            }
+        }
+        else if (crosshairImage)
+        {
+            crosshairImage.color = c;
         }
     }
 

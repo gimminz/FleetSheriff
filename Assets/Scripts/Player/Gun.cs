@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Gun : MonoBehaviour
@@ -11,18 +10,16 @@ public class Gun : MonoBehaviour
         public LineRenderer lineRenderer;
     }
 
-    public enum FireMode
-    {
-        Hitscan,  
-        Projectile, 
-        HomingMissile
-    }
+    public enum FireMode { Hitscan, Projectile, HomingMissile }
+    public FireMode currentFireMode = FireMode.Projectile;  
 
-    public FireMode currentFireMode = FireMode.Hitscan;
-
-    public LockOnManager lockOnManager;
     public Muzzle[] muzzles;
-    public float fireDistance = 50f;
+    public CrosshairAutoTracker crosshairTracker;            
+
+    public float projectileRange = 300f;              
+    public float missileRange = 500f;                  
+    public float hitscanRange = 450f;               
+
     public float damage = 25f;
     public float fireDelay = 0.2f;
     private float lastFireTime;
@@ -38,14 +35,10 @@ public class Gun : MonoBehaviour
     private void Start()
     {
         if (playerProjectilePrefab != null)
-        {
             projectilePool = new ObjectPool<PlayerProjectile>(playerProjectilePrefab, transform, 10, 50);
-        }
 
         if (playerMissilePrefab != null)
-        {
             missilePool = new ObjectPool<PlayerMissile>(playerMissilePrefab, transform, 5, 20);
-        }
     }
 
     public void ChangeFireMode()
@@ -56,26 +49,44 @@ public class Gun : MonoBehaviour
 
     public void FireButton()
     {
-        if (Time.time >= lastFireTime + fireDelay)
-        {
-            Fire();
-            lastFireTime = Time.time;
-        }
+        if (Time.time < lastFireTime + fireDelay) return;
+        Fire();
+        lastFireTime = Time.time;
     }
 
     private void Fire()
     {
         switch (currentFireMode)
         {
-            case FireMode.Hitscan:
-                FireHitscan();
-                break;
-            case FireMode.Projectile:
-                FireProjectile();
-                break;
-            case FireMode.HomingMissile:
-                FireHomingMissile();
-                break;
+            case FireMode.Hitscan: FireHitscan(); break;
+            case FireMode.Projectile: FireProjectile(); break;
+            case FireMode.HomingMissile: FireHomingMissile(); break;
+        }
+    }
+    private void FireProjectile()
+    {
+        if (projectilePool == null) return;
+
+        foreach (var m in muzzles)
+        {
+            if (m?.muzzleTransform == null) continue;
+
+            Vector3 origin = m.muzzleTransform.position;
+            Vector3 dir = m.muzzleTransform.forward;
+
+            Transform target = crosshairTracker ? crosshairTracker.CurrentTarget : null;
+            if (target && crosshairTracker.IsLocked && DistanceTo(target, origin) <= projectileRange)
+            {
+                dir = (GetTargetAimPoint(target) - origin).normalized;
+            }
+
+            PlayerProjectile p = projectilePool.Get();
+            if (!p) continue;
+
+            p.Init(projectilePool);
+            p.damage = damage;
+            p.speed = projectileSpeed;
+            p.Launch(origin, dir);
         }
     }
 
@@ -83,24 +94,27 @@ public class Gun : MonoBehaviour
     {
         foreach (var m in muzzles)
         {
-            ShootFromMuzzle(m);
-        }
-    }
+            if (m?.muzzleTransform == null) continue;
 
-    private void FireProjectile()
-    {
-        if (projectilePool == null) return;
+            Vector3 origin = m.muzzleTransform.position;
+            Vector3 dir = m.muzzleTransform.forward;
 
-        foreach (var m in muzzles)
-        {
-            PlayerProjectile projectile = projectilePool.Get();
-            if (projectile != null)
+            Transform target = crosshairTracker ? crosshairTracker.CurrentTarget : null;
+            if (target && crosshairTracker.IsLocked && DistanceTo(target, origin) <= hitscanRange)
             {
-                projectile.Init(projectilePool);
-                projectile.damage = damage;
-                projectile.speed = projectileSpeed;
-                projectile.Launch(m.muzzleTransform.position, m.muzzleTransform.forward);
+                dir = (GetTargetAimPoint(target) - origin).normalized;
             }
+
+            Vector3 hitPos = origin + dir * hitscanRange;
+
+            if (Physics.Raycast(origin, dir, out RaycastHit hit, hitscanRange))
+            {
+                hitPos = hit.point;
+                var dmg = hit.collider.GetComponent<IDamagable>();
+                if (dmg != null) dmg.OnDamage(damage, hit.point, hit.normal);
+            }
+
+            StartCoroutine(CoShotEffect(m, hitPos));
         }
     }
 
@@ -108,75 +122,28 @@ public class Gun : MonoBehaviour
     {
         if (missilePool == null) return;
 
-        List<Transform> lockedEnemies = lockOnManager?.GetLockedOnEnemies();
+        Transform target = (crosshairTracker && crosshairTracker.IsLocked) ? crosshairTracker.CurrentTarget : null;
+        if (!target) return;
 
-        if (lockedEnemies != null && lockedEnemies.Count > 0)
+        Transform firstMuzzle = muzzles != null && muzzles.Length > 0 ? muzzles[0].muzzleTransform : transform;
+        if (DistanceTo(target, firstMuzzle.position) > missileRange) return;
+
+        foreach (var m in muzzles)
         {
-            int missilesToFire = Mathf.Min(muzzles.Length, lockedEnemies.Count);
+            if (m?.muzzleTransform == null) continue;
 
-            for (int i = 0; i < missilesToFire; i++)
-            {
-                PlayerMissile missile = missilePool.Get();
-                if (missile != null)
-                {
-                    missile.Init(missilePool);
-                    missile.damage = damage;
-                    missile.speed = missileSpeed;
-                    missile.Launch(muzzles[i].muzzleTransform.position,
-                                 muzzles[i].muzzleTransform.forward,
-                                 lockedEnemies[i]);
-                }
-            }
+            PlayerMissile missile = missilePool.Get();
+            if (!missile) continue;
+
+            missile.Init(missilePool);
+            missile.damage = damage;
+            missile.speed = missileSpeed;
+
+            Vector3 origin = m.muzzleTransform.position;
+            Vector3 dir = m.muzzleTransform.forward;
+
+            missile.Launch(origin, dir, target);
         }
-        else
-        {
-            foreach (var m in muzzles)
-            {
-                PlayerMissile missile = missilePool.Get();
-                if (missile != null)
-                {
-                    missile.Init(missilePool);
-                    missile.damage = damage;
-                    missile.speed = missileSpeed;
-                    missile.Launch(m.muzzleTransform.position, m.muzzleTransform.forward, null);
-                }
-            }
-        }
-    }
-
-    private void ShootFromMuzzle(Muzzle m)
-    {
-        Vector3 hitPosition = m.muzzleTransform.position + m.muzzleTransform.forward * fireDistance;
-
-        if (Physics.Raycast(m.muzzleTransform.position, m.muzzleTransform.forward, out RaycastHit hit, fireDistance))
-        {
-            hitPosition = hit.point;
-
-            List<Transform> lockedEnemies = lockOnManager?.GetLockedOnEnemies();
-
-            if (lockedEnemies != null && lockedEnemies.Count > 0)
-            {
-                Transform enemyRoot = hit.collider.transform;
-                if (lockedEnemies.Contains(enemyRoot))
-                {
-                    var target = hit.collider.GetComponent<IDamagable>();
-                    if (target != null)
-                    {
-                        target.OnDamage(damage, hit.point, hit.normal);
-                    }
-                }
-            }
-            else
-            {
-                var target = hit.collider.GetComponent<IDamagable>();
-                if (target != null)
-                {
-                    target.OnDamage(damage, hit.point, hit.normal);
-                }
-            }
-        }
-
-        StartCoroutine(CoShotEffect(m, hitPosition));
     }
 
     private IEnumerator CoShotEffect(Muzzle m, Vector3 hitPosition)
@@ -190,5 +157,14 @@ public class Gun : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             m.lineRenderer.enabled = false;
         }
+        yield break;
     }
+
+    private Vector3 GetTargetAimPoint(Transform tr)
+    {
+        var aim = tr.Find("AimPoint");
+        return aim ? aim.position : tr.position;
+    }
+
+    private float DistanceTo(Transform tr, Vector3 from) => Vector3.Distance(from, GetTargetAimPoint(tr));
 }
