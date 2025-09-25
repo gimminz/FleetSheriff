@@ -12,10 +12,9 @@ public class Enemy : LivingEntity
 
     protected override void Die()
     {
-        base.Die(); 
-
-        if (lockOnManager != null) lockOnManager.RemoveLockOn(transform);
-        if (enemyIndicator != null) enemyIndicator.RemoveEnemy(transform);
+        base.Die();
+        var rt = GetComponent<RadarTarget>();
+        if (rt) rt.enabled = false;
 
         Destroy(gameObject, 0.2f);
     }
