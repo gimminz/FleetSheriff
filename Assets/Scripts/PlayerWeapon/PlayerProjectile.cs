@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerProjectile : MonoBehaviour
 {
     public float damage = 25f;
-    public float speed = 30f;
+    public float speed = 0.08f;
     public float lifeTime = 5f;
 
     private Rigidbody rb;

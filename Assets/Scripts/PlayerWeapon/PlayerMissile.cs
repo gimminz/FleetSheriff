@@ -3,10 +3,13 @@ using UnityEngine;
 public class PlayerMissile : MonoBehaviour
 {
     public float damage = 25f;
-    public float speed = 20f;
+    public float speed = 0.2f; 
     public float lifeTime = 8f;
     public float homingStrength = 2f; 
-    public float homingRange = 50f;  
+    public float homingRange = 50f;
+
+    private Transform launcher;         
+    private float maxTargetDistance = 500f;
 
     private Rigidbody rb;
     private Collider col;
@@ -25,8 +28,7 @@ public class PlayerMissile : MonoBehaviour
     {
         pool = poolRef;
     }
-
-    public void Launch(Vector3 position, Vector3 direction, Transform targetTransform = null)
+    public void Launch(Vector3 position, Vector3 direction, Transform targetTransform, Transform launcherTransform, float maxDistance)
     {
         lifeTimer = 0f;
         target = targetTransform;
@@ -36,11 +38,14 @@ public class PlayerMissile : MonoBehaviour
 
         if (col) col.enabled = true;
         rb.isKinematic = false;
-        rb.useGravity = false;  
+        rb.useGravity = false;
         rb.angularVelocity = Vector3.zero;
 
+        launcher = launcherTransform;
+        maxTargetDistance = maxDistance;
+
         velocity = direction.normalized * speed;
-        rb.linearVelocity = velocity;
+        rb.linearVelocity = velocity; 
     }
 
     private void FixedUpdate()
@@ -61,6 +66,22 @@ public class PlayerMissile : MonoBehaviour
         if (lifeTimer >= lifeTime)
         {
             ReturnToPool();
+        }
+
+        if (target == null)
+        {
+            ReturnToPool();
+            return;
+        }
+
+        if (launcher != null)
+        {
+            float d = Vector3.Distance(launcher.position, target.position);
+            if (d > maxTargetDistance)
+            {
+                ReturnToPool();
+                return;
+            }
         }
     }
 
