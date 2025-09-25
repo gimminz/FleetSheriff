@@ -21,8 +21,14 @@ public class CrosshairAutoTracker : MonoBehaviour
 
     public bool IsLocked { get; private set; }
     public Transform CurrentTarget { get; private set; }
+    private Image[] _crosshairImagesAll;
 
     static readonly List<Transform> _candidate = new List<Transform>();
+
+    void Awake()
+    {
+        _crosshairImagesAll = crosshair ? crosshair.GetComponentsInChildren<Image>(true) : null;
+    }
 
     void Reset()
     {
