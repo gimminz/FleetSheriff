@@ -28,9 +28,15 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_Children: []
   m_Father: {fileID: 1543556019728238758}
   m_RootOrder: 1
+=======
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1543556019728238758}
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -60,6 +66,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -102,11 +112,18 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
+=======
+  m_ConstrainProportionsScale: 0
+>>>>>>> DW_work
   m_Children:
   - {fileID: 1543556020287375833}
   - {fileID: 1543556020138563488}
   m_Father: {fileID: 1543556021486751246}
+<<<<<<< HEAD
   m_RootOrder: 2
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -136,6 +153,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -178,9 +199,15 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_Children: []
   m_Father: {fileID: 1543556019530212603}
   m_RootOrder: 0
+=======
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1543556019530212603}
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -210,15 +237,24 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_text: 99
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: d9b454495b7d24a7a933eb61bdfa0607, type: 2}
   m_sharedMaterial: {fileID: 7409485994217783921, guid: d9b454495b7d24a7a933eb61bdfa0607,
     type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -236,13 +272,21 @@ MonoBehaviour:
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
+<<<<<<< HEAD
+=======
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: 0
+>>>>>>> DW_work
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
+<<<<<<< HEAD
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
+=======
+>>>>>>> DW_work
   m_fontSize: 30
   m_fontSizeBase: 30
   m_fontWeight: 400
@@ -250,6 +294,11 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
+<<<<<<< HEAD
+=======
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+>>>>>>> DW_work
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -257,6 +306,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
@@ -273,10 +323,27 @@ MonoBehaviour:
   m_isCullingEnabled: 0
   m_ignoreRectMaskCulling: 0
   m_ignoreCulling: 1
+=======
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+>>>>>>> DW_work
   m_horizontalMapping: 0
   m_verticalMapping: 0
   m_uvLineOffset: 0
   m_geometrySortingOrder: 0
+<<<<<<< HEAD
   m_VertexBufferAutoSizeReduction: 1
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
@@ -305,6 +372,16 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+=======
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+>>>>>>> DW_work
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1543556019514463683
@@ -335,11 +412,18 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
+=======
+  m_ConstrainProportionsScale: 0
+>>>>>>> DW_work
   m_Children:
   - {fileID: 1543556020056217114}
   - {fileID: 1543556021152449908}
   m_Father: {fileID: 1543556021486751246}
+<<<<<<< HEAD
   m_RootOrder: 3
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -369,6 +453,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -411,9 +499,15 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_Children: []
   m_Father: {fileID: 1543556021486751246}
   m_RootOrder: 6
+=======
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1543556021486751246}
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -443,6 +537,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -485,10 +583,17 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_Children:
   - {fileID: 1543556019457187206}
   m_Father: {fileID: 1543556019611088124}
   m_RootOrder: 0
+=======
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1543556019457187206}
+  m_Father: {fileID: 1543556019611088124}
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -518,6 +623,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -560,11 +669,18 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
+=======
+  m_ConstrainProportionsScale: 0
+>>>>>>> DW_work
   m_Children:
   - {fileID: 1543556019530212603}
   - {fileID: 1543556020094709639}
   m_Father: {fileID: 1543556021486751246}
+<<<<<<< HEAD
   m_RootOrder: 0
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -594,6 +710,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -636,9 +756,15 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_Children: []
   m_Father: {fileID: 1543556020648914872}
   m_RootOrder: 0
+=======
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1543556020648914872}
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -668,15 +794,24 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_text: 28
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: d9b454495b7d24a7a933eb61bdfa0607, type: 2}
   m_sharedMaterial: {fileID: 7409485994217783921, guid: d9b454495b7d24a7a933eb61bdfa0607,
     type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -694,13 +829,21 @@ MonoBehaviour:
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
+<<<<<<< HEAD
+=======
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: 0
+>>>>>>> DW_work
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
+<<<<<<< HEAD
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
+=======
+>>>>>>> DW_work
   m_fontSize: 30
   m_fontSizeBase: 30
   m_fontWeight: 400
@@ -708,6 +851,11 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
+<<<<<<< HEAD
+=======
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+>>>>>>> DW_work
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -715,6 +863,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
@@ -731,10 +880,27 @@ MonoBehaviour:
   m_isCullingEnabled: 0
   m_ignoreRectMaskCulling: 0
   m_ignoreCulling: 1
+=======
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+>>>>>>> DW_work
   m_horizontalMapping: 0
   m_verticalMapping: 0
   m_uvLineOffset: 0
   m_geometrySortingOrder: 0
+<<<<<<< HEAD
   m_VertexBufferAutoSizeReduction: 1
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
@@ -763,6 +929,16 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+=======
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+>>>>>>> DW_work
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1543556019662885906
@@ -791,12 +967,19 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
+=======
+  m_ConstrainProportionsScale: 0
+>>>>>>> DW_work
   m_Children:
   - {fileID: 1543556021224556283}
   - {fileID: 1543556019765093678}
   - {fileID: 1543556020940643190}
   m_Father: {fileID: 1543556021486751246}
+<<<<<<< HEAD
   m_RootOrder: 7
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -831,11 +1014,18 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
+=======
+  m_ConstrainProportionsScale: 0
+>>>>>>> DW_work
   m_Children:
   - {fileID: 1543556020640092972}
   - {fileID: 1543556019442789941}
   m_Father: {fileID: 1543556021486751246}
+<<<<<<< HEAD
   m_RootOrder: 5
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -865,6 +1055,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -907,9 +1101,15 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_Children: []
   m_Father: {fileID: 1543556019662885907}
   m_RootOrder: 1
+=======
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1543556019662885907}
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -939,6 +1139,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -981,9 +1185,15 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_Children: []
   m_Father: {fileID: 1543556020271273965}
   m_RootOrder: 1
+=======
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1543556020271273965}
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1013,6 +1223,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1055,10 +1269,17 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_Children:
   - {fileID: 1543556020668368233}
   m_Father: {fileID: 1543556019514463684}
   m_RootOrder: 0
+=======
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1543556020668368233}
+  m_Father: {fileID: 1543556019514463684}
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1088,6 +1309,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1130,9 +1355,15 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_Children: []
   m_Father: {fileID: 1543556019611088124}
   m_RootOrder: 1
+=======
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1543556019611088124}
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1162,6 +1393,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1204,9 +1439,15 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_Children: []
   m_Father: {fileID: 1543556019455430798}
   m_RootOrder: 1
+=======
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1543556019455430798}
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1236,6 +1477,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1278,9 +1523,15 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_Children: []
   m_Father: {fileID: 1543556020287375833}
   m_RootOrder: 0
+=======
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1543556020287375833}
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1310,15 +1561,24 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_text: 99
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: d9b454495b7d24a7a933eb61bdfa0607, type: 2}
   m_sharedMaterial: {fileID: 7409485994217783921, guid: d9b454495b7d24a7a933eb61bdfa0607,
     type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1336,13 +1596,21 @@ MonoBehaviour:
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
+<<<<<<< HEAD
+=======
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: 0
+>>>>>>> DW_work
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
+<<<<<<< HEAD
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
+=======
+>>>>>>> DW_work
   m_fontSize: 30
   m_fontSizeBase: 30
   m_fontWeight: 400
@@ -1350,6 +1618,11 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
+<<<<<<< HEAD
+=======
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+>>>>>>> DW_work
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1357,6 +1630,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
@@ -1373,10 +1647,27 @@ MonoBehaviour:
   m_isCullingEnabled: 0
   m_ignoreRectMaskCulling: 0
   m_ignoreCulling: 1
+=======
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+>>>>>>> DW_work
   m_horizontalMapping: 0
   m_verticalMapping: 0
   m_uvLineOffset: 0
   m_geometrySortingOrder: 0
+<<<<<<< HEAD
   m_VertexBufferAutoSizeReduction: 1
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
@@ -1405,6 +1696,16 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+=======
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+>>>>>>> DW_work
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1543556020271273964
@@ -1435,11 +1736,18 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
+=======
+  m_ConstrainProportionsScale: 0
+>>>>>>> DW_work
   m_Children:
   - {fileID: 1543556021108330995}
   - {fileID: 1543556020023497668}
   m_Father: {fileID: 1543556021486751246}
+<<<<<<< HEAD
   m_RootOrder: 1
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1469,6 +1777,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1511,10 +1823,17 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_Children:
   - {fileID: 1543556020218486440}
   m_Father: {fileID: 1543556019455430798}
   m_RootOrder: 0
+=======
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1543556020218486440}
+  m_Father: {fileID: 1543556019455430798}
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1544,6 +1863,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1586,9 +1909,15 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_Children: []
   m_Father: {fileID: 1543556020643576650}
   m_RootOrder: 1
+=======
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1543556020643576650}
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1618,6 +1947,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1660,9 +1993,15 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_Children: []
   m_Father: {fileID: 1543556020684800918}
   m_RootOrder: 1
+=======
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1543556020684800918}
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1692,6 +2031,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1734,10 +2077,17 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_Children:
   - {fileID: 1543556021114644137}
   m_Father: {fileID: 1543556020684800918}
   m_RootOrder: 0
+=======
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1543556021114644137}
+  m_Father: {fileID: 1543556020684800918}
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1767,6 +2117,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1809,10 +2163,17 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_Children:
   - {fileID: 1543556020998926309}
   m_Father: {fileID: 1543556019728238758}
   m_RootOrder: 0
+=======
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1543556020998926309}
+  m_Father: {fileID: 1543556019728238758}
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1842,6 +2203,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1884,13 +2249,20 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
+=======
+  m_ConstrainProportionsScale: 0
+>>>>>>> DW_work
   m_Children:
   - {fileID: 1543556020648914872}
   - {fileID: 1543556020528552407}
   - {fileID: 1543556021065766287}
   - {fileID: 1543556020921699111}
   m_Father: {fileID: 1543556021486751246}
+<<<<<<< HEAD
   m_RootOrder: 8
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1920,6 +2292,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1962,10 +2338,17 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_Children:
   - {fileID: 1543556019627322540}
   m_Father: {fileID: 1543556020643576650}
   m_RootOrder: 0
+=======
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1543556019627322540}
+  m_Father: {fileID: 1543556020643576650}
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1995,6 +2378,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2037,9 +2424,15 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_Children: []
   m_Father: {fileID: 1543556020056217114}
   m_RootOrder: 0
+=======
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1543556020056217114}
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2069,15 +2462,24 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_text: 99
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: d9b454495b7d24a7a933eb61bdfa0607, type: 2}
   m_sharedMaterial: {fileID: 7409485994217783921, guid: d9b454495b7d24a7a933eb61bdfa0607,
     type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2095,13 +2497,21 @@ MonoBehaviour:
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
+<<<<<<< HEAD
+=======
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: 0
+>>>>>>> DW_work
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
+<<<<<<< HEAD
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
+=======
+>>>>>>> DW_work
   m_fontSize: 30
   m_fontSizeBase: 30
   m_fontWeight: 400
@@ -2109,6 +2519,11 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
+<<<<<<< HEAD
+=======
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+>>>>>>> DW_work
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2116,6 +2531,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
@@ -2132,10 +2548,27 @@ MonoBehaviour:
   m_isCullingEnabled: 0
   m_ignoreRectMaskCulling: 0
   m_ignoreCulling: 1
+=======
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+>>>>>>> DW_work
   m_horizontalMapping: 0
   m_verticalMapping: 0
   m_uvLineOffset: 0
   m_geometrySortingOrder: 0
+<<<<<<< HEAD
   m_VertexBufferAutoSizeReduction: 1
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
@@ -2164,6 +2597,16 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+=======
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+>>>>>>> DW_work
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1543556020684800917
@@ -2194,11 +2637,18 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
+=======
+  m_ConstrainProportionsScale: 0
+>>>>>>> DW_work
   m_Children:
   - {fileID: 1543556020583140628}
   - {fileID: 1543556020559821843}
   m_Father: {fileID: 1543556021486751246}
+<<<<<<< HEAD
   m_RootOrder: 4
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -2228,6 +2678,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2270,9 +2724,15 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_Children: []
   m_Father: {fileID: 1543556020643576650}
   m_RootOrder: 3
+=======
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1543556020643576650}
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -2302,6 +2762,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2344,9 +2808,15 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_Children: []
   m_Father: {fileID: 1543556019662885907}
   m_RootOrder: 2
+=======
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1543556019662885907}
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2376,15 +2846,24 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_text: Add Slot
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: d9b454495b7d24a7a933eb61bdfa0607, type: 2}
   m_sharedMaterial: {fileID: 7409485994217783921, guid: d9b454495b7d24a7a933eb61bdfa0607,
     type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2402,13 +2881,21 @@ MonoBehaviour:
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
+<<<<<<< HEAD
+=======
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: 0
+>>>>>>> DW_work
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
+<<<<<<< HEAD
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
+=======
+>>>>>>> DW_work
   m_fontSize: 30.6
   m_fontSizeBase: 30.6
   m_fontWeight: 400
@@ -2416,6 +2903,11 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
+<<<<<<< HEAD
+=======
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+>>>>>>> DW_work
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2423,6 +2915,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
@@ -2439,10 +2932,27 @@ MonoBehaviour:
   m_isCullingEnabled: 0
   m_ignoreRectMaskCulling: 0
   m_ignoreCulling: 1
+=======
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+>>>>>>> DW_work
   m_horizontalMapping: 0
   m_verticalMapping: 0
   m_uvLineOffset: 0
   m_geometrySortingOrder: 0
+<<<<<<< HEAD
   m_VertexBufferAutoSizeReduction: 1
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
@@ -2471,6 +2981,16 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+=======
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+>>>>>>> DW_work
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1543556020998926308
@@ -2501,9 +3021,15 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_Children: []
   m_Father: {fileID: 1543556020640092972}
   m_RootOrder: 0
+=======
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1543556020640092972}
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2533,15 +3059,24 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_text: 99
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: d9b454495b7d24a7a933eb61bdfa0607, type: 2}
   m_sharedMaterial: {fileID: 7409485994217783921, guid: d9b454495b7d24a7a933eb61bdfa0607,
     type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2559,13 +3094,21 @@ MonoBehaviour:
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
+<<<<<<< HEAD
+=======
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: 0
+>>>>>>> DW_work
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
+<<<<<<< HEAD
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
+=======
+>>>>>>> DW_work
   m_fontSize: 30
   m_fontSizeBase: 30
   m_fontWeight: 400
@@ -2573,6 +3116,11 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
+<<<<<<< HEAD
+=======
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+>>>>>>> DW_work
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2580,6 +3128,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
@@ -2596,10 +3145,27 @@ MonoBehaviour:
   m_isCullingEnabled: 0
   m_ignoreRectMaskCulling: 0
   m_ignoreCulling: 1
+=======
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+>>>>>>> DW_work
   m_horizontalMapping: 0
   m_verticalMapping: 0
   m_uvLineOffset: 0
   m_geometrySortingOrder: 0
+<<<<<<< HEAD
   m_VertexBufferAutoSizeReduction: 1
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
@@ -2628,6 +3194,16 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+=======
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+>>>>>>> DW_work
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1543556021065766286
@@ -2658,9 +3234,15 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_Children: []
   m_Father: {fileID: 1543556020643576650}
   m_RootOrder: 2
+=======
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1543556020643576650}
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2690,6 +3272,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2732,10 +3318,17 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_Children:
   - {fileID: 1543556021154379417}
   m_Father: {fileID: 1543556020271273965}
   m_RootOrder: 0
+=======
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1543556021154379417}
+  m_Father: {fileID: 1543556020271273965}
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -2765,6 +3358,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2807,9 +3404,15 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_Children: []
   m_Father: {fileID: 1543556020583140628}
   m_RootOrder: 0
+=======
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1543556020583140628}
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2839,15 +3442,24 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_text: 99
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: d9b454495b7d24a7a933eb61bdfa0607, type: 2}
   m_sharedMaterial: {fileID: 7409485994217783921, guid: d9b454495b7d24a7a933eb61bdfa0607,
     type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2865,13 +3477,21 @@ MonoBehaviour:
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
+<<<<<<< HEAD
+=======
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: 0
+>>>>>>> DW_work
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
+<<<<<<< HEAD
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
+=======
+>>>>>>> DW_work
   m_fontSize: 30
   m_fontSizeBase: 30
   m_fontWeight: 400
@@ -2879,6 +3499,11 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
+<<<<<<< HEAD
+=======
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+>>>>>>> DW_work
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2886,6 +3511,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
@@ -2902,10 +3528,27 @@ MonoBehaviour:
   m_isCullingEnabled: 0
   m_ignoreRectMaskCulling: 0
   m_ignoreCulling: 1
+=======
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+>>>>>>> DW_work
   m_horizontalMapping: 0
   m_verticalMapping: 0
   m_uvLineOffset: 0
   m_geometrySortingOrder: 0
+<<<<<<< HEAD
   m_VertexBufferAutoSizeReduction: 1
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
@@ -2934,6 +3577,16 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+=======
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+>>>>>>> DW_work
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1543556021152449907
@@ -2964,9 +3617,15 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_Children: []
   m_Father: {fileID: 1543556019514463684}
   m_RootOrder: 1
+=======
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1543556019514463684}
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2996,6 +3655,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3038,9 +3701,15 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_Children: []
   m_Father: {fileID: 1543556021108330995}
   m_RootOrder: 0
+=======
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1543556021108330995}
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3070,15 +3739,24 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_text: 99
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: d9b454495b7d24a7a933eb61bdfa0607, type: 2}
   m_sharedMaterial: {fileID: 7409485994217783921, guid: d9b454495b7d24a7a933eb61bdfa0607,
     type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3096,13 +3774,21 @@ MonoBehaviour:
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
+<<<<<<< HEAD
+=======
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: 0
+>>>>>>> DW_work
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
+<<<<<<< HEAD
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
+=======
+>>>>>>> DW_work
   m_fontSize: 30
   m_fontSizeBase: 30
   m_fontWeight: 400
@@ -3110,6 +3796,11 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
+<<<<<<< HEAD
+=======
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+>>>>>>> DW_work
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -3117,6 +3808,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
@@ -3133,10 +3825,27 @@ MonoBehaviour:
   m_isCullingEnabled: 0
   m_ignoreRectMaskCulling: 0
   m_ignoreCulling: 1
+=======
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+>>>>>>> DW_work
   m_horizontalMapping: 0
   m_verticalMapping: 0
   m_uvLineOffset: 0
   m_geometrySortingOrder: 0
+<<<<<<< HEAD
   m_VertexBufferAutoSizeReduction: 1
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
@@ -3165,6 +3874,16 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+=======
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+>>>>>>> DW_work
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1543556021224556282
@@ -3195,9 +3914,15 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
   m_Children: []
   m_Father: {fileID: 1543556019662885907}
   m_RootOrder: 0
+=======
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1543556019662885907}
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3227,6 +3952,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+<<<<<<< HEAD
+=======
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> DW_work
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3269,6 +3998,10 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+<<<<<<< HEAD
+=======
+  m_ConstrainProportionsScale: 0
+>>>>>>> DW_work
   m_Children:
   - {fileID: 1543556019611088124}
   - {fileID: 1543556020271273965}
@@ -3280,7 +4013,10 @@ RectTransform:
   - {fileID: 1543556019662885907}
   - {fileID: 1543556020643576650}
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 0
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

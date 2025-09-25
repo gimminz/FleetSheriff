@@ -34,7 +34,10 @@ RectTransform:
   m_Children:
   - {fileID: 7111750797850081892}
   m_Father: {fileID: 1709522324281098489}
+<<<<<<< HEAD
   m_RootOrder: 1
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -150,7 +153,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2467123877110930457}
+<<<<<<< HEAD
   m_RootOrder: 2
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -187,8 +193,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Btn_MenuButton_Hexagon
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -228,15 +239,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -285,7 +308,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8552037016333387580}
+<<<<<<< HEAD
   m_RootOrder: 0
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -361,7 +387,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5893029049671996408}
+<<<<<<< HEAD
   m_RootOrder: 5
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -398,8 +427,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Btn_IconTextButton_SlantSquare02
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -439,15 +473,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -496,7 +542,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8552037016333387580}
+<<<<<<< HEAD
   m_RootOrder: 2
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -533,8 +582,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Btn_TextButton_Square01
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -574,15 +628,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -631,7 +697,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1709522324281098489}
+<<<<<<< HEAD
   m_RootOrder: 9
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -668,8 +737,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Btn_IconButton_Square01
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -709,15 +783,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -766,7 +852,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1709522324281098489}
+<<<<<<< HEAD
   m_RootOrder: 6
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -803,8 +892,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Btn_IconButton_Hexagon04
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -844,15 +938,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -901,7 +1007,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5893029049671996408}
+<<<<<<< HEAD
   m_RootOrder: 12
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -938,8 +1047,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Btn_IconTextButton_Square06
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -979,15 +1093,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -1036,7 +1162,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 319364194772430032}
+<<<<<<< HEAD
   m_RootOrder: 0
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1073,8 +1202,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Icon Button
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1114,15 +1248,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -1171,7 +1317,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1709522324281098489}
+<<<<<<< HEAD
   m_RootOrder: 4
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1208,8 +1357,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Btn_IconButton_Hexagon02
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1249,15 +1403,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -1312,7 +1478,10 @@ RectTransform:
   - {fileID: 7592876778105911094}
   - {fileID: 6487991995525364823}
   m_Father: {fileID: 5260153118060050489}
+<<<<<<< HEAD
   m_RootOrder: 58
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1359,7 +1528,10 @@ RectTransform:
   - {fileID: 8745912740361784161}
   - {fileID: 4075008821660529786}
   m_Father: {fileID: 5260153118060050489}
+<<<<<<< HEAD
   m_RootOrder: 9
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1397,7 +1569,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8552037016333387580}
+<<<<<<< HEAD
   m_RootOrder: 3
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1434,8 +1609,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Btn_TextButton_Square02
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1475,15 +1655,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -1532,7 +1724,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5893029049671996408}
+<<<<<<< HEAD
   m_RootOrder: 7
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1569,8 +1764,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Btn_IconTextButton_Square01
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1610,15 +1810,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -1667,7 +1879,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5893029049671996408}
+<<<<<<< HEAD
   m_RootOrder: 8
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1704,8 +1919,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Btn_IconTextButton_Square02
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1745,15 +1965,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -1802,7 +2034,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5893029049671996408}
+<<<<<<< HEAD
   m_RootOrder: 4
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1841,8 +2076,13 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1882,15 +2122,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -1939,7 +2191,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5893029049671996408}
+<<<<<<< HEAD
   m_RootOrder: 13
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1976,8 +2231,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Btn_IconTextButton_Square07
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2017,15 +2277,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -2074,7 +2346,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5893029049671996408}
+<<<<<<< HEAD
   m_RootOrder: 6
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2111,8 +2386,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Btn_IconTextButton_SlantSquare03
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2152,15 +2432,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -2212,7 +2504,10 @@ RectTransform:
   m_Children:
   - {fileID: 8100863854199803548}
   m_Father: {fileID: 2467123877110930457}
+<<<<<<< HEAD
   m_RootOrder: 1
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -2328,7 +2623,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1709522324281098489}
+<<<<<<< HEAD
   m_RootOrder: 8
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -2365,8 +2663,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Btn_IconButton_Hexagon06
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2406,15 +2709,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -2463,7 +2778,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1709522324281098489}
+<<<<<<< HEAD
   m_RootOrder: 7
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -2500,8 +2818,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Btn_IconButton_Hexagon05
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2541,15 +2864,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -2598,7 +2933,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1709522324281098489}
+<<<<<<< HEAD
   m_RootOrder: 10
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -2635,8 +2973,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Btn_IconButton_Square02
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2676,15 +3019,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -2733,7 +3088,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2467123877110930457}
+<<<<<<< HEAD
   m_RootOrder: 5
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -2770,8 +3128,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Btn_MenuButton_Square01
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2811,15 +3174,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -2868,7 +3243,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2467123877110930457}
+<<<<<<< HEAD
   m_RootOrder: 0
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -2948,7 +3326,10 @@ RectTransform:
   - {fileID: 134106570194188468}
   - {fileID: 1471091081517020890}
   m_Father: {fileID: 5260153118060050489}
+<<<<<<< HEAD
   m_RootOrder: 1
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2986,7 +3367,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8552037016333387580}
+<<<<<<< HEAD
   m_RootOrder: 5
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -3023,8 +3407,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Btn_TextButton_Square04
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3064,15 +3453,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -3132,7 +3533,10 @@ RectTransform:
   - {fileID: 8598606205669766361}
   - {fileID: 5260153118159556182}
   m_Father: {fileID: 5260153118060050489}
+<<<<<<< HEAD
   m_RootOrder: 2
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3170,7 +3574,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6005227857087353238}
+<<<<<<< HEAD
   m_RootOrder: 0
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3207,8 +3614,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Text Button
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3248,15 +3660,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -3305,7 +3729,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5893029049671996408}
+<<<<<<< HEAD
   m_RootOrder: 2
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3342,8 +3769,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Btn_IconTextButton_Ploygon01
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3383,15 +3815,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -3443,7 +3887,10 @@ RectTransform:
   m_Children:
   - {fileID: 3775151314076225989}
   m_Father: {fileID: 5893029049671996408}
+<<<<<<< HEAD
   m_RootOrder: 1
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -3559,7 +4006,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1709522324281098489}
+<<<<<<< HEAD
   m_RootOrder: 5
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -3596,8 +4046,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Btn_IconButton_Hexagon03
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3637,15 +4092,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -3765,7 +4232,10 @@ RectTransform:
   - {fileID: 4815816385418500894}
   - {fileID: 4815816384983262122}
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 0
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3841,7 +4311,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2467123877110930457}
+<<<<<<< HEAD
   m_RootOrder: 6
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -3878,8 +4351,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Btn_MenuButton_Square02
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3919,15 +4397,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -3976,7 +4466,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5893029049671996408}
+<<<<<<< HEAD
   m_RootOrder: 3
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4013,8 +4506,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Btn_IconTextButton_Ploygon02
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4054,15 +4552,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -4111,7 +4621,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2467123877110930457}
+<<<<<<< HEAD
   m_RootOrder: 7
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -4148,8 +4661,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Btn_MenuButton_Square03
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4189,15 +4707,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -4246,7 +4776,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5893029049671996408}
+<<<<<<< HEAD
   m_RootOrder: 11
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4283,8 +4816,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Btn_IconTextButton_Square05
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4324,15 +4862,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -4381,7 +4931,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5260153118060050489}
+<<<<<<< HEAD
   m_RootOrder: 0
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -4457,7 +5010,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5893029049671996408}
+<<<<<<< HEAD
   m_RootOrder: 10
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4494,8 +5050,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Btn_IconTextButton_Square04
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4535,15 +5096,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -4592,7 +5165,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5893029049671996408}
+<<<<<<< HEAD
   m_RootOrder: 0
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -4668,7 +5244,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1709522324281098489}
+<<<<<<< HEAD
   m_RootOrder: 2
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -4705,8 +5284,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Btn_IconButton_Circle01
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4746,15 +5330,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -4803,7 +5399,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6264939947210248722}
+<<<<<<< HEAD
   m_RootOrder: 0
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4840,8 +5439,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Menu Button
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4881,15 +5485,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -4938,7 +5554,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1709522324281098489}
+<<<<<<< HEAD
   m_RootOrder: 3
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -4975,8 +5594,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Btn_IconButton_Hexagon01
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5016,15 +5640,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -5073,7 +5709,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2467123877110930457}
+<<<<<<< HEAD
   m_RootOrder: 3
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -5110,8 +5749,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Btn_MenuButton_SlantSquare
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5151,15 +5795,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -5208,7 +5864,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1709522324281098489}
+<<<<<<< HEAD
   m_RootOrder: 0
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -5284,7 +5943,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5893029049671996408}
+<<<<<<< HEAD
   m_RootOrder: 9
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5321,8 +5983,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Btn_IconTextButton_Square03
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5362,15 +6029,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -5431,7 +6110,10 @@ RectTransform:
   - {fileID: 4236903153339243006}
   - {fileID: 6194003609283829852}
   m_Father: {fileID: 5260153118060050489}
+<<<<<<< HEAD
   m_RootOrder: 28
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5472,7 +6154,10 @@ RectTransform:
   m_Children:
   - {fileID: 5759076772039237336}
   m_Father: {fileID: 8552037016333387580}
+<<<<<<< HEAD
   m_RootOrder: 1
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -5588,7 +6273,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8552037016333387580}
+<<<<<<< HEAD
   m_RootOrder: 4
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -5625,8 +6313,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Btn_TextButton_Square03
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5666,15 +6359,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -5723,7 +6428,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2467123877110930457}
+<<<<<<< HEAD
   m_RootOrder: 4
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -5760,8 +6468,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Btn_MenuButton_SlantSquare
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5801,15 +6514,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -5858,7 +6583,10 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1896826657557274189}
+<<<<<<< HEAD
   m_RootOrder: 0
+=======
+>>>>>>> DW_work
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5895,8 +6623,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: Icon Text Button
   m_isRightToLeft: 0
+<<<<<<< HEAD
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+=======
+  m_fontAsset: {fileID: 11400000, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+  m_sharedMaterial: {fileID: -5341210447600837017, guid: 72eedc0a004dd994b877a6eb71265001, type: 2}
+>>>>>>> DW_work
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5936,15 +6669,27 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
+<<<<<<< HEAD
   m_enableWordWrapping: 1
+=======
+  m_TextWrappingMode: 1
+>>>>>>> DW_work
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+<<<<<<< HEAD
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+=======
+  m_ActiveFontFeatures: 00000000
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+>>>>>>> DW_work
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -5967,6 +6712,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 782889296217541597, guid: dd3377b2e737f4c3db56066a7f26a18a, type: 3}
@@ -6058,6 +6807,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: dd3377b2e737f4c3db56066a7f26a18a, type: 3}
 --- !u!224 &2944919496560884554 stripped
 RectTransform:
@@ -6069,6 +6824,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 4815816384774798176}
     m_Modifications:
     - target: {fileID: 8308665382401719777, guid: 0aeab9c2f58f049a8aed29e31eed4a93, type: 3}
@@ -6160,6 +6919,12 @@ PrefabInstance:
       value: Btn_TextButton_Square01_Green
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 0aeab9c2f58f049a8aed29e31eed4a93, type: 3}
 --- !u!224 &8598606205714342394 stripped
 RectTransform:
@@ -6171,6 +6936,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 5662304641231296889, guid: fdbb4203d1f4d43b69bdacedd349b5ae, type: 3}
@@ -6262,6 +7031,12 @@ PrefabInstance:
       value: Btn_IconButton_Hexagon03_White
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: fdbb4203d1f4d43b69bdacedd349b5ae, type: 3}
 --- !u!224 &5260153119144098272 stripped
 RectTransform:
@@ -6273,6 +7048,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 2734380274830562765, guid: fa992897fd00c46129c6a37ae3b1316d, type: 3}
@@ -6364,6 +7143,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: fa992897fd00c46129c6a37ae3b1316d, type: 3}
 --- !u!224 &7679703411526800451 stripped
 RectTransform:
@@ -6375,6 +7160,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 2001242586979888105, guid: 40ce696cebad84f328cc5bc8c95f148f, type: 3}
@@ -6466,6 +7255,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 40ce696cebad84f328cc5bc8c95f148f, type: 3}
 --- !u!224 &2031972873687726080 stripped
 RectTransform:
@@ -6477,6 +7272,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 4653183446535209952, guid: 838132fe3ad4f4563817a15f2bbe9062, type: 3}
@@ -6568,6 +7367,12 @@ PrefabInstance:
       value: Btn_TextButton_Square02_White
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 838132fe3ad4f4563817a15f2bbe9062, type: 3}
 --- !u!224 &5260153117560569066 stripped
 RectTransform:
@@ -6579,6 +7384,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 1513193721790301714, guid: cae22628bf091433dad3862771c21e52, type: 3}
@@ -6726,6 +7535,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: cae22628bf091433dad3862771c21e52, type: 3}
 --- !u!224 &2031972874636679096 stripped
 RectTransform:
@@ -6737,6 +7552,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 1561889311200497688, guid: 0ba4defe2862b4293a9e3297778a2f58, type: 3}
@@ -6876,6 +7695,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 0ba4defe2862b4293a9e3297778a2f58, type: 3}
 --- !u!224 &2031972873857552133 stripped
 RectTransform:
@@ -6887,6 +7712,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 2405208725672159940, guid: 3d55b03b872864c73a9265d43c2ba4f9, type: 3}
@@ -6978,6 +7807,12 @@ PrefabInstance:
       value: Btn_IconButton_Circle01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 3d55b03b872864c73a9265d43c2ba4f9, type: 3}
 --- !u!224 &3219107685103716628 stripped
 RectTransform:
@@ -6989,6 +7824,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 1306387444571308372, guid: eff28b2ed3e134cf8b2f761ad686f671, type: 3}
@@ -7080,6 +7919,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: eff28b2ed3e134cf8b2f761ad686f671, type: 3}
 --- !u!224 &2031972875533864413 stripped
 RectTransform:
@@ -7091,6 +7936,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 1361358832019975435, guid: f87154f1d26f5402888fac508f7a355b, type: 3}
@@ -7230,6 +8079,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: f87154f1d26f5402888fac508f7a355b, type: 3}
 --- !u!224 &2031972875205096575 stripped
 RectTransform:
@@ -7241,6 +8096,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 4815816384774798176}
     m_Modifications:
     - target: {fileID: 8758548190321663190, guid: 15cd7c9af63f34b90802e6da17ad5201, type: 3}
@@ -7332,6 +8191,12 @@ PrefabInstance:
       value: Btn_TextButton_Square01_Red
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 15cd7c9af63f34b90802e6da17ad5201, type: 3}
 --- !u!224 &8598606205669766361 stripped
 RectTransform:
@@ -7343,6 +8208,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 1412998380672471600, guid: 91db71fc80f3f4c75b40025fcb50b16c, type: 3}
@@ -7434,6 +8303,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 91db71fc80f3f4c75b40025fcb50b16c, type: 3}
 --- !u!224 &2031972874642997708 stripped
 RectTransform:
@@ -7445,6 +8320,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 1428548325211247022, guid: 9632746d764c14074a18f69c1efb6ab4, type: 3}
@@ -7580,6 +8459,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 9632746d764c14074a18f69c1efb6ab4, type: 3}
 --- !u!224 &2031972874713053401 stripped
 RectTransform:
@@ -7591,6 +8476,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 964319010625086764, guid: 0751a5d66c8e344df95679601b435d97, type: 3}
@@ -7682,6 +8571,12 @@ PrefabInstance:
       value: Btn_IconTextButton_Square04_Blue
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 0751a5d66c8e344df95679601b435d97, type: 3}
 --- !u!224 &2031972874783633557 stripped
 RectTransform:
@@ -7693,6 +8588,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 6460910595052218332, guid: 96fdcadcb45c545bb8e74d7e7ec67d09, type: 3}
@@ -7784,6 +8683,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 96fdcadcb45c545bb8e74d7e7ec67d09, type: 3}
 --- !u!224 &5260153117245457747 stripped
 RectTransform:
@@ -7795,6 +8700,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 1103873209291694218, guid: 198cae0c9afda4c7fa8378cecfec07d2, type: 3}
@@ -7886,6 +8795,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 198cae0c9afda4c7fa8378cecfec07d2, type: 3}
 --- !u!224 &2031972874032222163 stripped
 RectTransform:
@@ -7897,6 +8812,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 6729562640072943509, guid: bd6764efb9bfa4bc08989763a45ec750, type: 3}
@@ -7988,6 +8907,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: bd6764efb9bfa4bc08989763a45ec750, type: 3}
 --- !u!224 &5260153118939663346 stripped
 RectTransform:
@@ -7999,6 +8924,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 2856386601466395721, guid: 7b6315401730c4bfe9ed2ae9275b8731, type: 3}
@@ -8090,6 +9019,12 @@ PrefabInstance:
       value: Btn_MenuButton_Hexagon-Group
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 7b6315401730c4bfe9ed2ae9275b8731, type: 3}
 --- !u!224 &3610361012122466331 stripped
 RectTransform:
@@ -8101,6 +9036,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 4815816384774798176}
     m_Modifications:
     - target: {fileID: 8059985570315302898, guid: 67c8298076be44bcc9e4a33e688194bf, type: 3}
@@ -8192,6 +9131,12 @@ PrefabInstance:
       value: Btn_TextButton_Square01_Sky
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 67c8298076be44bcc9e4a33e688194bf, type: 3}
 --- !u!224 &8598606205314660910 stripped
 RectTransform:
@@ -8203,6 +9148,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 1473068366351817692, guid: b54d33b0d943645debbecbb6c7c14929, type: 3}
@@ -8294,6 +9243,12 @@ PrefabInstance:
       value: Btn_IconButton_Hexagon03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: b54d33b0d943645debbecbb6c7c14929, type: 3}
 --- !u!224 &907780401672508857 stripped
 RectTransform:
@@ -8305,6 +9260,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 431820689933602168, guid: a31bde420411243cf939088ee592cd5c, type: 3}
@@ -8396,6 +9355,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: a31bde420411243cf939088ee592cd5c, type: 3}
 --- !u!224 &2031972874704337148 stripped
 RectTransform:
@@ -8407,6 +9372,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 6781940026955559064, guid: c82c40de8df664d9382c25c88594afcf, type: 3}
@@ -8498,6 +9467,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: c82c40de8df664d9382c25c88594afcf, type: 3}
 --- !u!224 &4815816384423059118 stripped
 RectTransform:
@@ -8509,6 +9484,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 87504495479576596, guid: a82465bfe5c3b496aa9c31211ac4c4c9, type: 3}
@@ -8600,6 +9579,12 @@ PrefabInstance:
       value: Btn_IconTextButton_Square04_Sky
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: a82465bfe5c3b496aa9c31211ac4c4c9, type: 3}
 --- !u!224 &2031972873655504821 stripped
 RectTransform:
@@ -8611,6 +9596,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 6186615197737697452, guid: 7d89932ec28614bdcbd14f93c5fd40ea, type: 3}
@@ -8702,6 +9691,12 @@ PrefabInstance:
       value: Btn_IconButton_Hexagon01_White
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 7d89932ec28614bdcbd14f93c5fd40ea, type: 3}
 --- !u!224 &5260153117675779361 stripped
 RectTransform:
@@ -8713,6 +9708,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 138655961324398658, guid: 948ec9300f05341f18ad4c7ebe9e8ad5, type: 3}
@@ -8804,6 +9803,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 948ec9300f05341f18ad4c7ebe9e8ad5, type: 3}
 --- !u!224 &2031972874263065927 stripped
 RectTransform:
@@ -8815,6 +9820,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 208487993640778706, guid: af1394b7cd62a4068891792cf48f8041, type: 3}
@@ -8906,6 +9915,12 @@ PrefabInstance:
       value: Btn_IconTextButton_Ploygon02_White
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: af1394b7cd62a4068891792cf48f8041, type: 3}
 --- !u!224 &2031972875048348009 stripped
 RectTransform:
@@ -8917,6 +9932,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 6300626721825892182, guid: 964e6c598975747ac9da7f0f037240f1, type: 3}
@@ -9008,6 +10027,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 964e6c598975747ac9da7f0f037240f1, type: 3}
 --- !u!224 &5260153119319028082 stripped
 RectTransform:
@@ -9019,6 +10044,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 7128503778724977006, guid: 63b3d9daa0cc7485ab79c006c69bd217, type: 3}
@@ -9110,6 +10139,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 63b3d9daa0cc7485ab79c006c69bd217, type: 3}
 --- !u!224 &4815816386172825793 stripped
 RectTransform:
@@ -9121,6 +10156,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 4142686099903552746, guid: bb47108fd2b5e485992d745fed41a582, type: 3}
@@ -9212,6 +10251,12 @@ PrefabInstance:
       value: Btn_IconTextButton_Square06
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: bb47108fd2b5e485992d745fed41a582, type: 3}
 --- !u!224 &2031972873862897307 stripped
 RectTransform:
@@ -9223,6 +10268,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 7191127463888368832, guid: 58b90948fcdc04f519fd1af2ac5dffb6, type: 3}
@@ -9314,6 +10363,12 @@ PrefabInstance:
       value: Btn_IconButton_Hexagon01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 58b90948fcdc04f519fd1af2ac5dffb6, type: 3}
 --- !u!224 &5260153118536055205 stripped
 RectTransform:
@@ -9325,6 +10380,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 7147528715851920412, guid: 254aecd7820f4425aac1a5e2590b23ac, type: 3}
@@ -9416,6 +10475,12 @@ PrefabInstance:
       value: Btn_TextButton_Square03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 254aecd7820f4425aac1a5e2590b23ac, type: 3}
 --- !u!224 &5260153118414893729 stripped
 RectTransform:
@@ -9427,6 +10492,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 4815816384774798176}
     m_Modifications:
     - target: {fileID: 6488807807523636645, guid: 844c1275730b34969bbda9e400975f04, type: 3}
@@ -9518,6 +10587,12 @@ PrefabInstance:
       value: Btn_TextButton_Square01_Navy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 844c1275730b34969bbda9e400975f04, type: 3}
 --- !u!224 &8598606204587730026 stripped
 RectTransform:
@@ -9529,6 +10604,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 4815816384774798176}
     m_Modifications:
     - target: {fileID: 6470356541720059185, guid: 7cb553583743e4084930fb2020dc3d34, type: 3}
@@ -9620,6 +10699,12 @@ PrefabInstance:
       value: Btn_TextButton_Square01_YellowGreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 7cb553583743e4084930fb2020dc3d34, type: 3}
 --- !u!224 &8598606204329861468 stripped
 RectTransform:
@@ -9631,6 +10716,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 3179822242591122650, guid: bc4b6311320af416081aa4fa1f5bb230, type: 3}
@@ -9722,6 +10811,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: bc4b6311320af416081aa4fa1f5bb230, type: 3}
 --- !u!224 &2031972874287238929 stripped
 RectTransform:
@@ -9733,6 +10828,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 3233959248344937814, guid: 30126a084355f4e19b9a944558de432f, type: 3}
@@ -9824,6 +10923,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 30126a084355f4e19b9a944558de432f, type: 3}
 --- !u!224 &2031972875041511979 stripped
 RectTransform:
@@ -9835,6 +10940,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 9033697191705565064, guid: 7f3642a580a004ad38b25b9d9c03ec68, type: 3}
@@ -9926,6 +11035,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 7f3642a580a004ad38b25b9d9c03ec68, type: 3}
 --- !u!224 &5260153118087404871 stripped
 RectTransform:
@@ -9937,6 +11052,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 4815816384774798176}
     m_Modifications:
     - target: {fileID: 4745287386849172828, guid: 473d4d404d24547cf9f6709d17482f43, type: 3}
@@ -10028,6 +11147,12 @@ PrefabInstance:
       value: Btn_TextButton_Square01_Brown
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 473d4d404d24547cf9f6709d17482f43, type: 3}
 --- !u!224 &8598606204780644975 stripped
 RectTransform:
@@ -10039,6 +11164,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 7615103567848842557, guid: 0b11cff201fdb49488717938e5526376, type: 3}
@@ -10130,6 +11259,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 0b11cff201fdb49488717938e5526376, type: 3}
 --- !u!224 &5100304405390398696 stripped
 RectTransform:
@@ -10141,6 +11276,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 8878642166450592748, guid: e549e1f79f89c47c6a9b0005e632e3b8, type: 3}
@@ -10232,6 +11371,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: e549e1f79f89c47c6a9b0005e632e3b8, type: 3}
 --- !u!224 &4815816385113366929 stripped
 RectTransform:
@@ -10243,6 +11388,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 2768682786667136188, guid: 927f4d4d73de74659aa7aaabafd7a125, type: 3}
@@ -10334,6 +11483,12 @@ PrefabInstance:
       value: Btn_IconTextButton_Square02_White
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 927f4d4d73de74659aa7aaabafd7a125, type: 3}
 --- !u!224 &2031972874680849101 stripped
 RectTransform:
@@ -10345,6 +11500,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 1054705151272246163, guid: e470545d023a94ec184d264df4c4233f, type: 3}
@@ -10436,6 +11595,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: e470545d023a94ec184d264df4c4233f, type: 3}
 --- !u!224 &1822922470753320296 stripped
 RectTransform:
@@ -10447,6 +11612,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 2840452826474172843, guid: c92269193246c483184fd9b14ffcc183, type: 3}
@@ -10538,6 +11707,12 @@ PrefabInstance:
       value: Btn_IconTextButton_Square05
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: c92269193246c483184fd9b14ffcc183, type: 3}
 --- !u!224 &2031972874307127924 stripped
 RectTransform:
@@ -10549,6 +11724,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 7503168035924448525, guid: 19757caf48a634fffbf55d8f5e0794ce, type: 3}
@@ -10640,6 +11819,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 19757caf48a634fffbf55d8f5e0794ce, type: 3}
 --- !u!224 &6028122375547480304 stripped
 RectTransform:
@@ -10651,6 +11836,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 4815816384774798176}
     m_Modifications:
     - target: {fileID: 5471898312717548453, guid: eec2bdcc6715e4700a81eafc1c6f584c, type: 3}
@@ -10742,6 +11931,12 @@ PrefabInstance:
       value: Btn_TextButton_Square01_Blue
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: eec2bdcc6715e4700a81eafc1c6f584c, type: 3}
 --- !u!224 &8598606204908473346 stripped
 RectTransform:
@@ -10753,6 +11948,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 8493971102554692317, guid: 3fe90d362124d4eeb853591f0d3eb466, type: 3}
@@ -10844,6 +12043,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 3fe90d362124d4eeb853591f0d3eb466, type: 3}
 --- !u!224 &5260153118372256092 stripped
 RectTransform:
@@ -10855,6 +12060,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 608507478978507617, guid: 66a37307f9e214d75844c421307f16c6, type: 3}
@@ -10946,6 +12155,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 66a37307f9e214d75844c421307f16c6, type: 3}
 --- !u!224 &5260153118644341068 stripped
 RectTransform:
@@ -10957,6 +12172,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 4815816384774798176}
     m_Modifications:
     - target: {fileID: 707493211914912177, guid: 41b3c06fa1104464897fa5959ced4f8d, type: 3}
@@ -11048,6 +12267,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 41b3c06fa1104464897fa5959ced4f8d, type: 3}
 --- !u!224 &5260153118159556182 stripped
 RectTransform:
@@ -11059,6 +12284,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 6896982785359904168, guid: aeaaeb3cb02f044168b08b484f5ba870, type: 3}
@@ -11150,6 +12379,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: aeaaeb3cb02f044168b08b484f5ba870, type: 3}
 --- !u!224 &2031972873861472483 stripped
 RectTransform:
@@ -11161,6 +12396,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 6456824614975787649, guid: c964a98b5a6f8467f8322b5884133586, type: 3}
@@ -11296,6 +12535,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: c964a98b5a6f8467f8322b5884133586, type: 3}
 --- !u!224 &2031972874901417855 stripped
 RectTransform:
@@ -11307,6 +12552,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 6505350752345402599, guid: bbb5c1a987598473fb70f623b5c8756f, type: 3}
@@ -11398,6 +12647,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: bbb5c1a987598473fb70f623b5c8756f, type: 3}
 --- !u!224 &2031972874342298904 stripped
 RectTransform:
@@ -11409,6 +12664,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 6614774597164246357, guid: 560b3be1aa5cc4315adce8fd441d4095, type: 3}
@@ -11500,6 +12759,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 560b3be1aa5cc4315adce8fd441d4095, type: 3}
 --- !u!224 &2031972874326475638 stripped
 RectTransform:
@@ -11511,6 +12776,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 4815816384774798176}
     m_Modifications:
     - target: {fileID: 4182610911479498282, guid: c1b05dcefac024e89ae5e9d5cedcaafc, type: 3}
@@ -11602,6 +12871,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: c1b05dcefac024e89ae5e9d5cedcaafc, type: 3}
 --- !u!224 &8598606205810854502 stripped
 RectTransform:
@@ -11613,6 +12888,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 4380705344160544346, guid: c210196b75daf4a99a9ab6d8fe4b82f9, type: 3}
@@ -11704,6 +12983,12 @@ PrefabInstance:
       value: Btn_MenuButton_SquareLeft-Group
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: c210196b75daf4a99a9ab6d8fe4b82f9, type: 3}
 --- !u!224 &8347751054566539934 stripped
 RectTransform:
@@ -11715,6 +13000,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 1479727176039565257, guid: 5874ab1117d2942e8a866a5075aba9bf, type: 3}
@@ -11806,6 +13095,12 @@ PrefabInstance:
       value: Btn_MenuButton_Square03-Group-White
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 5874ab1117d2942e8a866a5075aba9bf, type: 3}
 --- !u!224 &4815816384983262122 stripped
 RectTransform:
@@ -11817,6 +13112,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 2188958560963233706, guid: cc35711ea96f54161b90a93b1d019c70, type: 3}
@@ -11908,6 +13207,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: cc35711ea96f54161b90a93b1d019c70, type: 3}
 --- !u!224 &5260153118327561821 stripped
 RectTransform:
@@ -11919,6 +13224,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 2618069951095601864, guid: 831b5f875b846465fa330ebe51071fac, type: 3}
@@ -12010,6 +13319,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 831b5f875b846465fa330ebe51071fac, type: 3}
 --- !u!224 &8277843322025406076 stripped
 RectTransform:
@@ -12021,6 +13336,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 4815816384774798176}
     m_Modifications:
     - target: {fileID: 3321198844592524132, guid: eb49a4a674b3b4e449c09741874ab3f3, type: 3}
@@ -12112,6 +13431,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: eb49a4a674b3b4e449c09741874ab3f3, type: 3}
 --- !u!224 &8598606205383637400 stripped
 RectTransform:
@@ -12123,6 +13448,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 5141755556155279421, guid: 22a43111eb28641dbaf94cd3050d4af5, type: 3}
@@ -12214,6 +13543,12 @@ PrefabInstance:
       value: Btn_IconTextButton_Ploygon01_White
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 22a43111eb28641dbaf94cd3050d4af5, type: 3}
 --- !u!224 &2031972875015115858 stripped
 RectTransform:
@@ -12225,6 +13560,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 3372042605426526058, guid: 1625830a2a9fa4fceb6b1a56a785439e, type: 3}
@@ -12316,6 +13655,12 @@ PrefabInstance:
       value: Btn_IconButton_Hexagon02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 1625830a2a9fa4fceb6b1a56a785439e, type: 3}
 --- !u!224 &8078874088728200984 stripped
 RectTransform:
@@ -12327,6 +13672,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 2894071899152152178, guid: 497f7289bd19540db936711f3a14b6f2, type: 3}
@@ -12418,6 +13767,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 497f7289bd19540db936711f3a14b6f2, type: 3}
 --- !u!224 &5260153117239939613 stripped
 RectTransform:
@@ -12429,6 +13784,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 4815816384774798176}
     m_Modifications:
     - target: {fileID: 1710372822537638314, guid: bebd7ac5ae1044805aace1ed631f455f, type: 3}
@@ -12520,6 +13879,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: bebd7ac5ae1044805aace1ed631f455f, type: 3}
 --- !u!224 &8598606204416084117 stripped
 RectTransform:
@@ -12531,6 +13896,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 3218640435658406222, guid: fd73d094a917942b7af5b1f3ed8cadc1, type: 3}
@@ -12622,6 +13991,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: fd73d094a917942b7af5b1f3ed8cadc1, type: 3}
 --- !u!224 &5260153117400394914 stripped
 RectTransform:
@@ -12633,6 +14008,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 879200571182212259, guid: 62e15413544254b7ab14360008a5fab7, type: 3}
@@ -12724,6 +14103,12 @@ PrefabInstance:
       value: Btn_IconButton_Hexagon05
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 62e15413544254b7ab14360008a5fab7, type: 3}
 --- !u!224 &7639856506198905023 stripped
 RectTransform:
@@ -12735,6 +14120,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 5025842245733749027, guid: a1b97e8bdd8764beeb1a6b1ede312190, type: 3}
@@ -12826,6 +14215,12 @@ PrefabInstance:
       value: Btn_MenuButton_SquareLeft-Group_White
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: a1b97e8bdd8764beeb1a6b1ede312190, type: 3}
 --- !u!224 &2559526467292057828 stripped
 RectTransform:
@@ -12837,6 +14232,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 4815816384774798176}
     m_Modifications:
     - target: {fileID: 1295817764823000740, guid: f540df5de6e6b4b71b01bdfc22ca32be, type: 3}
@@ -12928,6 +14327,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: f540df5de6e6b4b71b01bdfc22ca32be, type: 3}
 --- !u!224 &8598606204715045034 stripped
 RectTransform:
@@ -12939,6 +14344,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 8545106137257291860, guid: b120e1c6e940140139031a35031d0750, type: 3}
@@ -13074,6 +14483,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: b120e1c6e940140139031a35031d0750, type: 3}
 --- !u!224 &2031972874262368611 stripped
 RectTransform:
@@ -13085,6 +14500,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 7888735672709589996, guid: 5a866a6d83f4043e2872f330e2a7b414, type: 3}
@@ -13176,6 +14595,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 5a866a6d83f4043e2872f330e2a7b414, type: 3}
 --- !u!224 &1719453480953854494 stripped
 RectTransform:
@@ -13187,6 +14612,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 7967157705888917005, guid: 6719fbcd8a2624baaaed811fff902c54, type: 3}
@@ -13278,6 +14707,12 @@ PrefabInstance:
       value: Btn_IconTextButton_Square01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 6719fbcd8a2624baaaed811fff902c54, type: 3}
 --- !u!224 &2031972874468693888 stripped
 RectTransform:
@@ -13289,6 +14724,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 7529430573930070474, guid: 29b45c4f00e6c4eda9a1b49c004f57ec, type: 3}
@@ -13380,6 +14819,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 29b45c4f00e6c4eda9a1b49c004f57ec, type: 3}
 --- !u!224 &2031972873642605075 stripped
 RectTransform:
@@ -13391,6 +14836,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 4424807523764699120, guid: ba3d5a990f4864f9fbca8ca5b08eb020, type: 3}
@@ -13482,6 +14931,12 @@ PrefabInstance:
       value: Btn_TextButton_Square04
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: ba3d5a990f4864f9fbca8ca5b08eb020, type: 3}
 --- !u!224 &5260153117583737087 stripped
 RectTransform:
@@ -13493,6 +14948,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 4815816384774798176}
     m_Modifications:
     - target: {fileID: 102949869147388360, guid: 7d071896587364551938a43ff6a8a00a, type: 3}
@@ -13584,6 +15043,12 @@ PrefabInstance:
       value: Btn_TextButton_Square01_Plum
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 7d071896587364551938a43ff6a8a00a, type: 3}
 --- !u!224 &8598606205245735820 stripped
 RectTransform:
@@ -13595,6 +15060,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 7707175005187656666, guid: 5c7d6b5b81856448da5aba53217677b9, type: 3}
@@ -13686,6 +15155,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 5c7d6b5b81856448da5aba53217677b9, type: 3}
 --- !u!224 &2031972875153157139 stripped
 RectTransform:
@@ -13697,6 +15172,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 7326628605902717010, guid: aac67c2daac094db4a12226a57304646, type: 3}
@@ -13788,6 +15267,12 @@ PrefabInstance:
       value: Btn_IconTextButton_SlantSquare03_White
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: aac67c2daac094db4a12226a57304646, type: 3}
 --- !u!224 &2031972873675678932 stripped
 RectTransform:
@@ -13799,6 +15284,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 2316077046314977282, guid: 925c2069ee9ef4467a071c3060e6ee32, type: 3}
@@ -13890,6 +15379,12 @@ PrefabInstance:
       value: Btn_MenuButton_SlantSquare-Group
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 925c2069ee9ef4467a071c3060e6ee32, type: 3}
 --- !u!224 &6584551183426359344 stripped
 RectTransform:
@@ -13901,6 +15396,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 4111816962961449505, guid: e6686b174226d4bfb805168deaa863d3, type: 3}
@@ -13992,6 +15491,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: e6686b174226d4bfb805168deaa863d3, type: 3}
 --- !u!224 &4815816385418500894 stripped
 RectTransform:
@@ -14003,6 +15508,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 7476359397271847606, guid: 0336013f36e7346f4828d3e5852875ee, type: 3}
@@ -14094,6 +15603,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 0336013f36e7346f4828d3e5852875ee, type: 3}
 --- !u!224 &2031972874837955465 stripped
 RectTransform:
@@ -14105,6 +15620,10 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD
+=======
+    serializedVersion: 3
+>>>>>>> DW_work
     m_TransformParent: {fileID: 5260153118060050489}
     m_Modifications:
     - target: {fileID: 1191713909392659465, guid: 9b2f3859ced2b48bfa48267c3d60af91, type: 3}
@@ -14196,6 +15715,12 @@ PrefabInstance:
       value: Btn_TextButton_Square02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+<<<<<<< HEAD
+=======
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+>>>>>>> DW_work
   m_SourcePrefab: {fileID: 100100000, guid: 9b2f3859ced2b48bfa48267c3d60af91, type: 3}
 --- !u!224 &8031793697466276449 stripped
 RectTransform:
