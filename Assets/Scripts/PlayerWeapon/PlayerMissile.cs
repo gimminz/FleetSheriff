@@ -3,12 +3,11 @@ using UnityEngine;
 public class PlayerMissile : MonoBehaviour
 {
     public float damage = 25f;
-    public float speed = 0.2f; 
+    public float speed = 20f;
     public float lifeTime = 8f;
-    public float homingStrength = 2f; 
-    public float homingRange = 50f;
+    public float homingStrength = 2f;
 
-    private Transform launcher;         
+    private Transform launcher;
     private float maxTargetDistance = 500f;
 
     private Rigidbody rb;
@@ -28,6 +27,7 @@ public class PlayerMissile : MonoBehaviour
     {
         pool = poolRef;
     }
+
     public void Launch(Vector3 position, Vector3 direction, Transform targetTransform, Transform launcherTransform, float maxDistance)
     {
         lifeTimer = 0f;
@@ -45,70 +45,50 @@ public class PlayerMissile : MonoBehaviour
         maxTargetDistance = maxDistance;
 
         velocity = direction.normalized * speed;
-        rb.linearVelocity = velocity; 
+        rb.linearVelocity = velocity;
     }
 
     private void FixedUpdate()
     {
         UpdateHoming();
-
         rb.linearVelocity = velocity;
 
         if (velocity != Vector3.zero)
-        {
             transform.rotation = Quaternion.LookRotation(velocity);
-        }
     }
 
     private void Update()
     {
         lifeTimer += Time.deltaTime;
-        if (lifeTimer >= lifeTime)
-        {
-            ReturnToPool();
-        }
+        if (lifeTimer >= lifeTime) { ReturnToPool(); return; }
 
-        if (target == null)
-        {
-            ReturnToPool();
-            return;
-        }
+        if (target == null) { ReturnToPool(); return; }
 
         if (launcher != null)
         {
             float d = Vector3.Distance(launcher.position, target.position);
-            if (d > maxTargetDistance)
-            {
-                ReturnToPool();
-                return;
-            }
+            if (d > maxTargetDistance) { ReturnToPool(); return; }
         }
     }
 
     private void UpdateHoming()
-    { 
-        if (target != null)
-        {
-            float distanceToTarget = Vector3.Distance(transform.position, target.position);
+    {
+        if (target == null) return;
 
-            if (distanceToTarget <= homingRange)
-            {
-                Vector3 directionToTarget = (target.position - transform.position).normalized;
-                velocity = Vector3.Slerp(velocity.normalized, directionToTarget, homingStrength * Time.fixedDeltaTime) * speed;
-            }
-        }
+        Vector3 dir = (target.position - transform.position).normalized;
+        velocity = Vector3.Slerp(velocity.normalized, dir, homingStrength * Time.fixedDeltaTime) * speed;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
         {
-            var damagable = other.GetComponent<IDamagable>();
-            if (damagable != null)
+            var dmg = other.GetComponent<IDamagable>();
+            if (dmg != null)
             {
                 Vector3 hitPoint = transform.position;
                 Vector3 hitNormal = -transform.forward;
-                damagable.OnDamage(damage, hitPoint, hitNormal);
+                dmg.OnDamage(damage, hitPoint, hitNormal);
             }
             ReturnToPool();
         }
@@ -126,9 +106,7 @@ public class PlayerMissile : MonoBehaviour
         rb.angularVelocity = Vector3.zero;
         rb.isKinematic = true;
 
-        if (pool != null)
-            pool.Return(this);
-        else
-            gameObject.SetActive(false);
+        if (pool != null) pool.Return(this);
+        else gameObject.SetActive(false);
     }
 }

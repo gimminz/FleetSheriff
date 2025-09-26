@@ -4,22 +4,29 @@ using UnityEngine.UI;
 
 public class HomingTargetOverlay : MonoBehaviour
 {
-    public Transform player;             
-    public Camera playerCamera;            
-    public Canvas canvas;                   
-    public RectTransform parentRect;        
-    public RectTransform scopeRect;         
-    public RadarRegistry registry;         
-    public RectTransform crosshairPrefab;    
+    public Transform player;
+    public Camera playerCamera;
+    public Canvas canvas;
+    public RectTransform parentRect;
+    public RectTransform overlayRoot;
+    public RectTransform scopeRect;
+    public RadarRegistry registry;
+    public RectTransform crosshairPrefab;
 
-    public float missileRange = 500f;       
+    public float missileRange = 500f;
     public int initialPool = 16;
     public int maxPool = 64;
+
+    [Header("Colors")]
+    public Color normalColor = Color.white;
+    public Color readyColor = Color.red;
 
     private ObjectPool<RectTransform> _pool;
     private readonly Dictionary<Transform, RectTransform> _map = new();
     private readonly List<Transform> _validTargets = new();
     private readonly List<Transform> _sortedTargets = new();
+
+    private bool _missileReadyVisual;
 
     void Awake()
     {
@@ -29,6 +36,24 @@ public class HomingTargetOverlay : MonoBehaviour
             enabled = false; return;
         }
         _pool = new ObjectPool<RectTransform>(crosshairPrefab, parentRect, initialPool, maxPool);
+
+        if (!overlayRoot)
+        {
+            var go = new GameObject("HomingOverlay_Instances", typeof(RectTransform));
+            overlayRoot = go.GetComponent<RectTransform>();
+            overlayRoot.SetParent(parentRect, false);
+            overlayRoot.anchorMin = overlayRoot.anchorMax = new Vector2(0.5f, 0.5f);
+            overlayRoot.sizeDelta = Vector2.zero;
+            overlayRoot.anchoredPosition = Vector2.zero;
+        }
+    }
+
+    void OnEnable()
+    {
+        foreach (var kv in _map) _pool.Return(kv.Value);
+        _map.Clear();
+        _validTargets.Clear();
+        _sortedTargets.Clear();
     }
 
     void LateUpdate()
@@ -36,6 +61,7 @@ public class HomingTargetOverlay : MonoBehaviour
         if (!player || !playerCamera || !canvas || !scopeRect || registry == null) return;
 
         _validTargets.Clear();
+
         foreach (var rt in registry.Targets)
         {
             if (!rt) continue;
@@ -58,12 +84,18 @@ public class HomingTargetOverlay : MonoBehaviour
             if (!_map.TryGetValue(tr, out var ui))
             {
                 ui = _pool.Get();
-                ui.SetParent(parentRect, false);
+                ui.SetParent(overlayRoot, false);
+
+                foreach (var g in ui.GetComponentsInChildren<Graphic>(true))
+                    g.raycastTarget = false;
+
                 _map[tr] = ui;
             }
 
             if (ScreenToLocal(parentRect, new Vector2(sp.x, sp.y), out var parentLocal))
                 ui.anchoredPosition = parentLocal;
+
+            SetUIColors(ui, _missileReadyVisual ? readyColor : normalColor);
         }
 
         CollectRemovals();
@@ -72,10 +104,20 @@ public class HomingTargetOverlay : MonoBehaviour
         _sortedTargets.AddRange(_validTargets);
         _sortedTargets.Sort((a, b) =>
         {
-            float da = Vector3.SqrMagnitude(GetAimPoint(a) - player.position);
-            float db = Vector3.SqrMagnitude(GetAimPoint(b) - player.position);
+            float da = (GetAimPoint(a) - player.position).sqrMagnitude;
+            float db = (GetAimPoint(b) - player.position).sqrMagnitude;
             return da.CompareTo(db);
         });
+    }
+
+    public void SetMissileReady(bool ready)
+    {
+        _missileReadyVisual = ready;
+    }
+
+    public List<Transform> GetTargetsSortedByDistance()
+    {
+        return _sortedTargets;
     }
 
     void RemoveFor(Transform tr)
@@ -91,15 +133,19 @@ public class HomingTargetOverlay : MonoBehaviour
     {
         var toRemove = new List<Transform>();
         foreach (var kv in _map)
-        {
-            if (!_validTargets.Contains(kv.Key))
-                toRemove.Add(kv.Key);
-        }
+            if (!_validTargets.Contains(kv.Key)) toRemove.Add(kv.Key);
+
         foreach (var tr in toRemove)
         {
             _pool.Return(_map[tr]);
             _map.Remove(tr);
         }
+    }
+
+    void SetUIColors(RectTransform ui, Color c)
+    {
+        foreach (var g in ui.GetComponentsInChildren<Graphic>(true))
+            g.color = c;
     }
 
     bool ScreenToLocal(RectTransform targetRect, Vector2 screen, out Vector2 local)
@@ -114,8 +160,15 @@ public class HomingTargetOverlay : MonoBehaviour
         return aim ? aim.position : tr.position;
     }
 
-    public List<Transform> GetTargetsSortedByDistance()
+    public void ClearAll()
     {
-        return _sortedTargets; 
+        foreach (var kv in _map) _pool.Return(kv.Value);
+        _map.Clear();
+        _validTargets.Clear();
+        _sortedTargets.Clear();
+    }
+    void OnDisable()
+    {
+        ClearAll(); 
     }
 }
