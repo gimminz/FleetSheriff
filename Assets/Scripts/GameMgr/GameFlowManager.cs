@@ -8,6 +8,8 @@ public class GameFlowManager : MonoBehaviour
     
     public string mainMenuSceneName = "MainMenuScene";
     public OptionPanelController optionPanel;
+    public GameObject failPanel;
+    public PlayerHealth player;
 
     public MonoBehaviour[] pauseTargets; //Pause Scripts
 
@@ -27,6 +29,11 @@ public class GameFlowManager : MonoBehaviour
         _isPaused = false;
 
         if (optionPanel) optionPanel.Hide();
+    }
+    private void Start()
+    {
+        if (player != null)
+            player.OnDeath += ShowFailPanel;
     }
 
     public void OpenOption()
@@ -102,5 +109,10 @@ public class GameFlowManager : MonoBehaviour
         {
             if (t) t.enabled = enabled;
         }
+    }
+    void ShowFailPanel()
+    {
+        PauseGame();
+        if (failPanel) failPanel.SetActive(true);
     }
 }

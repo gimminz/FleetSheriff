@@ -9,6 +9,9 @@ public class EnemySpawner : MonoBehaviour
     public Transform player;
     public EnemyIndicator enemyIndicator;
 
+    public MissionSuccessUI missionSuccessUI;
+    private bool successShown = false;
+
     //debug -> fire test
     public bool spawnTestEnemyInFront = true; 
     public float forwardDistance = 1000f;       
@@ -19,7 +22,7 @@ public class EnemySpawner : MonoBehaviour
     {
         if (spawnTestEnemyInFront)
         {
-            SpawnEnemyInFront();
+            //SpawnEnemyInFront();
         }
 
         StartCoroutine(SpawnEnemyRoutine());
@@ -45,11 +48,23 @@ public class EnemySpawner : MonoBehaviour
         Vector3 spawnPos = player.position + Random.insideUnitSphere * spawnRadius;
         spawnPos.y = player.position.y + Random.Range(-20f, 20f);
         GameObject spawnedEnemy = Instantiate(enemy, spawnPos, Quaternion.identity);
+
         if (enemyIndicator != null)
-        {
             enemyIndicator.AddEnemy(spawnedEnemy.transform);
+
+        var enemyComp = spawnedEnemy.GetComponent<Enemy>();
+        if (enemyComp != null)
+        {
+            enemyComp.OnDeath += HandleEnemyDeath;
         }
     }
+    private void HandleEnemyDeath()
+    {
+        if (successShown) return;  
+        successShown = true;
+        missionSuccessUI?.Show();
+    }
+
     private void SpawnEnemyInFront()
     {
         Vector3 spawnPos = player.position + player.forward * forwardDistance;

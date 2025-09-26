@@ -44,6 +44,7 @@ public class PlayerHealth : LivingEntity
         gameObject.SetActive(false);
 
         Debug.Log("[PlayerHealth] Player died.");
+
     }
     public float GetCurrentHealth()
     {
