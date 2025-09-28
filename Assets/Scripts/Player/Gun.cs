@@ -16,8 +16,8 @@ public class Gun : MonoBehaviour
     public FireMode currentFireMode = FireMode.Projectile;
 
     public Muzzle[] muzzles;
-    public CrosshairAutoTracker crosshairTracker;     
-    public HomingTargetOverlay homingOverlay;      
+    public CrosshairAutoTracker crosshairTracker;
+    public HomingTargetOverlay homingOverlay;
 
     public float projectileRange = 300f;
     public float missileRange = 500f;
@@ -32,10 +32,12 @@ public class Gun : MonoBehaviour
     public PlayerMissile playerMissilePrefab;
     public float missileSpeed = 20f;
 
-    private float _nextBulletTime;       
-    private float _nextMissileTime;       
-    private float _missileInterval;      
-    private bool _isFiringHeld;         
+    private float _nextBulletTime;
+    private float _nextMissileTime;
+    private float _missileInterval;
+    private bool _isFiringHeld;
+    private bool _wasFiringLastFrame;
+    private bool _currentlyFiring;
 
     private ObjectPool<PlayerProjectile> projectilePool;
     private ObjectPool<PlayerMissile> missilePool;
@@ -56,16 +58,34 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
-        if (_isFiringHeld)
+        CheckFireInput();
+
+#if UNITY_EDITOR || UNITY_STANDALONE
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            ChangeFireMode();
+        }
+#endif
+
+        if (_currentlyFiring)
         {
             switch (currentFireMode)
             {
                 case FireMode.Hitscan:
+                    if (Time.time >= _nextBulletTime)
+                    {
+                        FireHitscan();
+                        _nextBulletTime = Time.time + fireDelay;
+                        Debug.Log($"Hitscan fired! Next time: {_nextBulletTime}, Current: {Time.time}");
+                    }
+                    break;
+
                 case FireMode.Projectile:
                     if (Time.time >= _nextBulletTime)
                     {
-                        FireNonHomingBurst();
+                        FireProjectile();
                         _nextBulletTime = Time.time + fireDelay;
+                        Debug.Log($"Projectile fired! Next time: {_nextBulletTime}, Current: {Time.time}");
                     }
                     break;
 
@@ -74,6 +94,7 @@ public class Gun : MonoBehaviour
                     {
                         FireHomingBurstIfAny();
                         _nextMissileTime = Time.time + _missileInterval;
+                        Debug.Log($"Missile fired! Next time: {_nextMissileTime}, Current: {Time.time}");
                     }
                     break;
             }
@@ -81,39 +102,38 @@ public class Gun : MonoBehaviour
 
         if (homingOverlay)
         {
-            bool ready = Time.time >= _nextMissileTime - 0.0001f; // 약간의 여유
+            bool ready = Time.time >= _nextMissileTime - 0.0001f;
             homingOverlay.SetMissileReady(ready && currentFireMode == FireMode.HomingMissile);
         }
+    }
+
+    private void CheckFireInput()
+    {
+        bool firePressed = _isFiringHeld;
+
+        if (firePressed && !_wasFiringLastFrame)
+        {
+            Debug.Log("Fire Started");
+        }
+        else if (!firePressed && _wasFiringLastFrame)
+        {
+            Debug.Log("Fire Stopped");
+        }
+
+        _wasFiringLastFrame = firePressed;
+        _currentlyFiring = firePressed;
     }
 
     public void OnFireButtonDown()
     {
         _isFiringHeld = true;
-
-        switch (currentFireMode)
-        {
-            case FireMode.Hitscan:
-            case FireMode.Projectile:
-                if (Time.time >= _nextBulletTime)
-                {
-                    FireNonHomingBurst();
-                    _nextBulletTime = Time.time + fireDelay;
-                }
-                break;
-
-            case FireMode.HomingMissile:
-                if (Time.time >= _nextMissileTime)
-                {
-                    FireHomingBurstIfAny();
-                    _nextMissileTime = Time.time + _missileInterval;
-                }
-                break;
-        }
+        Debug.Log("Button Fire Started");
     }
 
     public void OnFireButtonUp()
     {
         _isFiringHeld = false;
+        Debug.Log("Button Fire Stopped");
     }
 
     public void ChangeFireMode()
@@ -133,35 +153,24 @@ public class Gun : MonoBehaviour
         if (homingOverlay)
         {
             homingOverlay.gameObject.SetActive(useOverlay);
-            if (!useOverlay) homingOverlay.ClearAll();  
-            homingOverlay.SetMissileReady(false);       
+            if (!useOverlay) homingOverlay.ClearAll();
+            homingOverlay.SetMissileReady(false);
         }
 
         _nextBulletTime = Time.time;
         _nextMissileTime = Time.time;
     }
 
-    private void FireNonHomingBurst()
-    {
-        switch (currentFireMode)
-        {
-            case FireMode.Hitscan:
-                FireHitscan();
-                break;
-            case FireMode.Projectile:
-                FireProjectile();
-                break;
-        }
-    }
-
     private void FireHitscan()
     {
+        Debug.Log("FireHitscan called!");
+
         foreach (var m in muzzles)
         {
             if (m?.muzzleTransform == null) continue;
 
             Vector3 origin = m.muzzleTransform.position;
-            Vector3 dir = m.muzzleTransform.forward; 
+            Vector3 dir = m.muzzleTransform.forward;
 
             Transform target = crosshairTracker ? crosshairTracker.CurrentTarget : null;
             if (target && crosshairTracker.IsLocked && DistanceTo(target, origin) <= hitscanRange)
@@ -174,9 +183,22 @@ public class Gun : MonoBehaviour
                 hitPos = hit.point;
                 var dmg = hit.collider.GetComponent<IDamagable>();
                 if (dmg != null) dmg.OnDamage(damage, hit.point, hit.normal);
+                Debug.Log($"Hit {hit.collider.name}!");
+            }
+            else
+            {
+                Debug.Log("No hit detected"); 
             }
 
-            StartCoroutine(CoShotEffect(m, hitPos));
+            if (m.lineRenderer != null)
+            {
+                m.lineRenderer.enabled = true;
+                m.lineRenderer.positionCount = 2;
+                m.lineRenderer.SetPosition(0, origin);
+                m.lineRenderer.SetPosition(1, hitPos);
+
+                StartCoroutine(CoShotEffect(m, 0.05f));
+            }
         }
     }
 
@@ -204,25 +226,57 @@ public class Gun : MonoBehaviour
             p.Launch(origin, dir);
         }
     }
+
     private void FireHomingBurstIfAny()
     {
-        if (missilePool == null || homingOverlay == null) return;
+        Debug.Log("FireHomingBurstIfAny called!");
+
+        if (missilePool == null)
+        {
+            Debug.LogError("missilePool is null!");
+            return;
+        }
+
+        if (homingOverlay == null)
+        {
+            Debug.LogError("homingOverlay is null!");
+            return;
+        }
 
         List<Transform> targets = homingOverlay.GetTargetsSortedByDistance();
-        if (targets == null || targets.Count == 0) return;
+        if (targets == null || targets.Count == 0)
+        {
+            Debug.Log("No targets found for homing missiles");
+            return;
+        }
+
+        Debug.Log($"Found {targets.Count} targets for missiles");
 
         int muzzleCount = (muzzles != null) ? muzzles.Length : 0;
-        if (muzzleCount <= 0) return;
+        if (muzzleCount <= 0)
+        {
+            Debug.LogError("No muzzles available!");
+            return;
+        }
 
         int fireCount = Mathf.Min(muzzleCount, targets.Count);
+        Debug.Log($"Firing {fireCount} missiles");
 
         for (int i = 0; i < fireCount; i++)
         {
             var m = muzzles[i];
-            if (m?.muzzleTransform == null) continue;
+            if (m?.muzzleTransform == null)
+            {
+                Debug.LogWarning($"Muzzle {i} is null or missing transform");
+                continue;
+            }
 
             var missile = missilePool.Get();
-            if (!missile) continue;
+            if (!missile)
+            {
+                Debug.LogWarning($"Failed to get missile from pool for muzzle {i}");
+                continue;
+            }
 
             missile.Init(missilePool);
             missile.damage = damage;
@@ -232,6 +286,7 @@ public class Gun : MonoBehaviour
             Vector3 dir = m.muzzleTransform.forward;
 
             Transform target = targets[i];
+            Debug.Log($"Launching missile {i} at target: {target.name}");
 
             missile.Launch(origin, dir, target, transform, missileRange);
         }
@@ -254,18 +309,13 @@ public class Gun : MonoBehaviour
         }
     }
 
-    private IEnumerator CoShotEffect(Muzzle m, Vector3 hitPosition)
+    private IEnumerator CoShotEffect(Muzzle m, float duration)
     {
+        yield return new WaitForSeconds(duration);
         if (m.lineRenderer != null)
         {
-            m.lineRenderer.enabled = true;
-            m.lineRenderer.positionCount = 2;
-            m.lineRenderer.SetPosition(0, m.muzzleTransform.position);
-            m.lineRenderer.SetPosition(1, hitPosition);
-            yield return new WaitForSeconds(0.1f);
             m.lineRenderer.enabled = false;
         }
-        yield break;
     }
 
     private Vector3 GetAimPoint(Transform tr)
