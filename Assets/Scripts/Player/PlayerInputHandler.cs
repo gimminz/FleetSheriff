@@ -8,6 +8,7 @@ public class PlayerInputHandler : MonoBehaviour
     public bool useTouch = true;
     public float gyroSensitivity = 0.5f;
     public float touchSensitivity = 100f;
+    public float pitchExtraSensitivity = 1.3f;
 
     private Quaternion lastGyroRot;
     private int rotationFingerId = -1;
@@ -45,7 +46,8 @@ public class PlayerInputHandler : MonoBehaviour
             if (deltaEuler.y > 180) deltaEuler.y -= 360;
             if (deltaEuler.z > 180) deltaEuler.z -= 360;
 
-            rotationInput += deltaEuler * gyroSensitivity;
+            rotationInput.x += (-deltaEuler.x) * gyroSensitivity * pitchExtraSensitivity;
+            rotationInput.z += (deltaEuler.z) * gyroSensitivity; ;
         }
 
         if (useTouch)

@@ -6045,9 +6045,6 @@ PrefabInstance:
       addedObject: {fileID: 1654474312}
     - targetCorrespondingSourceObject: {fileID: 3393101774512844142, guid: 7001ad4285fc9324ebe16ff6b41b7a92, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1654474316}
-    - targetCorrespondingSourceObject: {fileID: 3393101774512844142, guid: 7001ad4285fc9324ebe16ff6b41b7a92, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1654474317}
     - targetCorrespondingSourceObject: {fileID: 3393101774512844142, guid: 7001ad4285fc9324ebe16ff6b41b7a92, type: 3}
       insertIndex: -1
@@ -6055,6 +6052,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3393101774512844142, guid: 7001ad4285fc9324ebe16ff6b41b7a92, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1654474321}
+    - targetCorrespondingSourceObject: {fileID: 3393101774512844142, guid: 7001ad4285fc9324ebe16ff6b41b7a92, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1654474322}
   m_SourcePrefab: {fileID: 100100000, guid: 7001ad4285fc9324ebe16ff6b41b7a92, type: 3}
 --- !u!1 &1654474310 stripped
 GameObject:
@@ -6108,23 +6108,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2620365709462845396, guid: 7001ad4285fc9324ebe16ff6b41b7a92, type: 3}
   m_PrefabInstance: {fileID: 1654474309}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1654474316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1654474310}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a29c29389caa1c43830fd9247284a47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  plane: {fileID: 1654474312}
-  useGyro: 1
-  useTouch: 1
-  gyroSensitivity: 0.5
-  touchSensitivity: 100
 --- !u!114 &1654474317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6196,6 +6179,24 @@ CapsuleCollider:
   m_Height: 4.302332
   m_Direction: 1
   m_Center: {x: 0, y: -0.00000059604656, z: -0.000001907349}
+--- !u!114 &1654474322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654474310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a29c29389caa1c43830fd9247284a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plane: {fileID: 1654474312}
+  useGyro: 1
+  useTouch: 1
+  gyroSensitivity: 0.5
+  touchSensitivity: 100
+  pitchExtraSensitivity: 1.5
 --- !u!1 &1672065875
 GameObject:
   m_ObjectHideFlags: 0
