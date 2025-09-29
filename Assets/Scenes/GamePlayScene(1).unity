@@ -1025,6 +1025,7 @@ MonoBehaviour:
   spawnRadius: 500
   player: {fileID: 0}
   enemyIndicator: {fileID: 1581583089}
+  missionSuccessUI: {fileID: 0}
   spawnTestEnemyInFront: 1
   forwardDistance: 30
   heightOffset: 0
@@ -3970,6 +3971,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenuSceneName: MainMenuScene
   optionPanel: {fileID: 314187904}
+  failPanel: {fileID: 0}
+  player: {fileID: 0}
   pauseTargets: []
   playerInput: {fileID: 0}
   playerActionMapName: Player
@@ -4353,63 +4356,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025128362}
   m_CullTransparentMesh: 1
---- !u!1001 &2093674145
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2635301671248262999, guid: 3c67b19a653b3734a8e8ed726a795295, type: 3}
-      propertyPath: m_Name
-      value: AsteroidGroup2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5172535357508163793, guid: 3c67b19a653b3734a8e8ed726a795295, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -42.875954
-      objectReference: {fileID: 0}
-    - target: {fileID: 5172535357508163793, guid: 3c67b19a653b3734a8e8ed726a795295, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5172535357508163793, guid: 3c67b19a653b3734a8e8ed726a795295, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 62.45486
-      objectReference: {fileID: 0}
-    - target: {fileID: 5172535357508163793, guid: 3c67b19a653b3734a8e8ed726a795295, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5172535357508163793, guid: 3c67b19a653b3734a8e8ed726a795295, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5172535357508163793, guid: 3c67b19a653b3734a8e8ed726a795295, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5172535357508163793, guid: 3c67b19a653b3734a8e8ed726a795295, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5172535357508163793, guid: 3c67b19a653b3734a8e8ed726a795295, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5172535357508163793, guid: 3c67b19a653b3734a8e8ed726a795295, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5172535357508163793, guid: 3c67b19a653b3734a8e8ed726a795295, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3c67b19a653b3734a8e8ed726a795295, type: 3}
 --- !u!1 &2112524111
 GameObject:
   m_ObjectHideFlags: 0
@@ -5122,4 +5068,3 @@ SceneRoots:
   - {fileID: 690752565917540838}
   - {fileID: 4009134223749139768}
   - {fileID: 7134970404960006482}
-  - {fileID: 2093674145}
