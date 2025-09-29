@@ -160,7 +160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 132296148}
   m_Layer: 5
-  m_Name: crossHairObject
+  m_Name: CrossHairObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5794,7 +5794,7 @@ MonoBehaviour:
   hitscanRange: 450
   damage: 25
   fireDelay: 0.1
-  missileRPM: 0.1
+  missileRPM: 60
   playerProjectilePrefab: {fileID: 4009134223749139769}
   projectileSpeed: 30
   playerMissilePrefab: {fileID: 7134970404960006483}

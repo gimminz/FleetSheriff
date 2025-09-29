@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -52,6 +52,11 @@ public class Gun : MonoBehaviour
 
         _missileInterval = (missileRPM > 0f) ? 60f / missileRPM : 9999f;
 
+        Debug.Log($"미사일 설정:");
+        Debug.Log($"  미사일 RPM: {missileRPM}");
+        Debug.Log($"  미사일 간격: {_missileInterval}초");
+        Debug.Log($"  초기 _nextMissileTime: {_nextMissileTime}");
+
         ApplyModeVisuals();
         UpdateCrosshairRange();
     }
@@ -63,11 +68,14 @@ public class Gun : MonoBehaviour
 #if UNITY_EDITOR || UNITY_STANDALONE
         if (Input.GetKeyDown(KeyCode.Tab))
         {
+            Debug.Log("Tab key pressed!");
             ChangeFireMode();
         }
 #endif
 
-        if (_currentlyFiring)
+        bool canFireMissile = Time.time >= _nextMissileTime; // 미사일 쿨다운 체크
+
+        if (_currentlyFiring && canFireMissile)
         {
             switch (currentFireMode)
             {
@@ -76,7 +84,6 @@ public class Gun : MonoBehaviour
                     {
                         FireHitscan();
                         _nextBulletTime = Time.time + fireDelay;
-                        Debug.Log($"Hitscan fired! Next time: {_nextBulletTime}, Current: {Time.time}");
                     }
                     break;
 
@@ -85,25 +92,29 @@ public class Gun : MonoBehaviour
                     {
                         FireProjectile();
                         _nextBulletTime = Time.time + fireDelay;
-                        Debug.Log($"Projectile fired! Next time: {_nextBulletTime}, Current: {Time.time}");
                     }
                     break;
 
                 case FireMode.HomingMissile:
-                    if (Time.time >= _nextMissileTime)
-                    {
-                        FireHomingBurstIfAny();
-                        _nextMissileTime = Time.time + _missileInterval;
-                        Debug.Log($"Missile fired! Next time: {_nextMissileTime}, Current: {Time.time}");
-                    }
+                    Debug.Log($"미사일 발사 시도 - 쿨다운 완료: {canFireMissile}");
+                    FireHomingBurstIfAny();
+                    _nextMissileTime = Time.time + _missileInterval;
+                    Debug.Log($"다음 미사일 시간 설정: {_nextMissileTime:F3} (간격: {_missileInterval}초)");
                     break;
             }
         }
 
-        if (homingOverlay)
+        // 🔧 수정: 유도탄 모드에서는 항상 락온 시스템 활성화
+        if (homingOverlay && currentFireMode == FireMode.HomingMissile)
         {
-            bool ready = Time.time >= _nextMissileTime - 0.0001f;
-            homingOverlay.SetMissileReady(ready && currentFireMode == FireMode.HomingMissile);
+            homingOverlay.SetMissileReady(true); // 항상 락온 가능하도록 설정
+
+            // 추가 디버깅: 현재 상태 확인
+            if (_currentlyFiring && !canFireMissile)
+            {
+                float waitTime = _nextMissileTime - Time.time;
+                Debug.Log($"미사일 쿨다운 대기 중: {waitTime:F2}초 남음");
+            }
         }
     }
 
@@ -139,26 +150,55 @@ public class Gun : MonoBehaviour
     public void ChangeFireMode()
     {
         currentFireMode = (FireMode)(((int)currentFireMode + 1) % 3);
+        Debug.Log($"ChangeFireMode called! New mode: {currentFireMode}");
         ApplyModeVisuals();
         UpdateCrosshairRange();
-        Debug.Log($"Fire mode changed to: {currentFireMode}");
     }
 
     private void ApplyModeVisuals()
     {
         bool useSingle = currentFireMode == Gun.FireMode.Hitscan || currentFireMode == Gun.FireMode.Projectile;
-        if (crosshairTracker) crosshairTracker.gameObject.SetActive(useSingle);
-
         bool useOverlay = currentFireMode == Gun.FireMode.HomingMissile;
+
+        if (crosshairTracker)
+        {
+            crosshairTracker.gameObject.SetActive(useSingle);
+
+            // Projectile이나 Hitscan 모드로 변경 시 crosshair를 중앙으로 리셋하고 lock 해제
+            if (useSingle)
+            {
+                crosshairTracker.ResetToCenter();
+                crosshairTracker.ReleaseLock();
+            }
+
+            // 같은 crosshair 오브젝트를 공유하는 경우를 위한 추가 제어
+            if (crosshairTracker.crosshair)
+            {
+                crosshairTracker.crosshair.gameObject.SetActive(useSingle);
+            }
+        }
+
         if (homingOverlay)
         {
             homingOverlay.gameObject.SetActive(useOverlay);
             if (!useOverlay) homingOverlay.ClearAll();
             homingOverlay.SetMissileReady(false);
+
+            // 유도탄 모드로 변경 시 missile range 동기화
+            if (useOverlay)
+            {
+                homingOverlay.SetMissileRange(missileRange);
+            }
         }
+
+        Debug.Log($"모드 변경 시 시간 초기화:");
+        Debug.Log($"  이전 _nextMissileTime: {_nextMissileTime:F3}");
 
         _nextBulletTime = Time.time;
         _nextMissileTime = Time.time;
+
+        Debug.Log($"  새로운 _nextMissileTime: {_nextMissileTime:F3}");
+        Debug.Log($"  현재 Time.time: {Time.time:F3}");
     }
 
     private void FireHitscan()
@@ -187,7 +227,7 @@ public class Gun : MonoBehaviour
             }
             else
             {
-                Debug.Log("No hit detected"); 
+                Debug.Log("No hit detected");
             }
 
             if (m.lineRenderer != null)
@@ -229,54 +269,100 @@ public class Gun : MonoBehaviour
 
     private void FireHomingBurstIfAny()
     {
-        Debug.Log("FireHomingBurstIfAny called!");
+        Debug.Log("=== FireHomingBurstIfAny 시작 ===");
+        Debug.Log($"현재 시간: {Time.time}, 다음 미사일 시간: {_nextMissileTime}");
+        Debug.Log($"미사일 준비됨: {Time.time >= _nextMissileTime}");
 
         if (missilePool == null)
         {
-            Debug.LogError("missilePool is null!");
+            Debug.LogError("❌ missilePool이 null입니다!");
             return;
         }
+        Debug.Log("✅ missilePool 확인됨");
 
         if (homingOverlay == null)
         {
-            Debug.LogError("homingOverlay is null!");
+            Debug.LogError("❌ homingOverlay가 null입니다!");
             return;
         }
+        Debug.Log("✅ homingOverlay 확인됨");
+
+        Debug.Log($"HomingOverlay 활성화 상태: {homingOverlay.gameObject.activeInHierarchy}");
+        Debug.Log($"HomingOverlay 컴포넌트 활성화: {homingOverlay.enabled}");
 
         List<Transform> targets = homingOverlay.GetTargetsSortedByDistance();
-        if (targets == null || targets.Count == 0)
+
+        if (targets == null)
         {
-            Debug.Log("No targets found for homing missiles");
+            Debug.LogError("❌ GetTargetsSortedByDistance()가 null을 반환했습니다!");
             return;
         }
 
-        Debug.Log($"Found {targets.Count} targets for missiles");
+        Debug.Log($"✅ 타겟 리스트 받음. 개수: {targets.Count}");
+
+        if (targets.Count == 0)
+        {
+            Debug.LogWarning("⚠️ 타겟이 없습니다. HomingOverlay 상태를 확인하세요.");
+            // HomingOverlay 내부 상태 디버깅을 위한 추가 정보 요청
+            Debug.Log("HomingOverlay 디버그 정보 요청...");
+            return;
+        }
+
+        // 각 타겟 정보 출력
+        for (int i = 0; i < targets.Count; i++)
+        {
+            if (targets[i] != null)
+            {
+                float distance = Vector3.Distance(transform.position, targets[i].position);
+                Debug.Log($"타겟 {i}: {targets[i].name}, 거리: {distance:F1}m");
+            }
+            else
+            {
+                Debug.LogWarning($"타겟 {i}이 null입니다!");
+            }
+        }
 
         int muzzleCount = (muzzles != null) ? muzzles.Length : 0;
+        Debug.Log($"사용 가능한 머즐 수: {muzzleCount}");
+
         if (muzzleCount <= 0)
         {
-            Debug.LogError("No muzzles available!");
+            Debug.LogError("❌ 머즐이 없습니다!");
             return;
+        }
+
+        // 각 머즐 상태 확인
+        for (int i = 0; i < muzzles.Length; i++)
+        {
+            if (muzzles[i] == null)
+                Debug.LogWarning($"머즐 {i}이 null입니다!");
+            else if (muzzles[i].muzzleTransform == null)
+                Debug.LogWarning($"머즐 {i}의 Transform이 null입니다!");
+            else
+                Debug.Log($"✅ 머즐 {i} 정상: {muzzles[i].muzzleTransform.name}");
         }
 
         int fireCount = Mathf.Min(muzzleCount, targets.Count);
-        Debug.Log($"Firing {fireCount} missiles");
+        Debug.Log($"🚀 {fireCount}개의 미사일을 발사합니다!");
 
+        int actualFired = 0;
         for (int i = 0; i < fireCount; i++)
         {
             var m = muzzles[i];
             if (m?.muzzleTransform == null)
             {
-                Debug.LogWarning($"Muzzle {i} is null or missing transform");
+                Debug.LogError($"❌ 머즐 {i} 사용 불가");
                 continue;
             }
 
             var missile = missilePool.Get();
             if (!missile)
             {
-                Debug.LogWarning($"Failed to get missile from pool for muzzle {i}");
+                Debug.LogError($"❌ 미사일 풀에서 미사일을 가져올 수 없습니다 (머즐 {i})");
                 continue;
             }
+
+            Debug.Log($"✅ 미사일 {i} 풀에서 획득: {missile.name}");
 
             missile.Init(missilePool);
             missile.damage = damage;
@@ -284,12 +370,21 @@ public class Gun : MonoBehaviour
 
             Vector3 origin = m.muzzleTransform.position;
             Vector3 dir = m.muzzleTransform.forward;
-
             Transform target = targets[i];
-            Debug.Log($"Launching missile {i} at target: {target.name}");
+
+            Debug.Log($"🎯 미사일 {i} 발사:");
+            Debug.Log($"  - 발사 위치: {origin}");
+            Debug.Log($"  - 발사 방향: {dir}");
+            Debug.Log($"  - 타겟: {target.name} at {target.position}");
+            Debug.Log($"  - 미사일 범위: {missileRange}");
 
             missile.Launch(origin, dir, target, transform, missileRange);
+            actualFired++;
+
+            Debug.Log($"🚀 미사일 {i} 발사 완료!");
         }
+
+        Debug.Log($"=== 총 {actualFired}개 미사일 발사 완료 ===");
     }
 
     private void UpdateCrosshairRange()
@@ -323,5 +418,6 @@ public class Gun : MonoBehaviour
         var aim = tr.Find("AimPoint");
         return aim ? aim.position : tr.position;
     }
+
     private float DistanceTo(Transform tr, Vector3 from) => Vector3.Distance(from, GetAimPoint(tr));
 }

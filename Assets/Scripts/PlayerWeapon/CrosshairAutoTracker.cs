@@ -20,6 +20,7 @@ public class CrosshairAutoTracker : MonoBehaviour
     public Color lockedColor = Color.red;
 
     private Graphic[] _crosshairGraphics;
+    private Vector2 _centerPosition;
 
     public bool IsLocked { get; private set; }
     public Transform CurrentTarget { get; private set; }
@@ -32,11 +33,20 @@ public class CrosshairAutoTracker : MonoBehaviour
         _crosshairGraphics = crosshair ? crosshair.GetComponentsInChildren<Graphic>(true) : null;
     }
 
+    void Awake()
+    {
+        // 중앙 위치 계산 (scopeRect의 중앙)
+        _centerPosition = GetScopeCenterInParent();
+    }
+
     void OnEnable()
     {
         SetCrosshairColor(normalColor);
         IsLocked = false;
         CurrentTarget = null;
+
+        // 항상 중앙에서 시작
+        ResetToCenter();
     }
 
     void LateUpdate()
@@ -68,7 +78,7 @@ public class CrosshairAutoTracker : MonoBehaviour
 
         if (!keepCurrent) CurrentTarget = best;
 
-        Vector2 targetLocal = GetScopeCenterInParent();
+        Vector2 targetLocal = _centerPosition; // 기본값은 중앙
         if (CurrentTarget)
         {
             if (TryGetScreenPoint(CurrentTarget, out Vector2 screen) && IsInsideScope(screen))
@@ -107,7 +117,36 @@ public class CrosshairAutoTracker : MonoBehaviour
         }
     }
 
-    void ReleaseLock()
+    private bool _isHomingMode = false;
+
+    public void SetHomingMode(bool isHoming)
+    {
+        _isHomingMode = isHoming;
+    }
+
+    private bool HasValidTargetsInRange()
+    {
+        if (!registry) return false;
+
+        foreach (var t in registry.Targets)
+        {
+            if (!t) continue;
+            var tr = t.transform;
+            if (IsTargetValid(tr)) return true;
+        }
+        return false;
+    }
+
+    public void ResetToCenter()
+    {
+        if (crosshair)
+        {
+            _centerPosition = GetScopeCenterInParent();
+            crosshair.anchoredPosition = _centerPosition;
+        }
+    }
+
+    public void ReleaseLock()
     {
         if (IsLocked)
         {
@@ -154,6 +193,8 @@ public class CrosshairAutoTracker : MonoBehaviour
 
     Vector2 GetScopeCenterInParent()
     {
+        if (!scopeRect || !parentRect || !canvas) return Vector2.zero;
+
         Vector2 sc = RectTransformUtility.WorldToScreenPoint(canvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : canvas.worldCamera, scopeRect.position);
         return ScreenToLocal(parentRect, sc, out var local) ? local : Vector2.zero;
     }
