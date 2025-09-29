@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Gun : MonoBehaviour
 {
@@ -14,6 +15,13 @@ public class Gun : MonoBehaviour
     public enum FireMode { Hitscan, Projectile, HomingMissile }
 
     public FireMode currentFireMode = FireMode.Projectile;
+
+    public TMPro.TextMeshProUGUI weaponNameText;
+
+    [Header("Weapon Names")]
+    public string hitscanName = "레이저";
+    public string projectileName = "투사체";
+    public string homingMissileName = "유도탄";
 
     public Muzzle[] muzzles;
     public CrosshairAutoTracker crosshairTracker;
@@ -59,6 +67,7 @@ public class Gun : MonoBehaviour
 
         ApplyModeVisuals();
         UpdateCrosshairRange();
+        UpdateWeaponNameUI();
     }
 
     void Update()
@@ -153,6 +162,23 @@ public class Gun : MonoBehaviour
         Debug.Log($"ChangeFireMode called! New mode: {currentFireMode}");
         ApplyModeVisuals();
         UpdateCrosshairRange();
+        UpdateWeaponNameUI();
+    }
+
+    private void UpdateWeaponNameUI()
+    {
+        if (weaponNameText == null) return;
+
+        string weaponName = currentFireMode switch
+        {
+            FireMode.Hitscan => hitscanName,
+            FireMode.Projectile => projectileName,
+            FireMode.HomingMissile => homingMissileName,
+            _ => "UNKNOWN"
+        };
+
+        weaponNameText.text = weaponName;
+        Debug.Log($"무장 이름 업데이트: {weaponName}");
     }
 
     private void ApplyModeVisuals()
