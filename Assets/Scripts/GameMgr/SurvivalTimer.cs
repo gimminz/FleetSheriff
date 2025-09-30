@@ -1,65 +1,86 @@
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class SurvivalTimer : MonoBehaviour
 {
-    public PlayerHealth player;            
-    public TextMeshProUGUI timerText;  
+    [Header("Refs")]
+    public PlayerHealth player;
+    public TextMeshProUGUI timerText;
 
-    public float durationSeconds = 120f;   
+    [Header("Settings")]
+    public float durationSeconds = 120f;
+    public bool autoStart = true;
+    public bool useUnscaledTime = false;
 
-    public UnityEvent OnSurvived;       
-    public UnityEvent OnFailed;        
+    [Header("Rule")]
+    [Tooltip("시간 00:00 시, 이 값 이상 격추면 무조건 성공")]
+    public int successKillThreshold = 1;
 
-    private float timeLeft;
-    private bool running;
+    float timeLeft;
+    bool running;
+    bool _fired; // 종료 이벤트 단 1회
 
-    private void Start()
+    void Start()
     {
-        StartTimer();
+        if (autoStart) StartTimer();
+        else { timeLeft = Mathf.Max(0f, durationSeconds); UpdateText(timeLeft); }
     }
 
     public void StartTimer()
     {
-        timeLeft = durationSeconds;
+        timeLeft = Mathf.Max(0f, durationSeconds);
         running = true;
+        _fired = false;
         UpdateText(timeLeft);
     }
 
     public void StopTimer() => running = false;
 
-    private void Update()
+    void Update()
     {
-        if (!running) return;
-        if (player != null && player.isDead)
-        {
-            running = false;
-            OnFailed?.Invoke();
-            return;
-        }
+        if (!running || _fired) return;
 
-        timeLeft -= Time.deltaTime;
+        float dt = useUnscaledTime ? Time.unscaledDeltaTime : Time.deltaTime;
+        timeLeft -= dt;
+
         if (timeLeft <= 0f)
         {
             timeLeft = 0f;
             running = false;
 
-            if (player != null && !player.isDead)
-            {
-                player.OnDamage(player.GetCurrentHealth(), Vector3.zero, Vector3.zero);
-            }
+            if (_fired) return;
+            _fired = true;
 
-            OnSurvived?.Invoke();
+            // 00:00 표시 보장
+            UpdateText(timeLeft);
+
+            // ★ 타이머 종료 플래그를 먼저 올린다 (성공 우선 로직이 이 플래그에 의존)
+            if (GameFlowManager.Instance) GameFlowManager.Instance.MarkTimerElapsed();
+
+            // 이후 성공/실패 판정 (성공 우선)
+            int kills = KillTracker.Instance ? KillTracker.Instance.KillCount : 0;
+            if (kills >= successKillThreshold)
+            {
+                if (GameFlowManager.Instance) GameFlowManager.Instance.ShowSuccessPanel();
+            }
+            else
+            {
+                if (GameFlowManager.Instance) GameFlowManager.Instance.ShowFailPanel();
+            }
+            return;
         }
+
         UpdateText(timeLeft);
     }
 
-
-    private void UpdateText(float t)
+    void UpdateText(float t)
     {
-        int m = Mathf.FloorToInt(t / 60f);
-        int s = Mathf.FloorToInt(t % 60f);
+        int total = Mathf.CeilToInt(t);
+        int m = total / 60;
+        int s = total % 60;
         if (timerText) timerText.text = $"{m:00}:{s:00}";
     }
+
+    // ★ 경합 프레임 보강용: GFM에서 남은 시간을 직접 확인
+    public float GetRemaining() => timeLeft;
 }

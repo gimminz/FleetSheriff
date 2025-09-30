@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class UiShipWeaponsController : MonoBehaviour
 {
+    public SelectedShipContext selectedShipContext; 
+
     public GameObject spaceShipListContainer;
     public GameObject weaponListContainer;
 
@@ -36,28 +38,51 @@ public class UiShipWeaponsController : MonoBehaviour
     {
         if (w == null) return;
 
-        if (explain)
-        {
-            explain.SetData(w); 
-        }
+        explain?.SetData(w);
 
         var target = GetAddressText(currentSlot);
         if (target)
             target.text = string.IsNullOrWhiteSpace(w.WeaponAddress) ? "-" : w.WeaponAddress;
+
+        if (selectedShipContext != null && selectedShipContext.ActiveShipId.HasValue)
+            selectedShipContext.SetWeapon(selectedShipContext.ActiveShipId.Value, currentSlot, w.Id);
+    }
+
+    public void ApplyWeaponToSlot(ShipSlot slot, WeaponData weapon)
+    {
+        if (weapon != null) explain?.SetData(weapon);
+
+        var target = GetAddressText(slot);
+        if (target)
+            target.text = string.IsNullOrWhiteSpace(weapon?.WeaponAddress) ? "-" : weapon.WeaponAddress;
+    }
+
+    public void ApplyWeaponsByIds(System.Collections.Generic.Dictionary<ShipSlot, int?> weapons)
+    {
+        var weaponTable = DataTableManager.WeaponTable;
+        if (weapons == null || weaponTable == null) return;
+
+        foreach (var kv in weapons)
+        {
+            var slot = kv.Key;
+            if (slot == ShipSlot.Down) continue;
+
+            var id = kv.Value;
+            WeaponData w = (id.HasValue) ? weaponTable.Get(id.Value) : null;
+            ApplyWeaponToSlot(slot, w);
+        }
     }
 
     private void SetModeShipList()
     {
         if (spaceShipListContainer) spaceShipListContainer.SetActive(true);
         if (weaponListContainer) weaponListContainer.SetActive(false);
-        Debug.Log($"ShipList ON ({spaceShipListContainer.name}), WeaponList OFF ({weaponListContainer.name})");
     }
 
     private void SetModeWeaponList()
     {
         if (spaceShipListContainer) spaceShipListContainer.SetActive(false);
         if (weaponListContainer) weaponListContainer.SetActive(true);
-        Debug.Log($"ShipList OFF ({spaceShipListContainer.name}), WeaponList ON ({weaponListContainer.name})");
     }
 
     private TextMeshProUGUI GetAddressText(ShipSlot slot)

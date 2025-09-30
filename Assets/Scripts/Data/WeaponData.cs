@@ -86,6 +86,22 @@ public class WeaponTable : DataTable
         }
     }
 
+    public WeaponData Get(int id)
+    {
+        return byId.TryGetValue(id, out var data) ? data : null; 
+    }
+
+    public bool Contains(int id) => byId.ContainsKey(id);
+
+    public List<WeaponData> GetMany(IEnumerable<int> ids)
+    {
+        if (ids == null) return new List<WeaponData>();
+        var list = new List<WeaponData>();
+        foreach (var id in ids)
+            if (byId.TryGetValue(id, out var d) && d != null) list.Add(d);
+        return list;
+    }
+
     public List<WeaponData> GetByCategoryAndHardpoint(int category, int hardpoint, bool ascending = true, string locale = "ko-KR")
     {
         var comp = System.StringComparer.Create(new CultureInfo(locale), true);

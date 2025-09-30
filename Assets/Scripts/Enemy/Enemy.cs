@@ -5,9 +5,20 @@ public class Enemy : LivingEntity
 {
     public LockOnManager lockOnManager;
     public EnemyIndicator enemyIndicator;
-
-    // 스포너에 구간 점유 해제를 알리기 위한 콜백
     private Action _releaseOccupy;
+
+    [Header("VFX")]
+    public float explosionYOffset = 1.0f;
+
+    private bool _dying = false;
+    private bool _explosionSpawned = false;
+
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        _dying = false;
+        _explosionSpawned = false;
+    }
 
     public void SetSpawnerOccupyRelease(Action release)
     {
@@ -16,9 +27,10 @@ public class Enemy : LivingEntity
 
     public override void OnDamage(float damage, Vector3 hitPoint, Vector3 hitNormal)
     {
+        if (_dying || isDead) return;
+
         base.OnDamage(damage, hitPoint, hitNormal);
 
-        // HP 50% 미만이면 도주 상태로 전환
         var move = GetComponent<EnemyMovement>();
         if (move && health < maxHealth * 0.5f)
         {
@@ -28,23 +40,43 @@ public class Enemy : LivingEntity
 
     protected override void Die()
     {
-        base.Die();
+        if (_dying || isDead) return;
+        _dying = true;
+
+        var cols = GetComponentsInChildren<Collider>(true);
+        foreach (var c in cols) c.enabled = false;
+
+        var rb = GetComponent<Rigidbody>();
+        if (rb)
+        {
+            rb.isKinematic = true;
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+        }
+
+        if (!_explosionSpawned && VfxManager.Instance)
+        {
+            VfxManager.Instance.SpawnExplosion(transform.position, explosionYOffset);
+            _explosionSpawned = true;
+        }
 
         var rt = GetComponent<RadarTarget>();
         if (rt) rt.enabled = false;
 
-        // 구간 점유 해제
+        if (KillTracker.Instance) KillTracker.Instance.AddKill(1);
         _releaseOccupy?.Invoke();
+
+        base.Die();
 
         Destroy(gameObject, 0.2f);
     }
 
     void OnCollisionEnter(Collision other)
     {
-        // 적 vs 적: 데미지 없음 — 아무 것도 안 함
+        if (_dying || isDead) return;
+
         if (other.collider.CompareTag("Enemy")) return;
 
-        // 적 vs 플레이어: 서로 -10
         if (other.collider.CompareTag("Player"))
         {
             var player = other.collider.GetComponent<LivingEntity>();
@@ -55,8 +87,6 @@ public class Enemy : LivingEntity
             return;
         }
 
-        // 지형 충돌: x+180, y-180 반전 후 다시 플레이어를 향해 전진
-        // (오일러를 직접 다룰 때 짧게 처리)
         if (other.collider.gameObject.layer == LayerMask.NameToLayer("Default") ||
             other.collider.gameObject.isStatic)
         {
