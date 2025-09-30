@@ -1,0 +1,4 @@
+﻿ID,Ship_name,Ship_address,Korean_name,Ship_HP,Ship_Shield,Shield-regen,Ship_Max_Speed,MAX_Search_range,Max_targeting,Unlock_Lv.,Unlock_Precondition,Buy_Cost,Ship_Description
+41,ship_standard,StarSparrow3.prefabs,표준형,1200,400.0,40.0,120.0,500.0,5,,기본 지급,,보안부 소속의 모든 경관과 보안관들이 처음으로 지급받는 표준형 우주선입니다.
+42,ship_speed,StarSparrow8.prefabs,고속형,900,450.0,90.0,150.0,350.0,3,7,개조된 소형 우주 해적선 50회 격파/무력화,25000,고속 순찰대 소속 인원들을 위해 특별히 설계된 기체입니다. 보안부의 그 어떤 기체보다 빠른 속도를 자랑합니다.
+43,ship_heavy,StarSparrow20.prefabs,선체 강화형,1600,600.0,50.0,100.0,700.0,8,15,해적 모선 20회 격파,35000,기존 표준 모델보다 두꺼운 장갑이 적용된 특수 목적 기체입니다. 속도는 느려졌지만 왠만한 공격으론 이 기체를 막을 수 없을겁니다.
