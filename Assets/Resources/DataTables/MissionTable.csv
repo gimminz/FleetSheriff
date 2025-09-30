@@ -1,0 +1,6 @@
+﻿ID,mission_type,Korean_name,Limit_time,Use_NPC 1,,Use_NPC 2,,Use_NPC 3,,Use_NPC 4,,User,exp_reward,credit_reward
+61,pirate_arrest_1,해적 체포 1,150,511,12,,,,,,,,300,500
+62,pirate_arrest_2,해적 체포 2,160,511,8,512,4,,,,,3,300,600
+63,pirate_arrest_3,해적 체포 3,200,511,4,512,4,514,4,,,5,350,800
+64,pirate_arrest_4,해적 체포 4,210,512,6,513,3,514,3,,,8,360,850
+65,pirate_arrest_5,해적 체포 5,240,512,4,513,4,514,3,515,1,10,550,1100

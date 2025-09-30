@@ -1,0 +1,7 @@
+﻿ID,NPC_NAME,NPC_address,Korean_name,CATEGORY,HP,Shield,Shield-regen,MAX_speed,Neutralize,exp_reward 1,credit_reward 1,exp_reward 2,credit_reward 2,Weapon_1,Weapon_2
+511,enemy_small_1,HiRezSpaceshipsCreatorFree / Example4NoInterior_Grey,소형 우주 해적선,1,150,,,60.0,50,50,100,125,225,21100012,
+512,enemy_small_2,HiRezSpaceshipsCreatorFree / Example1NoInterior_Grey,개조된 소형 우주 해적선,1,200,20,2.0,70.0,75,70,140,175,315,21100012,
+513,enemy_medium_1,HiRezSpaceshipsCreatorFree / Example3NoInterior_Red,중형 우주 해적선,1,180,,,55.0,60,60,120,150,340,21100013,21100014
+514,enemy_medium_2,HiRezSpaceshipsCreatorFree / Example1NoInterior_Red,개조된 중형 우주 해적선,1,300,30,3.0,80.0,85,80,160,200,450,21100013,
+515,enemy_mothership,F3_Corvette / F3_Yellow Variant,해적 모선,1,1000,600,20.0,45.0,300,150,300,375,850,21100012,21100013
+526,cargoship,Sparrow_Fighter /Sparrow_orange Variant,화물선,2,1000,200,10.0,50.0,,,,,,,
