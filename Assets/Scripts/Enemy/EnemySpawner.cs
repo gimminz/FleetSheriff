@@ -14,21 +14,42 @@ public class EnemySpawner : MonoBehaviour
     public MissionSuccessUI missionSuccessUI;
 
     [Header("Spawn Settings")]
-    public float spawnInterval = 20f;
-    public float spawnRadius = 300f;
+    [Tooltip("스폰 간격 (초) - 이 시간마다 2기씩 생성")]
+    public float spawnInterval = 90f;  // ✅ 20 → 90초로 대폭 증가
+
+    [Tooltip("스폰 반경 (유닛) - 플레이어로부터 이 거리에서 생성")]
+    public float spawnRadius = 3000f;  // ✅ 300 → 3000으로 대폭 증가 (플레이어 속도 200 고려)
+
+    [Tooltip("고도 각도 (상/하 그룹)")]
     public float altitudePitchDeg = 30f;
-    public bool usePlayerCenteredRing = true;
+
+    [Tooltip("플레이어 중심 링 방식 사용 (false 권장: 플레이어가 빠르게 이동할 때 뒤에서 스폰 방지)")]
+    public bool usePlayerCenteredRing = false;  // ✅ true → false (고정 위치 스폰)
+
+    [Header("Fixed Spawn Zone")]
+    [Tooltip("고정 스폰 존 중심 (usePlayerCenteredRing=false일 때)")]
+    public Vector3 fixedSpawnCenter = Vector3.zero;
+
+    [Tooltip("플레이어 진행 방향 앞쪽에만 스폰 (전방 반구)")]
+    public bool spawnOnlyInFront = true;  // ✅ 새로 추가: 전방에만 스폰
+
+    [Header("Wave Control")]
+    [Tooltip("동시에 존재 가능한 최대 적 수")]
+    public int maxConcurrentEnemies = 4;  // ✅ 6 → 4기로 감소
+
+    private int currentEnemyCount = 0;
 
     [Header("Test One-Enemy Mode")]
     [Tooltip("시작 시 플레이어 정면에 테스트용 적 1기를 소환합니다.")]
     public bool spawnTestEnemyOnStart = true;
     [Tooltip("테스트 적까지의 거리")]
-    public float testEnemyDistance = 30f;
+    public float testEnemyDistance = 500f;  // ✅ 30 → 500으로 대폭 증가
     [Tooltip("테스트 적의 높이 보정(플레이어 기준)")]
     public float testEnemyHeightOffset = 0f;
 
     [Header("Debug")]
     public bool drawGizmos = true;
+    public bool showDebugLogs = false;  // ✅ 디버그 로그 토글
 
     private readonly Dictionary<int, int> _occupied = new Dictionary<int, int>();
     private readonly int[][] _pairs = new int[][] { new[] { 1, 2 }, new[] { 3, 4 }, new[] { 5, 6 }, new[] { 7, 8 } };
@@ -45,16 +66,15 @@ public class EnemySpawner : MonoBehaviour
     {
         if (spawnTestEnemyOnStart)
         {
-            // 테스트 모드일 땐 무조건 '완전 정지'로 소환
             SpawnOneInFront(distance: testEnemyDistance, stationary: true, heightOffset: testEnemyHeightOffset);
-            return; // 링 스폰 루틴 비활성
+            return;
         }
 
         StartCoroutine(SpawnRoutine());
     }
 
     // ----------- 테스트용 1기 소환 -----------
-    public GameObject SpawnOneInFront(float distance = 30f, bool stationary = true, float heightOffset = 0f)
+    public GameObject SpawnOneInFront(float distance = 100f, bool stationary = true, float heightOffset = 0f)
     {
         if (!enemy || !player)
         {
@@ -71,11 +91,14 @@ public class EnemySpawner : MonoBehaviour
 
         if (enemyIndicator) enemyIndicator.AddEnemy(go.transform);
 
+        currentEnemyCount++;  // ✅ 카운트 증가
+
         var e = go.GetComponent<Enemy>();
         if (e)
         {
             e.OnDeath += () =>
             {
+                currentEnemyCount--;  // ✅ 사망 시 카운트 감소
                 if (!successShown)
                 {
                     successShown = true;
@@ -84,21 +107,16 @@ public class EnemySpawner : MonoBehaviour
             };
         }
 
-        // 무조건 정지시킴(테스트 모드 확실)
         if (stationary) MakeCompletelyStationary(go, alsoStopAttacks: true);
 
         return go;
     }
-    // --------------------------------------
 
-    // 적을 '완전 정지' 상태로 만드는 유틸
     void MakeCompletelyStationary(GameObject go, bool alsoStopAttacks)
     {
-        // 1) 커스텀 이동 컴포넌트
         var move = go.GetComponent<EnemyMovement>();
         if (move) move.enabled = false;
 
-        // 2) NavMeshAgent(있다면)
 #if UNITY_AI_NAVIGATION
         var agent = go.GetComponent<NavMeshAgent>();
         if (agent)
@@ -109,36 +127,26 @@ public class EnemySpawner : MonoBehaviour
         }
 #endif
 
-        // 3) 리지드바디 정지/고정
         var rb = go.GetComponent<Rigidbody>();
         if (rb)
         {
             rb.linearVelocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
-            rb.isKinematic = true; // 외력/중력 영향 제거
+            rb.isKinematic = true;
             rb.constraints = RigidbodyConstraints.FreezeAll;
         }
 
-        // 4) 애니메이터 루트모션/재생 속도 중단(있다면)
         var animator = go.GetComponentInChildren<Animator>();
         if (animator)
         {
             animator.applyRootMotion = false;
-            // 필요하면 특정 정지 포즈를 위해 speed=0
-            // animator.speed = 0f; // (정지 모션이 없으면 주석 해제)
         }
 
-        // 5) 공격/사격 AI 끄기(원하면 계속 켜둘 수도 있음)
         if (alsoStopAttacks)
         {
             var attack1 = go.GetComponent<EnemyAttackController>();
             if (attack1) attack1.enabled = false;
-
-            // 다른 커스텀 AI 스크립트도 여기서 비활성화 가능
-            // var otherAI = go.GetComponent<SomeEnemyAI>(); if (otherAI) otherAI.enabled = false;
         }
-
-        // 6) 아이들 흔들림/패트롤 등 기타 스크립트 비활성화 필요 시 여기에 추가
     }
 
     IEnumerator SpawnRoutine()
@@ -146,12 +154,29 @@ public class EnemySpawner : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(spawnInterval);
+
+            // ✅ 최대 개체 수 체크
+            if (currentEnemyCount >= maxConcurrentEnemies)
+            {
+                if (showDebugLogs)
+                    Debug.Log($"[EnemySpawner] 최대 적 수 도달 ({currentEnemyCount}/{maxConcurrentEnemies}). 스폰 스킵.");
+                continue;
+            }
+
             TrySpawnTwo();
         }
     }
 
     void TrySpawnTwo()
     {
+        // ✅ 최대 개체 수 체크 (2기 스폰 가능한지)
+        if (currentEnemyCount + 2 > maxConcurrentEnemies)
+        {
+            if (showDebugLogs)
+                Debug.Log($"[EnemySpawner] 2기 스폰 불가. 현재: {currentEnemyCount}, 최대: {maxConcurrentEnemies}");
+            return;
+        }
+
         bool anyFree = false;
         for (int n = 1; n <= 8; n++) if (_occupied[n] == 0) { anyFree = true; break; }
         if (!anyFree) return;
@@ -178,7 +203,12 @@ public class EnemySpawner : MonoBehaviour
             attempts += 2;
         }
 
-        if (spawned > 0) _nextOrbitPlusX = !_nextOrbitPlusX;
+        if (spawned > 0)
+        {
+            _nextOrbitPlusX = !_nextOrbitPlusX;
+            if (showDebugLogs)
+                Debug.Log($"[EnemySpawner] {spawned}기 스폰 완료. 총 적: {currentEnemyCount}");
+        }
     }
 
     GameObject InstantiateEnemyInNumber(int number, bool orbitPlusX)
@@ -188,9 +218,34 @@ public class EnemySpawner : MonoBehaviour
         int sectorIndex = NumberToSectorIndex(number);
         float centerDeg = sectorIndex * 45f + 22.5f;
 
-        Vector3 center = usePlayerCenteredRing ? player.position : Vector3.zero;
+        // ✅ 스폰 중심 결정
+        Vector3 center = usePlayerCenteredRing ? player.position : fixedSpawnCenter;
+
         Vector3 dirXZ = AngleToDirXZ(centerDeg);
         Vector3 spawnPos = center + dirXZ * spawnRadius;
+
+        // ✅ 전방에만 스폰하는 옵션 (플레이어 속도가 빠를 때 권장)
+        if (spawnOnlyInFront && player)
+        {
+            // 스폰 위치가 플레이어 진행 방향 기준 앞쪽인지 체크
+            Vector3 toSpawn = spawnPos - player.position;
+            toSpawn.y = 0f;
+            Vector3 playerForwardFlat = player.forward;
+            playerForwardFlat.y = 0f;
+
+            float dot = Vector3.Dot(playerForwardFlat.normalized, toSpawn.normalized);
+
+            // 뒤쪽이면 앞쪽으로 반사
+            if (dot < 0f)
+            {
+                // 스폰 위치를 플레이어 전방으로 재배치
+                Vector3 reflected = Vector3.Reflect(toSpawn, playerForwardFlat.normalized);
+                spawnPos = player.position + reflected.normalized * spawnRadius;
+
+                if (showDebugLogs)
+                    Debug.Log($"[EnemySpawner] 후방 스폰 감지 → 전방으로 재배치 (섹터 {number})");
+            }
+        }
 
         bool isUpGroup = (number == 1 || number == 2 || number == 8 || number == 7);
         float pitch = isUpGroup ? altitudePitchDeg : -altitudePitchDeg;
@@ -201,11 +256,20 @@ public class EnemySpawner : MonoBehaviour
 
         if (enemyIndicator) enemyIndicator.AddEnemy(go.transform);
 
+        currentEnemyCount++;  // ✅ 카운트 증가
+
         var e = go.GetComponent<Enemy>();
         if (e)
         {
-            e.OnDeath += () => HandleEnemyDeath(number);
-            e.SetSpawnerOccupyRelease(() => { _occupied[number] = Mathf.Max(0, _occupied[number] - 1); });
+            e.OnDeath += () =>
+            {
+                currentEnemyCount--;  // ✅ 사망 시 카운트 감소
+                HandleEnemyDeath(number);
+            };
+            e.SetSpawnerOccupyRelease(() =>
+            {
+                _occupied[number] = Mathf.Max(0, _occupied[number] - 1);
+            });
         }
 
         var move = go.GetComponent<EnemyMovement>();
@@ -213,7 +277,10 @@ public class EnemySpawner : MonoBehaviour
         {
             move.player = player;
             move.initialOrbitPlusX = orbitPlusX;
-            move.speed = 60f;
+            move.speed = 80f;  // ✅ 60 → 80 (플레이어 속도 200에 비해 느리게)
+            // ✅ Orbit 진입 거리 및 반경 증가 (장거리 전투)
+            move.orbitEnterDistance = 400f;  // 60 → 400 (훨씬 멀리서 궤도 진입)
+            move.orbitRadius = 250f;         // 50 → 250 (넓은 궤도)
         }
 
         return go;
@@ -254,17 +321,56 @@ public class EnemySpawner : MonoBehaviour
     {
         if (!drawGizmos || !player) return;
 
+        // ✅ 스폰 존 시각화
+        Vector3 center = usePlayerCenteredRing ? player.position : fixedSpawnCenter;
+
         Gizmos.color = Color.cyan;
-        Gizmos.DrawWireSphere(player.position, spawnRadius);
+        Gizmos.DrawWireSphere(center, spawnRadius);
+
+        // ✅ 스폰 포인트 시각화 개선
+        for (int i = 0; i < 8; i++)
+        {
+            float deg = i * 45f + 22.5f;
+            Vector3 dir = AngleToDirXZ(deg);
+            Vector3 pos = center + dir * spawnRadius;
+
+            // 전방/후방 구분 색상
+            if (spawnOnlyInFront && player)
+            {
+                Vector3 toSpawn = pos - player.position;
+                toSpawn.y = 0f;
+                Vector3 playerForwardFlat = player.forward;
+                playerForwardFlat.y = 0f;
+                float dot = Vector3.Dot(playerForwardFlat.normalized, toSpawn.normalized);
+
+                Gizmos.color = dot >= 0f ? Color.green : Color.red;  // 전방=초록, 후방=빨강
+            }
+            else
+            {
+                Gizmos.color = Color.yellow;
+            }
+
+            Gizmos.DrawWireSphere(pos, 20f);
+            Gizmos.DrawLine(center, pos);
+        }
+
+        // ✅ 플레이어 전방 방향 표시
+        if (spawnOnlyInFront)
+        {
+            Gizmos.color = Color.blue;
+            Vector3 forwardLine = player.position + player.forward * spawnRadius;
+            Gizmos.DrawLine(player.position, forwardLine);
+            Gizmos.DrawWireSphere(forwardLine, 50f);
+        }
 
         if (spawnTestEnemyOnStart)
         {
-            Gizmos.color = Color.yellow;
+            Gizmos.color = Color.magenta;
             Vector3 p0 = player.position;
             Vector3 p1 = p0 + player.forward * Mathf.Max(0.01f, testEnemyDistance);
             p1.y += testEnemyHeightOffset;
             Gizmos.DrawLine(p0, p1);
-            Gizmos.DrawSphere(p1, 1.0f);
+            Gizmos.DrawSphere(p1, 10.0f);
         }
     }
 }

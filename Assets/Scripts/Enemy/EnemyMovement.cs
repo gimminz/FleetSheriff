@@ -11,7 +11,7 @@ public class EnemyMovement : MonoBehaviour
     public float orbitEnterDistance = 60f;   // Orbit 진입 임계
 
     public float rearChaseDuration = 2.0f;   // 뒤쪽 직진 유지 시간
-    public float despawnDistance = 800f;
+    public float despawnDistance = 4000f;
 
     // 선회 방향(+X/−X) 초기값 — 스폰 시 지정
     public bool initialOrbitPlusX = true;

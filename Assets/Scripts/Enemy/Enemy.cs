@@ -29,6 +29,8 @@ public class Enemy : LivingEntity
     {
         if (_dying || isDead) return;
 
+        Debug.Log($"[Enemy] Taking damage: {damage}. Current health: {health}/{maxHealth}");
+
         base.OnDamage(damage, hitPoint, hitNormal);
 
         var move = GetComponent<EnemyMovement>();
@@ -41,7 +43,10 @@ public class Enemy : LivingEntity
     protected override void Die()
     {
         if (_dying || isDead) return;
+
         _dying = true;
+
+        Debug.Log($"[Enemy] Die() called. isDead: {isDead}, _dying: {_dying}");
 
         var cols = GetComponentsInChildren<Collider>(true);
         foreach (var c in cols) c.enabled = false;
@@ -63,11 +68,25 @@ public class Enemy : LivingEntity
         var rt = GetComponent<RadarTarget>();
         if (rt) rt.enabled = false;
 
-        if (KillTracker.Instance) KillTracker.Instance.AddKill(1);
         _releaseOccupy?.Invoke();
 
+        // ★ 킬 카운트 증가 - 로그 추가
+        if (KillTracker.Instance)
+        {
+            Debug.Log($"[Enemy] Adding kill. Current count before: {KillTracker.Instance.KillCount}");
+            KillTracker.Instance.AddKill(1);
+            Debug.Log($"[Enemy] Kill added. Current count after: {KillTracker.Instance.KillCount}");
+        }
+        else
+        {
+            Debug.LogError("[Enemy] KillTracker.Instance is NULL!");
+        }
+
+        // ★ base.Die() 호출 - 로그 추가
+        Debug.Log("[Enemy] Calling base.Die()");
         base.Die();
 
+        Debug.Log("[Enemy] Destroying enemy object in 0.2s");
         Destroy(gameObject, 0.2f);
     }
 

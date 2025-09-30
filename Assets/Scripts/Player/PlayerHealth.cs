@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -14,9 +15,13 @@ public class PlayerHealth : LivingEntity
     [Tooltip("방어막 초당 회복량(Ship CSV의 Shield-regen은 '피격 후 지연시간(초)'로 사용)")]
     public float shieldRegenPerSecond = 30f;
 
+    [Header("사망 설정")]
+    [Tooltip("사망 후 Fail Panel이 뜨기까지의 딜레이 (초)")]
+    public float deathPanelDelay = 3f;
+
     [Header("사망 VFX")]
     [Tooltip("플레이어 사망 시 폭발 이펙트를 띄울 Y 오프셋")]
-    public float deathExplosionYOffset = 1.0f;   // ★ 추가: 자리 ‘위’로 살짝 띄우기
+    public float deathExplosionYOffset = 1.0f;
 
     // Ship 데이터로부터 설정되는 최대치들
     public float MaxHP { get; private set; }
@@ -135,9 +140,6 @@ public class PlayerHealth : LivingEntity
         // ★ 중복 방지 가드
         if (isDead) return;
 
-        // 먼저 base로 isDead=true, OnDeath 이벤트 발행
-        base.Die();
-
         // ★ 폭발 VFX (풀링, VfxManager 사용)
         if (VfxManager.Instance)
         {
@@ -154,7 +156,21 @@ public class PlayerHealth : LivingEntity
         // 정책에 따라 유지/비활성/파괴 택1
         gameObject.SetActive(false);
 
-        Debug.Log("[PlayerHealth] Player died.");
+        Debug.Log("[PlayerHealth] Player died. Starting death delay...");
+
+        // ★ 3초 후 base.Die() 호출 (OnDeath 이벤트 발동)
+        StartCoroutine(DeathDelayCoroutine());
+    }
+
+    IEnumerator DeathDelayCoroutine()
+    {
+        // ★ unscaledTime 사용 (게임이 일시정지되어도 딜레이 진행)
+        yield return new WaitForSecondsRealtime(deathPanelDelay);
+
+        Debug.Log("[PlayerHealth] Death delay finished. Calling base.Die().");
+
+        // ★ 이제 base.Die() 호출 → isDead=true, OnDeath 이벤트 발동
+        base.Die();
     }
 
     public float GetCurrentHealth() => HP;

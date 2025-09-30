@@ -47,26 +47,34 @@ public class SurvivalTimer : MonoBehaviour
         {
             timeLeft = 0f;
             running = false;
-
             if (_fired) return;
             _fired = true;
 
             // 00:00 표시 보장
             UpdateText(timeLeft);
 
-            // ★ 타이머 종료 플래그를 먼저 올린다 (성공 우선 로직이 이 플래그에 의존)
-            if (GameFlowManager.Instance) GameFlowManager.Instance.MarkTimerElapsed();
+            // ★ 타이머 종료 플래그를 먼저 올린다
+            if (GameFlowManager.Instance)
+                GameFlowManager.Instance.MarkTimerElapsed();
 
-            // 이후 성공/실패 판정 (성공 우선)
+            // ★ 이후 성공/실패 판정 - 성공 우선!
             int kills = KillTracker.Instance ? KillTracker.Instance.KillCount : 0;
+
+            Debug.Log($"[SurvivalTimer] Timer ended. Kills: {kills}, Threshold: {successKillThreshold}");
+
             if (kills >= successKillThreshold)
             {
-                if (GameFlowManager.Instance) GameFlowManager.Instance.ShowSuccessPanel();
+                Debug.Log("[SurvivalTimer] Success condition met! Calling ShowSuccessPanel.");
+                if (GameFlowManager.Instance)
+                    GameFlowManager.Instance.ShowSuccessPanel();
             }
             else
             {
-                if (GameFlowManager.Instance) GameFlowManager.Instance.ShowFailPanel();
+                Debug.Log("[SurvivalTimer] Success condition not met. Calling ShowFailPanel.");
+                if (GameFlowManager.Instance)
+                    GameFlowManager.Instance.ShowFailPanel();
             }
+
             return;
         }
 
