@@ -14,6 +14,10 @@ public class PlayerHealth : LivingEntity
     [Tooltip("방어막 초당 회복량(Ship CSV의 Shield-regen은 '피격 후 지연시간(초)'로 사용)")]
     public float shieldRegenPerSecond = 30f;
 
+    [Header("사망 VFX")]
+    [Tooltip("플레이어 사망 시 폭발 이펙트를 띄울 Y 오프셋")]
+    public float deathExplosionYOffset = 1.0f;   // ★ 추가: 자리 ‘위’로 살짝 띄우기
+
     // Ship 데이터로부터 설정되는 최대치들
     public float MaxHP { get; private set; }
     public float MaxShield { get; private set; }
@@ -39,16 +43,12 @@ public class PlayerHealth : LivingEntity
 
     protected override void OnEnable()
     {
-        base.OnEnable(); // 여기서 isDead=false, health=maxHealth 로 초기화됨
+        base.OnEnable(); // isDead=false, health=maxHealth
         if (planeController) planeController.enabled = true;
         if (gun) gun.enabled = true;
         ForceRefreshUI();
     }
 
-    /// <summary>
-    /// 씬 진입 시점에 선택된 shipId로 ShipTable을 읽어 초기화하세요.
-    /// (출동 버튼 → 다음 씬에서 호출)
-    /// </summary>
     public void InitializeFromShipId(int shipId)
     {
         var ship = DataTableManager.ShipTable?.Get(shipId);
@@ -63,26 +63,20 @@ public class PlayerHealth : LivingEntity
         {
             MaxHP = Mathf.Max(0f, ship.ShipHP);
             MaxShield = Mathf.Max(0f, ship.ShipShield);
-            // CSV의 Shield-regen 값을 '피격 후 재생 지연(초)'로 사용
             ShieldRegenDelaySeconds = Mathf.Max(0f, ship.ShieldRegen);
         }
 
-        // LivingEntity와 값 일치(다른 시스템이 maxHealth/health를 볼 수 있음)
-        maxHealth = MaxHP;
+        maxHealth = MaxHP;   // LivingEntity와 동기화
         HP = MaxHP;
         Shield = MaxShield;
-        health = HP; // base.health 동기화
+        health = HP;
 
-        _lastHitTime = float.NegativeInfinity;
+        _lastHitTime = Time.time; // 초기엔 바로 재생되지 않게 하고 싶다면 -Infinity 유지도 가능
         _initialized = true;
 
         UpdateUI(force: true);
     }
 
-    /// <summary>
-    /// 데미지 처리: 방어막 → 내구도 순서로 소모.
-    /// LivingEntity의 base.OnDamage는 호출하지 않습니다(중복 차감 방지).
-    /// </summary>
     public override void OnDamage(float damage, Vector3 hitPoint, Vector3 hitNormal)
     {
         ApplyDamageInternal(damage);
@@ -101,7 +95,6 @@ public class PlayerHealth : LivingEntity
 
         float remain = damage;
 
-        // 방어막에서 먼저 흡수
         if (Shield > 0f)
         {
             float used = Mathf.Min(Shield, remain);
@@ -109,16 +102,13 @@ public class PlayerHealth : LivingEntity
             remain -= used;
         }
 
-        // 남은 데미지가 있으면 HP 차감
         if (remain > 0f)
         {
             HP = Mathf.Max(0f, HP - remain);
             health = HP; // LivingEntity와 동기화
         }
 
-        // 피격 시각 기록 → 재생 지연에 사용
         _lastHitTime = Time.time;
-
         UpdateUI(force: false);
 
         if (HP <= 0f && !isDead)
@@ -131,7 +121,6 @@ public class PlayerHealth : LivingEntity
     {
         if (!_initialized || isDead) return;
 
-        // 피격 후 ShieldRegenDelaySeconds가 지나야 재생 시작
         bool canRegen = (Time.time - _lastHitTime) >= ShieldRegenDelaySeconds;
 
         if (canRegen && Shield < MaxShield && shieldRegenPerSecond > 0f)
@@ -143,16 +132,28 @@ public class PlayerHealth : LivingEntity
 
     protected override void Die()
     {
-        base.Die(); // 여기서 isDead=true, OnDeath 이벤트 발생
+        // ★ 중복 방지 가드
+        if (isDead) return;
 
+        // 먼저 base로 isDead=true, OnDeath 이벤트 발행
+        base.Die();
+
+        // ★ 폭발 VFX (풀링, VfxManager 사용)
+        if (VfxManager.Instance)
+        {
+            VfxManager.Instance.SpawnExplosion(transform.position, deathExplosionYOffset);
+        }
+
+        // 조작/무기 비활성화 및 UI 마무리
         if (planeController) planeController.enabled = false;
         if (gun) gun.enabled = false;
 
-        // UI 정리
         if (hpPercentText) hpPercentText.text = "0%";
         if (shieldPercentText) shieldPercentText.text = "0%";
 
+        // 정책에 따라 유지/비활성/파괴 택1
         gameObject.SetActive(false);
+
         Debug.Log("[PlayerHealth] Player died.");
     }
 
@@ -171,13 +172,13 @@ public class PlayerHealth : LivingEntity
 
         if (force || sp != _lastShieldPct)
         {
-            if (shieldPercentText) shieldPercentText.text = sp.ToString() + "% 방어막";
+            if (shieldPercentText) shieldPercentText.text = sp + "% 방어막";
             _lastShieldPct = sp;
         }
 
         if (force || hp != _lastHpPct)
         {
-            if (hpPercentText) hpPercentText.text = hp.ToString() + "% 내구도";
+            if (hpPercentText) hpPercentText.text = hp + "% 내구도";
             _lastHpPct = hp;
         }
     }

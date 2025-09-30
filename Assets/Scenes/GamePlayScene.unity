@@ -1547,6 +1547,9 @@ MonoBehaviour:
   spawnRadius: 30
   altitudePitchDeg: 30
   usePlayerCenteredRing: 1
+  spawnTestEnemyOnStart: 1
+  testEnemyDistance: 200
+  testEnemyHeightOffset: 0
   drawGizmos: 1
 --- !u!4 &455517798
 Transform:
@@ -2375,13 +2378,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1654474318}
   timerText: {fileID: 2025128364}
-  durationSeconds: 120
-  OnSurvived:
-    m_PersistentCalls:
-      m_Calls: []
-  OnFailed:
-    m_PersistentCalls:
-      m_Calls: []
+  durationSeconds: 10
+  autoStart: 1
+  useUnscaledTime: 0
+  successKillThreshold: 1
 --- !u!4 &570332028
 Transform:
   m_ObjectHideFlags: 0
@@ -2956,6 +2956,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 686670056}
   m_CullTransparentMesh: 1
+--- !u!1 &743243022
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 743243023}
+  - component: {fileID: 743243024}
+  m_Layer: 0
+  m_Name: VfxManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &743243023
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743243022}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 985705359}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &743243024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743243022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a7642bf879c1b84e8e8357a73c01f30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: -7841460209968707705, guid: 89e4ccb38e1514447a233a75ddd1c362, type: 3}
+  vfxRoot: {fileID: 985705359}
+  initialPoolSize: 10
+  maxPoolSize: 50
 --- !u!1001 &755921203
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3108,6 +3156,7 @@ GameObject:
   - component: {fileID: 793335732}
   - component: {fileID: 793335731}
   - component: {fileID: 793335736}
+  - component: {fileID: 793335737}
   m_Layer: 5
   m_Name: SuccessPanel
   m_TagString: Untagged
@@ -3242,6 +3291,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 793335729}
+--- !u!114 &793335737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793335729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53118d5f3c54d3f43bfb46cbb6fed8ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &808982082
 GameObject:
   m_ObjectHideFlags: 0
@@ -3405,6 +3466,7 @@ Transform:
   - {fileID: 1880546245}
   - {fileID: 1455033119}
   - {fileID: 501792380}
+  - {fileID: 985705359}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &920282444
@@ -3593,6 +3655,38 @@ MonoBehaviour:
   registry: {fileID: 635542468}
   dotPool: {fileID: 939718302}
   worldRadius: 500
+--- !u!1 &985705358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 985705359}
+  m_Layer: 0
+  m_Name: VFX_Root
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &985705359
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985705358}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 743243023}
+  m_Father: {fileID: 844699189}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1013743085
 GameObject:
   m_ObjectHideFlags: 0
@@ -6648,6 +6742,7 @@ MonoBehaviour:
   shieldPercentText: {fileID: 1503591875}
   hpPercentText: {fileID: 1846143077}
   shieldRegenPerSecond: 30
+  deathExplosionYOffset: 1
 --- !u!136 &1654474321
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7016,11 +7111,15 @@ MonoBehaviour:
   mainMenuSceneName: MainMenuScene
   optionPanel: {fileID: 314187904}
   failPanel: {fileID: 1566777949}
+  successPanel: {fileID: 793335729}
   player: {fileID: 1654474318}
-  pauseTargets: []
+  pauseTargets:
+  - {fileID: 0}
   playerInput: {fileID: 0}
   playerActionMapName: Player
   uiActionMapName: UI
+  successKillThresholdOnTimeUp: 1
+  survivalTimer: {fileID: 570332027}
 --- !u!1 &1846143075
 GameObject:
   m_ObjectHideFlags: 0

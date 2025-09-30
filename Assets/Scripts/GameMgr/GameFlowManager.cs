@@ -10,18 +10,30 @@ public class GameFlowManager : MonoBehaviour
     public OptionPanelController optionPanel;
 
     public GameObject failPanel;
-    public GameObject successPanel;   // ★ 추가
+    public GameObject successPanel;
 
     public PlayerHealth player;
 
-    public MonoBehaviour[] pauseTargets; //Pause Scripts
+    public MonoBehaviour[] pauseTargets;
 
     public PlayerInput playerInput;
     public string playerActionMapName = "Player";
     public string uiActionMapName = "UI";
 
+    [Header("Result Rules")]
+    [Tooltip("00:00 시 격추 수가 이 값 이상이면 무조건 성공")]
+    public int successKillThresholdOnTimeUp = 1;
+
+    [Header("Optional (경합 보강)")]
+    public SurvivalTimer survivalTimer; 
+
     float _prevTimeScale = 1f;
     bool _isPaused = false;
+
+    bool _timerElapsed = false;
+    public bool IsTimerElapsed => _timerElapsed;
+
+    bool _resultShown = false;
 
     void Awake()
     {
@@ -34,20 +46,30 @@ public class GameFlowManager : MonoBehaviour
         if (optionPanel) optionPanel.Hide();
         if (failPanel) failPanel.SetActive(false);
         if (successPanel) successPanel.SetActive(false);
+        _timerElapsed = false;
+        _resultShown = false;
     }
 
-    private void Start()
+    void Start()
     {
         if (player != null)
-            player.OnDeath += ShowFailPanel;
+            player.OnDeath += ShowFailPanel; 
     }
 
-    private void OnDestroy()
+    void OnDestroy()
     {
         if (player != null) player.OnDeath -= ShowFailPanel;
     }
 
-    // ===== 옵션/일시정지 =====
+    public void MarkTimerElapsed() { _timerElapsed = true; }
+
+    public void ResetResults()
+    {
+        _timerElapsed = false;
+        _resultShown = false;
+        if (failPanel) failPanel.SetActive(false);
+        if (successPanel) successPanel.SetActive(false);
+    }
 
     public void OpenOption()
     {
@@ -105,29 +127,55 @@ public class GameFlowManager : MonoBehaviour
         }
     }
 
-    // ===== 결과 패널 =====
+    bool ShouldForceSuccessAtTimeUp()
+    {
+        int kills = KillTracker.Instance ? KillTracker.Instance.KillCount : 0;
+
+        if (_timerElapsed)                     
+            return kills >= successKillThresholdOnTimeUp;
+
+        if (survivalTimer && survivalTimer.GetRemaining() <= 0.001f)
+            return kills >= successKillThresholdOnTimeUp;
+
+        return false;
+    }
 
     public void ShowFailPanel()
     {
+        if (_resultShown) return;
+
+        if (ShouldForceSuccessAtTimeUp())
+        {
+            ShowSuccessPanel(); 
+            return;
+        }
+
         PauseGame();
         if (successPanel) successPanel.SetActive(false);
         if (failPanel) failPanel.SetActive(true);
+        _resultShown = true;
     }
 
     public void ShowSuccessPanel()
     {
+        if (_resultShown) return;
+
+        if (!_timerElapsed)
+        {
+            Debug.LogWarning("[GameFlowManager] ShowSuccessPanel ignored because timer has not elapsed yet.");
+            return;
+        }
+
         PauseGame();
         if (failPanel) failPanel.SetActive(false);
         if (successPanel) successPanel.SetActive(true);
+        _resultShown = true;
     }
-
-    // ===== 재시작/메뉴 =====
 
     public void RestartGame()
     {
         if (optionPanel) optionPanel.Hide();
-        if (failPanel) failPanel.SetActive(false);
-        if (successPanel) successPanel.SetActive(false);
+        ResetResults();
 
         SetPauseTargetsEnabled(true);
         _isPaused = false;

@@ -8,6 +8,11 @@ public class MissionSuccessUI : MonoBehaviour
     {
         if (!panel) return;
         panel.SetActive(true);
-        Time.timeScale = 0f;
+    }
+
+    public void Hide()
+    {
+        if (!panel) return;
+        panel.SetActive(false);
     }
 }

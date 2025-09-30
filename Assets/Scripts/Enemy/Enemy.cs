@@ -7,6 +7,19 @@ public class Enemy : LivingEntity
     public EnemyIndicator enemyIndicator;
     private Action _releaseOccupy;
 
+    [Header("VFX")]
+    public float explosionYOffset = 1.0f;
+
+    private bool _dying = false;
+    private bool _explosionSpawned = false;
+
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        _dying = false;
+        _explosionSpawned = false;
+    }
+
     public void SetSpawnerOccupyRelease(Action release)
     {
         _releaseOccupy = release;
@@ -14,6 +27,8 @@ public class Enemy : LivingEntity
 
     public override void OnDamage(float damage, Vector3 hitPoint, Vector3 hitNormal)
     {
+        if (_dying || isDead) return;
+
         base.OnDamage(damage, hitPoint, hitNormal);
 
         var move = GetComponent<EnemyMovement>();
@@ -25,20 +40,41 @@ public class Enemy : LivingEntity
 
     protected override void Die()
     {
-        base.Die();
+        if (_dying || isDead) return;
+        _dying = true;
+
+        var cols = GetComponentsInChildren<Collider>(true);
+        foreach (var c in cols) c.enabled = false;
+
+        var rb = GetComponent<Rigidbody>();
+        if (rb)
+        {
+            rb.isKinematic = true;
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+        }
+
+        if (!_explosionSpawned && VfxManager.Instance)
+        {
+            VfxManager.Instance.SpawnExplosion(transform.position, explosionYOffset);
+            _explosionSpawned = true;
+        }
 
         var rt = GetComponent<RadarTarget>();
         if (rt) rt.enabled = false;
 
         if (KillTracker.Instance) KillTracker.Instance.AddKill(1);
-
         _releaseOccupy?.Invoke();
+
+        base.Die();
 
         Destroy(gameObject, 0.2f);
     }
 
     void OnCollisionEnter(Collision other)
     {
+        if (_dying || isDead) return;
+
         if (other.collider.CompareTag("Enemy")) return;
 
         if (other.collider.CompareTag("Player"))
