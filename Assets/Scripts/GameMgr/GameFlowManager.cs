@@ -85,13 +85,29 @@ public class GameFlowManager : MonoBehaviour
 
     public void RestartGame()
     {
+        if (optionPanel) optionPanel.Hide();
+        if (failPanel) failPanel.SetActive(false);
+
+        SetPauseTargetsEnabled(true);  
+        _isPaused = false;
         Time.timeScale = 1f;
         AudioListener.pause = false;
-        _isPaused = false;
 
-        var active = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(active.buildIndex, LoadSceneMode.Single);
+        if (playerInput && !string.IsNullOrEmpty(playerActionMapName))
+        {
+            var current = playerInput.currentActionMap?.name;
+            if (current != playerActionMapName) playerInput.SwitchCurrentActionMap(playerActionMapName);
+        }
+
+        var scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name, LoadSceneMode.Single);
     }
+
+    private void OnDestroy()
+    {
+        if (player != null) player.OnDeath -= ShowFailPanel;
+    }
+
 
     public void GoToMainMenu()
     {
