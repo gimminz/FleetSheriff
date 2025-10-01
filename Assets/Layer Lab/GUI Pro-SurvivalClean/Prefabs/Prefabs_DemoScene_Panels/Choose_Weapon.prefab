@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: POWER 12
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: eb5b38f961dc79e40872091b76d1c1da, type: 2}
-  m_sharedMaterial: {fileID: -2878256393082071580, guid: eb5b38f961dc79e40872091b76d1c1da, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f23960798954cf241ae02dbdf73e3233, type: 2}
+  m_sharedMaterial: {fileID: 5910446619260632814, guid: f23960798954cf241ae02dbdf73e3233, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -402,8 +402,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: SNIPER
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: eb5b38f961dc79e40872091b76d1c1da, type: 2}
-  m_sharedMaterial: {fileID: -2878256393082071580, guid: eb5b38f961dc79e40872091b76d1c1da, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f23960798954cf241ae02dbdf73e3233, type: 2}
+  m_sharedMaterial: {fileID: 5910446619260632814, guid: f23960798954cf241ae02dbdf73e3233, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -812,8 +812,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: AR
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: eb5b38f961dc79e40872091b76d1c1da, type: 2}
-  m_sharedMaterial: {fileID: -2878256393082071580, guid: eb5b38f961dc79e40872091b76d1c1da, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f23960798954cf241ae02dbdf73e3233, type: 2}
+  m_sharedMaterial: {fileID: 5910446619260632814, guid: f23960798954cf241ae02dbdf73e3233, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1066,8 +1066,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: POWER 12
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: eb5b38f961dc79e40872091b76d1c1da, type: 2}
-  m_sharedMaterial: {fileID: -2878256393082071580, guid: eb5b38f961dc79e40872091b76d1c1da, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f23960798954cf241ae02dbdf73e3233, type: 2}
+  m_sharedMaterial: {fileID: 5910446619260632814, guid: f23960798954cf241ae02dbdf73e3233, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1326,8 +1326,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: POWER 12
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: eb5b38f961dc79e40872091b76d1c1da, type: 2}
-  m_sharedMaterial: {fileID: -2878256393082071580, guid: eb5b38f961dc79e40872091b76d1c1da, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f23960798954cf241ae02dbdf73e3233, type: 2}
+  m_sharedMaterial: {fileID: 5910446619260632814, guid: f23960798954cf241ae02dbdf73e3233, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1687,8 +1687,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: SHOTGUN
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: eb5b38f961dc79e40872091b76d1c1da, type: 2}
-  m_sharedMaterial: {fileID: -2878256393082071580, guid: eb5b38f961dc79e40872091b76d1c1da, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f23960798954cf241ae02dbdf73e3233, type: 2}
+  m_sharedMaterial: {fileID: 5910446619260632814, guid: f23960798954cf241ae02dbdf73e3233, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2368,8 +2368,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: POWER 12
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: eb5b38f961dc79e40872091b76d1c1da, type: 2}
-  m_sharedMaterial: {fileID: -2878256393082071580, guid: eb5b38f961dc79e40872091b76d1c1da, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f23960798954cf241ae02dbdf73e3233, type: 2}
+  m_sharedMaterial: {fileID: 5910446619260632814, guid: f23960798954cf241ae02dbdf73e3233, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2617,8 +2617,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: PISTOL
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: eb5b38f961dc79e40872091b76d1c1da, type: 2}
-  m_sharedMaterial: {fileID: -2878256393082071580, guid: eb5b38f961dc79e40872091b76d1c1da, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f23960798954cf241ae02dbdf73e3233, type: 2}
+  m_sharedMaterial: {fileID: 5910446619260632814, guid: f23960798954cf241ae02dbdf73e3233, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2753,8 +2753,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: SELECT YOUR WEAPON
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: eb5b38f961dc79e40872091b76d1c1da, type: 2}
-  m_sharedMaterial: {fileID: -2878256393082071580, guid: eb5b38f961dc79e40872091b76d1c1da, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f23960798954cf241ae02dbdf73e3233, type: 2}
+  m_sharedMaterial: {fileID: 5910446619260632814, guid: f23960798954cf241ae02dbdf73e3233, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2889,8 +2889,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: SELECT
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: eb5b38f961dc79e40872091b76d1c1da, type: 2}
-  m_sharedMaterial: {fileID: -2878256393082071580, guid: eb5b38f961dc79e40872091b76d1c1da, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f23960798954cf241ae02dbdf73e3233, type: 2}
+  m_sharedMaterial: {fileID: 5910446619260632814, guid: f23960798954cf241ae02dbdf73e3233, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

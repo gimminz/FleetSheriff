@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,7 +15,7 @@ public class ShipInSelectPanel : MonoBehaviour
         this.data = data;
         this.onSelect = onSelect;
 
-        if (nameText) nameText.text = data.ShipName;
+        if (nameText) nameText.text = string.IsNullOrWhiteSpace(data.KoreanName) ? data.ShipName : data.KoreanName;
 
         if (button == null) button = GetComponent<Button>();
         if (button)
