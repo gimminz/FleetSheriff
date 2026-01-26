@@ -4438,7 +4438,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 185532179}
         m_TargetAssemblyTypeName: UiShipWeaponsController, Assembly-CSharp
-        m_MethodName: OnClickCenterPanel
+        m_MethodName: OnClickShipPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5558,7 +5558,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.6104126, y: 44.560993}
+  m_AnchoredPosition: {x: -4.6104126, y: 44.56131}
   m_SizeDelta: {x: 59.4206, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &813194681
@@ -6644,7 +6644,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.6100006, y: -44.561005}
+  m_AnchoredPosition: {x: 4.6099854, y: -44.561005}
   m_SizeDelta: {x: -126, y: -89.122}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &940564258
@@ -13838,7 +13838,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000061035156}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -16.9541, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1953313743

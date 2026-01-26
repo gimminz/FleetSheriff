@@ -1201,7 +1201,7 @@ MonoBehaviour:
   usePlayerCenteredRing: 1
   fixedSpawnCenter: {x: 100, y: 100, z: 100}
   spawnOnlyInFront: 1
-  maxConcurrentEnemies: 6
+  maxConcurrentEnemies: 20
   spawnTestEnemyOnStart: 1
   testEnemyDistance: 200
   testEnemyHeightOffset: 0
@@ -1901,9 +1901,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1654474318}
   timerText: {fileID: 2025128364}
-  durationSeconds: 20
+  durationSeconds: 220
   autoStart: 1
-  useUnscaledTime: 0
+  useUnscaledTime: 1
   successKillThreshold: 1
 --- !u!4 &570332028
 Transform:

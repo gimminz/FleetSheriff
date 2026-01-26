@@ -48,6 +48,17 @@ public class UiShipWeaponsController : MonoBehaviour
             selectedShipContext.SetWeapon(selectedShipContext.ActiveShipId.Value, currentSlot, w.Id);
     }
 
+    public void OnClickShipPanel()
+    {
+        SetModeShipList();
+        if (spaceShipListContainer)
+        {
+            var shipList = spaceShipListContainer.GetComponentInChildren<UiShipList>(true);
+            shipList?.Refresh();
+        }
+    }
+
+
     public void ApplyWeaponToSlot(ShipSlot slot, WeaponData weapon)
     {
         if (weapon != null) explain?.SetData(weapon);
